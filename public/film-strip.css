@@ -26,3 +26,5 @@
   @media(max-width:760px){.moving-films{margin:10px auto 45px}.moving-films-heading{padding-top:38px;padding-bottom:20px}.moving-films-heading .section-head{gap:20px}.motion-card{width:255px}.motion-card-image{height:175px}.motion-card-caption>p{font-size:21px}.film-marquee-group{gap:18px;padding-right:18px}.film-marquee-track{animation-duration:75s}}
   @media(prefers-reduced-motion:reduce){.film-marquee-track{animation:none;transform:none;will-change:auto}.film-marquee{overflow-x:auto;mask-image:none}.film-marquee-group[aria-hidden=true]{display:none}.motion-card,.motion-card:nth-child(even){transform:none}.film-motion-toggle{display:none}}
 }
+
+@layer components { .moving-films.motion-offscreen .film-marquee-track,.moving-films.motion-hidden-tab .film-marquee-track { animation-play-state:paused; } }

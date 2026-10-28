@@ -1,5 +1,16 @@
 # Demo verification — 28 October 2026
 
+## Pre-deployment verification and mobile improvements
+
+- `npm test`: six enquiry tests pass.
+- `npm run verify`: production build succeeds; six route outputs exist; heading/ID checks pass; 159 local references and all 66 full-size/responsive image files resolve.
+- HTTP checks against the local server return 200 for all six routes, film-strip stylesheet and a phone-sized hero asset.
+- Added responsive delivery images at 480px and 960px; all 22 original assets remain at 1536px. Complete 480px set measures 0.87 MB versus 10.45 MB full-size (92% smaller); this is an asset-size comparison, not a measured page-speed score.
+- Increased mobile form text to 16px and common tap targets to 44px; adjusted narrow header spacing accordingly. Corrected the menu's accessible label on Escape/outside-close.
+- Moving cards now pause when off-screen and when the tab is hidden, in addition to hover/focus/manual pause and reduced-motion handling.
+- Final visual/device verification is pending: the browser tool still reports local browser use disabled after the user's enable attempt and a session refresh. Earlier responsive tests below do not verify the latest changes.
+- The site remains a demo: the form intentionally sends no email without a verified provider key; sample imagery is identified; noindex remains appropriate for the demo. Real enquiry delivery is not claimed.
+
 ## Moving film-card section and GitHub preparation
 
 Added a looping cinematic card row on Home and Work with hover/focus pause, explicit pause/resume control, and a static manually scrollable reduced-motion fallback. Animation uses a duplicated noninteractive card group, hidden from accessibility output, with equal group widths for seamless looping. No dependencies added. Native page controls and the site-wide pigment effect remain independent. Added Netlify configuration for Node 24, `npm run build` and `dist` publication. Existing six tests, module syntax checks and static build pass. Browser visual verification remains unavailable because local browser use is disabled in Work settings.

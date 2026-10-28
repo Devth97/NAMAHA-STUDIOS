@@ -6,7 +6,7 @@ import { siteConfig } from './config.js';
 export function setupInteractions() {
   const menu = document.querySelector('.menu-toggle');
   const navigation = document.querySelector('#navigation');
-  const closeMenu = () => { menu.setAttribute('aria-expanded','false'); navigation.classList.remove('open'); };
+  const closeMenu = () => { menu.setAttribute('aria-expanded','false'); menu.querySelector('.sr-only').textContent = 'Open menu'; navigation.classList.remove('open'); };
   menu.addEventListener('click', () => {
     const open = menu.getAttribute('aria-expanded') !== 'true';
     menu.setAttribute('aria-expanded', String(open));

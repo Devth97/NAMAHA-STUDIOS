@@ -42,3 +42,7 @@
 @layer components { #pigment { position:fixed; inset:0; width:100%; height:100dvh; z-index:35; } }
 
 @layer components { img.crop { object-fit:cover; object-position:center; } .hero-art img.crop { object-fit:contain; } .story-art img.crop { object-fit:contain; } }
+
+@layer responsive { @media(max-width:760px) { .field input,.field select,.field textarea { font-size:16px; } .filter { min-height:44px; } .menu-toggle,.social { min-width:44px; min-height:44px; } } }
+
+@layer responsive { @media(max-width:380px) { .header-inner { gap:10px; } .brand { width:145px; } } }

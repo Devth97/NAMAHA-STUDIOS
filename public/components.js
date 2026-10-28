@@ -19,9 +19,11 @@ const paths = {
 };
 export const icon = (name, className = '') => `<svg class="icon ${className}" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths[name] || paths.spark}</svg>`;
 
-export function crop(key, label = '', className = '') {
+export function crop(key, label = '', className = '', sizes = '(max-width: 760px) 100vw, 50vw') {
   const heroImage = key === 'hero' || key.endsWith('Hero');
-  return `<img class="crop ${className}" src="${art[key]}" alt="${esc(label)}" width="1536" height="1024" ${heroImage ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"'} decoding="async">`;
+  const source = art[key];
+  const variants = `${source.replace('.jpg', '-480.jpg')} 480w, ${source.replace('.jpg', '-960.jpg')} 960w, ${source} 1536w`;
+  return `<img class="crop ${className}" src="${source}" srcset="${variants}" sizes="${heroImage ? '(max-width: 760px) 100vw, 70vw' : sizes}" alt="${esc(label)}" width="1536" height="1024" ${heroImage ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"'} decoding="async">`;
 }
 export const logo = () => `<svg class="logo" viewBox="55 5 240 91" role="img" aria-label="Namaha Studios — Film, Television, Entertainment"><image href="${references.home}" width="853" height="1280"/></svg>`;
 export const button = (label, href, style = '') => `<a class="button ${style}" href="${href}">${label}${arrow}</a>`;

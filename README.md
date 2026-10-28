@@ -19,6 +19,7 @@ Open http://127.0.0.1:4173/ . Stop the preview with Ctrl+C.
 ```powershell
 npm test
 npm run build
+npm run verify
 ```
 
 The static output is `dist/`. Upload through the chosen Git-connected hosting workflow once the destination is confirmed. No archive/ZIP is needed or created. Build output is ignored by Git.
@@ -30,6 +31,8 @@ Home `/`, About `/about.html`, Services `/services.html`, Work `/work.html`, Gal
 ## Demo and email behaviour
 
 Projects are labelled as illustrative concepts, not client production credits. Contact details from reference screenshots are not published as verified business information. The original reference files remain intact; an inline SVG viewport preserves the exact logo. All other imagery uses standalone high-resolution assets through native responsive images. The hero loads eagerly; supporting images load lazily. Prompts and generation provenance are recorded in `image-manifest.json`. Images were generated with the built-in image tool and exported as quality-92 JPEGs without resizing.
+
+Every generated asset also has 480px and 960px progressive JPEG delivery variants, selected through `srcset` and `sizes`. The full-size 1536px artwork remains available for larger screens. Regeneration uses `scripts/optimise-images.py` with Pillow; it is not required during a Netlify build because variants are committed. The complete 480px set is approximately 0.87 MB versus 10.45 MB for the full-size set; actual browser transfer depends on device pixel density and lazy loading.
 
 `public/config.js` has an empty `web3formsAccessKey`. A valid form submission displays a preview confirmation and makes no provider request. No enquiry data is persisted. Set only an owner-verified public Web3Forms form identifier after confirming the recipient; never add a mailbox password. Verify delivery to the actual inbox and reply-to before launch. Honeypot protection is included; configure the provider's additional spam protection for production. Update the privacy notice and demo wording for the final live configuration.
 
@@ -49,6 +52,8 @@ Projects are labelled as illustrative concepts, not client production credits. C
 ## Moving film cards
 
 Home and Work include a continuous film-card strip. Hover, keyboard focus or the explicit pause button pauses the strip. Reduced-motion preferences replace animation with a manually scrollable row. Images are illustrative studio concepts.
+
+The strip also pauses while off-screen or when the browser tab is hidden. Mobile form inputs use 16px text to avoid automatic iOS focus zoom; mobile filter, menu and social controls have a minimum 44px touch target.
 
 ## GitHub and Netlify
 
