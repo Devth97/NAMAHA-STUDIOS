@@ -1,0 +1,40 @@
+/* Keep the full illustration inside the mobile content column. */
+@layer responsive {
+  @media(max-width:760px) {
+    .hero-inner,.home-hero .hero-inner { display:flex; flex-direction:column; align-items:stretch; }
+    .hero-copy { width:100%; min-width:0; }
+    .hero-art,.home-hero .hero-art {
+      position:relative;
+      inset:auto;
+      flex:none;
+      width:100%;
+      max-width:100%;
+      height:auto;
+      min-height:0;
+      aspect-ratio:auto;
+      margin:26px 0 18px;
+      overflow:hidden;
+      mask-image:none;
+      -webkit-mask-image:none;
+    }
+    .hero-art img.crop {
+      display:block;
+      position:static;
+      width:100%;
+      max-width:100%;
+      height:auto;
+      aspect-ratio:3 / 2;
+      object-fit:contain;
+    }
+    .hero-bottom { flex-wrap:wrap; gap:12px; }
+    .hero-bottom>span { flex:1; }
+    .hero-bottom .motion-toggle {
+      display:inline-flex;
+      min-height:44px;
+      padding:8px;
+      font-size:8px;
+    }
+    .hero-bottom>a { min-height:44px; }
+    #pigment { opacity:.55; }
+  }
+}

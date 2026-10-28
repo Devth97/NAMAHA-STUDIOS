@@ -1,5 +1,21 @@
 // Bounded canvas pigment simulation: curling filaments and diffusing colour blooms.
 // It is decorative, follows movement across the page and never captures pointer input.
+export function bindPigmentInput(target, onMove, onEnd) {
+  target.addEventListener('pointermove', event => {
+    if (event.pointerType !== 'touch') onMove({ x: event.clientX, y: event.clientY });
+  }, { passive: true });
+  const touch = event => {
+    if (event.touches.length !== 1) { onEnd(); return; }
+    const finger = event.touches[0];
+    onMove({ x: finger.clientX, y: finger.clientY });
+  };
+  // Touch events continue during native scrolling, after pointercancel.
+  target.addEventListener('touchstart', touch, { passive: true });
+  target.addEventListener('touchmove', touch, { passive: true });
+  target.addEventListener('touchend', onEnd, { passive: true });
+  target.addEventListener('touchcancel', onEnd, { passive: true });
+}
+
 export function initPigment(canvas) {
   if(!canvas) return;
   const motion=matchMedia('(prefers-reduced-motion:reduce)');
@@ -18,30 +34,30 @@ export function initPigment(canvas) {
     gradient.addColorStop(0,`rgba(${colour},.24)`);gradient.addColorStop(.3,`rgba(${colour},.12)`);gradient.addColorStop(.7,`rgba(${colour},.035)`);gradient.addColorStop(1,`rgba(${colour},0)`);
     brush.fillStyle=gradient;brush.fillRect(0,0,96,96);return sprite;
   });
-  const allowed=()=>enabled && !motion.matches && finePointer.matches && !document.hidden;
-  function size(){width=host.clientWidth;height=window.innerHeight;scale=Math.min(1,960/width);canvas.width=Math.round(width*scale);canvas.height=Math.round(height*scale);context.setTransform(scale,0,0,scale,0,0);particles=[];previous=null;}
+  const allowed=()=>enabled && !motion.matches && !document.hidden;
+  function size(){width=host.clientWidth;height=window.innerHeight;scale=Math.min(1,(finePointer.matches?960:640)/width);canvas.width=Math.round(width*scale);canvas.height=Math.round(height*scale);context.setTransform(scale,0,0,scale,0,0);particles=[];previous=null;}
   window.addEventListener('resize',size,{passive:true});
   function stop(){cancelAnimationFrame(frame);clearTimeout(idleTimer);frame=0;lastTime=0;previous=null;particles=[];context.clearRect(0,0,width,height);}
-  function updateAvailability(){if(!allowed())stop();control.hidden=!finePointer.matches||motion.matches;}
+  function updateAvailability(){if(!allowed())stop();control.hidden=motion.matches;}
   document.addEventListener('visibilitychange',updateAvailability);
   motion.addEventListener('change',updateAvailability);finePointer.addEventListener('change',updateAvailability);
   control.addEventListener('click',()=>{enabled=!enabled;control.setAttribute('aria-pressed',String(enabled));control.textContent=enabled?'INK IN MOTION':'INK PAUSED';updateAvailability();});
   host.addEventListener('pointerleave',()=>{previous=null;});
-  window.addEventListener('pointermove',event=>{
-    if(!allowed() || event.pointerType==='touch')return;
+  bindPigmentInput(window, ({x,y})=>{
+    if(!allowed())return;
     clearTimeout(idleTimer);
     idleTimer=setTimeout(stop,1600);
-    const x=event.clientX, y=event.clientY;
     const dx=previous?x-previous.x:0,dy=previous?y-previous.y:0;
-    const steps=Math.min(7,Math.max(1,Math.ceil(Math.hypot(dx,dy)/12)));
+    const steps=Math.min(finePointer.matches?7:4,Math.max(1,Math.ceil(Math.hypot(dx,dy)/12)));
     for(let i=0;i<steps;i++) {
       const t=(i+1)/steps;
       particles.push({x:x-dx*(1-t),y:y-dy*(1-t),vx:dx*.025+(Math.random()-.5)*1.4,vy:dy*.025+(Math.random()-.5)*1.4,born:performance.now(),life:1,seed:Math.random()*15,r:12+Math.random()*22,tone:Math.random()>.3?0:1});
     }
-    if(particles.length>180)particles.splice(0,particles.length-180);
+    const limit=finePointer.matches?180:90;
+    if(particles.length>limit)particles.splice(0,particles.length-limit);
     previous={x,y};
     if(!frame)frame=requestAnimationFrame(draw);
-  });
+  }, ()=>{previous=null;});
   function draw(time) {
     frame=0;if(!allowed())return;
     const dt=lastTime?Math.min(2,(time-lastTime)/16.667):1;lastTime=time;

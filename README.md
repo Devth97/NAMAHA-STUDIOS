@@ -38,7 +38,9 @@ Every generated asset also has 480px and 960px progressive JPEG delivery variant
 
 ## Motion
 
-`public/pigment.js` drives one fixed, pointer-transparent viewport canvas across all sections. It emits only on pointer movement, diffuses/fades existing trails, clears fully after idle, caps particles and render width, and stops when the page is hidden. Touch/coarse pointers and reduced-motion preferences disable the effect. A desktop pause control is in the hero footer.
+`public/pigment.js` drives one fixed, pointer-transparent viewport canvas across all sections. It responds to mouse movement or single-finger touch movement, diffuses/fades existing trails, clears fully after idle, caps particles and render width, and stops when the page is hidden. Touch listeners are passive so native scrolling continues; pinch gestures do not emit new pigment. Mobile uses a smaller particle/render budget. Reduced-motion preferences disable the effect. A pause control is available in the hero footer on desktop and mobile.
+
+`public/mobile-fixes.css` keeps mobile hero illustrations within their content column at their natural 3:2 proportions with automatic image height, avoiding oversized images or clipped edges.
 
 ## Before production
 

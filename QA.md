@@ -1,5 +1,11 @@
 # Demo verification — 28 October 2026
 
+## Mobile hero and touch-pigment correction
+
+User reported the hero image did not fit mobile screens and the paint effect was absent. Added a final mobile stylesheet resetting inherited hero dimensions/offsets and image percentage height: illustrations now use width 100%, automatic height and their natural 3:2 proportions within the padded content column. Removed the intentional fine-pointer restriction from pigment availability. Added passive single-finger touch handlers that continue during native scrolling, avoid duplicate pointer/touch emissions, ignore multi-touch gestures, retain 1.6-second idle clearing and reduced-motion preference, and use a reduced mobile render/particle budget. The mobile pause control is now visible.
+
+Nine tests pass, including new regression coverage for touch movement, unblocked native scrolling, no duplicate touch-pointer emissions and multi-touch handling. Production build and asset checks pass. Fresh physical-phone and browser visual checks remain unverified due to the previously reported browser-access restriction; this correction does not claim those checks were completed.
+
 ## Pre-deployment verification and mobile improvements
 
 - `npm test`: six enquiry tests pass.
