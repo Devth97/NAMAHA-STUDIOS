@@ -20,8 +20,8 @@ const paths = {
 export const icon = (name, className = '') => `<svg class="icon ${className}" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths[name] || paths.spark}</svg>`;
 
 export function crop(key, label = '', className = '') {
-  const [source, x, y, width, height] = art[key];
-  return `<svg class="crop ${className}" viewBox="${x} ${y} ${width} ${height}" preserveAspectRatio="xMidYMid slice" ${label ? `role="img" aria-label="${esc(label)}"` : 'aria-hidden="true"'}><image href="${references[source]}" width="853" height="1280"/></svg>`;
+  const heroImage = key === 'hero' || key.endsWith('Hero');
+  return `<img class="crop ${className}" src="${art[key]}" alt="${esc(label)}" width="1536" height="1024" ${heroImage ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"'} decoding="async">`;
 }
 export const logo = () => `<svg class="logo" viewBox="55 5 240 91" role="img" aria-label="Namaha Studios — Film, Television, Entertainment"><image href="${references.home}" width="853" height="1280"/></svg>`;
 export const button = (label, href, style = '') => `<a class="button ${style}" href="${href}">${label}${arrow}</a>`;

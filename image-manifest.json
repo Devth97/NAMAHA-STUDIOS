@@ -1,0 +1,222 @@
+[
+  {
+    "key": "hero",
+    "prompt": "Detailed black pen-and-ink film set with cinema camera, seated director, Karnataka mountains, palms and ochre sun on warm ivory, no lettering.",
+    "sourceGeneratedFile": "exec-2a4a5c28-2642-4a8c-a81e-57d4f7867ce8.png",
+    "file": "public/assets/hero-hq.jpg",
+    "generator": "built-in image_gen",
+    "width": 1536,
+    "height": 1024,
+    "export": "JPEG quality 92, source resolution"
+  },
+  {
+    "key": "aboutHero",
+    "prompt": "Use case: illustration-story. Standalone high-resolution landscape 3:2 website illustration, 1536x1024 or higher. A thoughtful Indian film crew collaborating around a cinema camera on a dolly, a director consulting with a cinematographer and two other crew members. Broad banyan branches overhead, coastal Karnataka landscape, distant hills, palms and temple, muted gold sun. Human collaboration at centre. Style: exquisitely detailed black pen-and-ink engraving, hand-drawn fine crosshatching, premium editorial film-studio illustration, realistic anatomy and equipment. Colour: black ink and restrained antique gold accents on warm ivory #f6f0e5. Airy edges, no hard border. No text, letters, logos, watermark, website mockup, panels or collage.",
+    "sourceGeneratedFile": "exec-1a78585f-bd9f-4d28-800b-83b3ca85d387.png",
+    "file": "public/assets/aboutHero-hq.jpg",
+    "generator": "built-in image_gen",
+    "width": 1536,
+    "height": 1024,
+    "export": "JPEG quality 92, source resolution"
+  },
+  {
+    "key": "servicesHero",
+    "prompt": "Use case: illustration-story. Standalone high-resolution landscape 3:2 website illustration, 1536x1024 or higher. An Indian film set in action, cinema camera on dolly rails in foreground left, actor and actress in traditional understated costume in middle, crew member with boom microphone on right and large film light, coastal Karnataka village and Western Ghats behind, muted gold sun. Style: exquisitely detailed black pen-and-ink engraving, hand-drawn fine crosshatching, premium editorial film-studio illustration, realistic anatomy and equipment. Colour: black ink and restrained antique gold accents on warm ivory #f6f0e5. Airy edges, no hard border. No text, letters, logos, watermark, website mockup, panels or collage.",
+    "sourceGeneratedFile": "exec-8056dea4-24f0-4016-b8dd-9704b8c80c59.png",
+    "file": "public/assets/servicesHero-hq.jpg",
+    "generator": "built-in image_gen",
+    "width": 1536,
+    "height": 1024,
+    "export": "JPEG quality 92, source resolution"
+  },
+  {
+    "key": "workHero",
+    "prompt": "Use case: illustration-story. Standalone high-resolution landscape 3:2 website illustration, 1536x1024 or higher. Professional cinema camera on a sturdy tripod at left and an empty director's chair at right, graceful film strip curling through lower foreground, mountains and coastal Karnataka palms in distance under an ochre watercolor sun. Elegant cinematic framing and meticulous mechanical detail. Style: exquisitely detailed black pen-and-ink engraving, hand-drawn fine crosshatching, premium editorial film-studio illustration, realistic anatomy and equipment. Colour: black ink and restrained antique gold accents on warm ivory #f6f0e5. Airy edges, no hard border. No text, letters, logos, watermark, website mockup, panels or collage.",
+    "sourceGeneratedFile": "exec-5bfc4ca8-09ad-4454-a813-4e3b84440f22.png",
+    "file": "public/assets/workHero-hq.jpg",
+    "generator": "built-in image_gen",
+    "width": 1536,
+    "height": 1024,
+    "export": "JPEG quality 92, source resolution"
+  },
+  {
+    "key": "galleryHero",
+    "prompt": "Use case: illustration-story. Standalone high-resolution landscape 3:2 website illustration, 1536x1024 or higher. Candid Indian film crew between takes on location, two technicians sharing a moment beside a cinema camera and lighting equipment, director seated at right, broad tree branches, coastal Karnataka palms and distant mountains with muted gold sun. Natural human proportions. Style: exquisitely detailed black pen-and-ink engraving, hand-drawn fine crosshatching, premium editorial film-studio illustration, realistic anatomy and equipment. Colour: black ink and restrained antique gold accents on warm ivory #f6f0e5. Airy edges, no hard border. No text, letters, logos, watermark, website mockup, panels or collage.",
+    "sourceGeneratedFile": "exec-359a022b-da6a-43b6-950b-17748092bf08.png",
+    "file": "public/assets/galleryHero-hq.jpg",
+    "generator": "built-in image_gen",
+    "width": 1536,
+    "height": 1024,
+    "export": "JPEG quality 92, source resolution"
+  },
+  {
+    "key": "contactHero",
+    "prompt": "Standalone high-resolution landscape 3:2 website illustration. Cinema camera, director seen from behind seated at right, crew with boom microphone at an outdoor Karnataka film set with palms, distant hills and ornate temple, muted gold sun. Exquisitely detailed black pen-and-ink etching, fine crosshatching, premium editorial illustration on warm ivory #f6f0e5 with restrained antique gold watercolor accents, airy vignette edges. No text, logos, letters, panels, collage, borders, watermark or UI.",
+    "sourceGeneratedFile": "exec-a73a363e-c8a4-4a58-a034-422dd314e322.png",
+    "file": "public/assets/contactHero-hq.jpg",
+    "generator": "built-in image_gen",
+    "width": 1536,
+    "height": 1024,
+    "export": "JPEG quality 92, source resolution"
+  },
+  {
+    "key": "journey",
+    "prompt": "Standalone high-resolution landscape 3:2 website illustration. Gracefully curling 35mm film strip across Karnataka hills with vintage production van, small crew, camera tripod and coastal palms. Poetic airy composition. Exquisitely detailed black pen-and-ink etching, fine crosshatching, premium editorial illustration on warm ivory #f6f0e5 with restrained antique gold watercolor accents, airy vignette edges. No text, logos, letters, panels, collage, borders, watermark or UI.",
+    "sourceGeneratedFile": "exec-a971af0c-91ff-412a-b028-94ab5913f230.png",
+    "file": "public/assets/journey-hq.jpg",
+    "generator": "built-in image_gen",
+    "width": 1536,
+    "height": 1024,
+    "export": "JPEG quality 92, source resolution"
+  },
+  {
+    "key": "storyboard",
+    "prompt": "Standalone high-resolution landscape 3:2 website illustration. Open storyboard sketchbook of cinematic sketches without writing, beautifully detailed metal film reel, fountain pen, camera lens and delicate botanical sprigs on ivory. Three-quarter overhead still life. Exquisitely detailed black pen-and-ink etching, fine crosshatching, premium editorial illustration on warm ivory #f6f0e5 with restrained antique gold watercolor accents, airy vignette edges. No text, logos, letters, panels, collage, borders, watermark or UI.",
+    "sourceGeneratedFile": "exec-0b161048-f631-498e-a68e-0f8819e77ec1.png",
+    "file": "public/assets/storyboard-hq.jpg",
+    "generator": "built-in image_gen",
+    "width": 1536,
+    "height": 1024,
+    "export": "JPEG quality 92, source resolution"
+  },
+  {
+    "key": "development",
+    "prompt": "Standalone high-resolution landscape 3:2 website illustration. Overhead creative development desk with open storyboard sketchbook, pencil, vintage lens, film strip and glowing muted gold lightbulb motif. No writing in sketchbook. Exquisitely detailed black pen-and-ink etching, fine crosshatching, premium editorial illustration on warm ivory #f6f0e5 with restrained antique gold watercolor accents, airy vignette edges. No text, logos, letters, panels, collage, borders, watermark or UI.",
+    "sourceGeneratedFile": "exec-884bc303-29ef-4917-9624-d57d0a4bf65a.png",
+    "file": "public/assets/development-hq.jpg",
+    "generator": "built-in image_gen",
+    "width": 1536,
+    "height": 1024,
+    "export": "JPEG quality 92, source resolution"
+  },
+  {
+    "key": "film",
+    "prompt": "Standalone premium cinematic editorial photograph for film studio website, landscape 3:2, high resolution. Indian cinematographer working with a detailed professional cinema camera on tripod on a hilltop at golden sunset, Western Ghats layered hills and coastal Karnataka palms in distance, subtle atmospheric haze, authentic equipment, tactile natural detail, warm amber highlights and deep olive-charcoal shadows, polished film still aesthetic, realistic human anatomy. No text, logos, watermarks, borders, collage or interface. Not a poster.",
+    "sourceGeneratedFile": "exec-c03cecc9-939b-4036-9949-2d53265b6cee.png",
+    "file": "public/assets/film-hq.jpg",
+    "generator": "built-in image_gen",
+    "width": 1536,
+    "height": 1024,
+    "export": "JPEG quality 92, source resolution"
+  },
+  {
+    "key": "television",
+    "prompt": "Standalone high-resolution landscape 3:2 cinematic editorial photograph for premium Indian film studio website. Indian television interview production studio, two presenters seated on tasteful cream sofas, camera and camera operator foreground, cinema lights and boom, warm wood set, authentic behind-the-scenes editorial photo. Natural tactile detail, realistic anatomy and equipment, warm amber highlights with deep charcoal shadows, polished cinematic colour grade. No text, logos, watermark, borders, montage or UI.",
+    "sourceGeneratedFile": "exec-8a35ad89-ed0d-4573-b690-2f352acfd694.png",
+    "file": "public/assets/television-hq.jpg",
+    "generator": "built-in image_gen",
+    "width": 1536,
+    "height": 1024,
+    "export": "JPEG quality 92, source resolution"
+  },
+  {
+    "key": "event",
+    "prompt": "Standalone high-resolution landscape 3:2 cinematic editorial photograph for premium Indian film studio website. Large live entertainment concert seen from behind an enthusiastic audience, stage performers in distance, beautiful amber and soft blue theatrical light beams, atmospheric realistic haze, premium live event photography. Natural tactile detail, realistic anatomy and equipment, warm amber highlights with deep charcoal shadows, polished cinematic colour grade. No text, logos, watermark, borders, montage or UI.",
+    "sourceGeneratedFile": "exec-0c98edc9-e6bf-4eee-8f22-69f3a7998882.png",
+    "file": "public/assets/event-hq.jpg",
+    "generator": "built-in image_gen",
+    "width": 1536,
+    "height": 1024,
+    "export": "JPEG quality 92, source resolution"
+  },
+  {
+    "key": "brand",
+    "prompt": "Standalone high-resolution landscape 3:2 cinematic editorial photograph for premium Indian film studio website. Food commercial behind the scenes, professional cinema camera monitor showing carefully styled traditional South Indian cuisine on a ceramic plate, chef softly out of focus, moody warm amber studio lighting, realistic professional equipment. Natural tactile detail, realistic anatomy and equipment, warm amber highlights with deep charcoal shadows, polished cinematic colour grade. No text, logos, watermark, borders, montage or UI.",
+    "sourceGeneratedFile": "exec-eccaea62-27d5-4951-9d44-3ef3b9c4e930.png",
+    "file": "public/assets/brand-hq.jpg",
+    "generator": "built-in image_gen",
+    "width": 1536,
+    "height": 1024,
+    "export": "JPEG quality 92, source resolution"
+  },
+  {
+    "key": "digital",
+    "prompt": "Use case: photorealistic-natural. Standalone high-resolution landscape 3:2 editorial photograph for premium film studio website. An Indian video editor at a desk editing a film on two large monitors, timeline and picture visible without legible UI text, warm dim creative studio, side/rear view, beautiful focus falloff. Realistic anatomy and equipment, excellent photographic detail, restrained warm amber/gold highlights with deep charcoal shadows, refined cinematic colour grade. No text, logos, watermark, collage, borders or website interface.",
+    "sourceGeneratedFile": "exec-7dbb02bd-2366-4df2-806d-6aacf4ed3f83.png",
+    "file": "public/assets/digital-hq.jpg",
+    "generator": "built-in image_gen",
+    "width": 1536,
+    "height": 1024,
+    "export": "JPEG quality 92, source resolution"
+  },
+  {
+    "key": "portrait",
+    "prompt": "Use case: photorealistic-natural. Standalone high-resolution landscape 3:2 editorial photograph for premium film studio website. Close view of a cinema production monitor displaying a thoughtful Indian actress, actress visible softly out of focus beyond it on set, elegant dramatic amber lighting, carefully composed real-world equipment. Realistic anatomy and equipment, excellent photographic detail, restrained warm amber/gold highlights with deep charcoal shadows, refined cinematic colour grade. No text, logos, watermark, collage, borders or website interface.",
+    "sourceGeneratedFile": "exec-0c74c1c6-3340-47ad-b27c-e2b0a4ed7b5a.png",
+    "file": "public/assets/portrait-hq.jpg",
+    "generator": "built-in image_gen",
+    "width": 1536,
+    "height": 1024,
+    "export": "JPEG quality 92, source resolution"
+  },
+  {
+    "key": "crew",
+    "prompt": "Use case: photorealistic-natural. Standalone high-resolution landscape 3:2 editorial photograph for premium film studio website. Four Indian film crew members in plain dark clothes collaborating around a cinema camera outdoors between takes, candid natural expressions and realistic hands, warm afternoon light. Realistic anatomy and equipment, excellent photographic detail, restrained warm amber/gold highlights with deep charcoal shadows, refined cinematic colour grade. No text, logos, watermark, collage, borders or website interface.",
+    "sourceGeneratedFile": "exec-f709afd4-86ec-42ed-909a-fc9f59cc76d7.png",
+    "file": "public/assets/crew-hq.jpg",
+    "generator": "built-in image_gen",
+    "width": 1536,
+    "height": 1024,
+    "export": "JPEG quality 92, source resolution"
+  },
+  {
+    "key": "location",
+    "prompt": "Use case: photorealistic-natural. Standalone high-resolution landscape 3:2 editorial photograph for premium film studio website. Film production van on a mountain road at dusk, crew preparing lights and camera, Western Ghats silhouette, peach golden sky, atmospheric cinematic environmental photograph. Realistic anatomy and equipment, excellent photographic detail, restrained warm amber/gold highlights with deep charcoal shadows, refined cinematic colour grade. No text, logos, watermark, collage, borders or website interface.",
+    "sourceGeneratedFile": "exec-ef56e7e1-d1f3-404d-9d8a-d0dc342e11b3.png",
+    "file": "public/assets/location-hq.jpg",
+    "generator": "built-in image_gen",
+    "width": 1536,
+    "height": 1024,
+    "export": "JPEG quality 92, source resolution"
+  },
+  {
+    "key": "green",
+    "prompt": "Use case: photorealistic-natural. Standalone high-resolution landscape 3:2 editorial photograph for premium film studio website. Behind the scenes in a professional green-screen studio, Indian actor at centre, camera operator and cinema camera foreground, realistic softboxes and controlled studio lighting. Realistic anatomy and equipment, excellent photographic detail, restrained warm amber/gold highlights with deep charcoal shadows, refined cinematic colour grade. No text, logos, watermark, collage, borders or website interface.",
+    "sourceGeneratedFile": "exec-4c708614-a4cc-4fe0-95e7-6ee20e613de8.png",
+    "file": "public/assets/green-hq.jpg",
+    "generator": "built-in image_gen",
+    "width": 1536,
+    "height": 1024,
+    "export": "JPEG quality 92, source resolution"
+  },
+  {
+    "key": "camera",
+    "prompt": "Use case: photorealistic-natural. Standalone high-resolution landscape 3:2 editorial photograph for premium film studio website. Close detailed view of a professional cinema camera with matte box and follow focus on a film set, camera assistant partly visible, warm bokeh background and natural dark metallic texture. Realistic anatomy and equipment, excellent photographic detail, restrained warm amber/gold highlights with deep charcoal shadows, refined cinematic colour grade. No text, logos, watermark, collage, borders or website interface.",
+    "sourceGeneratedFile": "exec-16f99fb6-e6ad-4b11-8276-721161883f91.png",
+    "file": "public/assets/camera-hq.jpg",
+    "generator": "built-in image_gen",
+    "width": 1536,
+    "height": 1024,
+    "export": "JPEG quality 92, source resolution"
+  },
+  {
+    "key": "slate",
+    "prompt": "Use case: photorealistic-natural. Standalone high-resolution landscape 3:2 editorial photograph for premium film studio website. Unmarked blank black film clapperboard with black and white striped hinged top in foreground, cinema camera and Indian crew softly out of focus behind, amber practical lights. No writing or logo on slate. Realistic anatomy and equipment, excellent photographic detail, restrained warm amber/gold highlights with deep charcoal shadows, refined cinematic colour grade. No text, logos, watermark, collage, borders or website interface.",
+    "sourceGeneratedFile": "exec-69b67b4a-fb4a-4eba-b1d1-4b589091d661.png",
+    "file": "public/assets/slate-hq.jpg",
+    "generator": "built-in image_gen",
+    "width": 1536,
+    "height": 1024,
+    "export": "JPEG quality 92, source resolution"
+  },
+  {
+    "key": "set",
+    "prompt": "Use case: photorealistic-natural. Standalone high-resolution landscape 3:2 editorial photograph for premium film studio website. Indian actress in understated red sari on an elegant heritage interior film set, crew with cinema camera and large lights visible at edges, warm amber cinematic chiaroscuro and realistic period architectural details. Realistic anatomy and equipment, excellent photographic detail, restrained warm amber/gold highlights with deep charcoal shadows, refined cinematic colour grade. No text, logos, watermark, collage, borders or website interface.",
+    "sourceGeneratedFile": "exec-5acd087a-2583-45c9-8a21-b58bb512a8e1.png",
+    "file": "public/assets/set-hq.jpg",
+    "generator": "built-in image_gen",
+    "width": 1536,
+    "height": 1024,
+    "export": "JPEG quality 92, source resolution"
+  },
+  {
+    "key": "banner",
+    "prompt": "Use case: photorealistic-natural. Standalone high-resolution landscape 3:2 editorial photograph for premium film studio website. Wide atmospheric Indian film production on a hilltop at golden sunset, cinematographer with camera on left, back-facing director in chair nearby, layered Western Ghats hills with distant temple and palms, dark charcoal foreground and golden haze, premium cinematic photograph, no branding. Realistic anatomy and equipment, excellent photographic detail, restrained warm amber/gold highlights with deep charcoal shadows, refined cinematic colour grade. No text, logos, watermark, collage, borders or website interface.",
+    "sourceGeneratedFile": "exec-b6027a1d-b645-4422-afc5-12a10e330c58.png",
+    "file": "public/assets/banner-hq.jpg",
+    "generator": "built-in image_gen",
+    "width": 1536,
+    "height": 1024,
+    "export": "JPEG quality 92, source resolution"
+  }
+]

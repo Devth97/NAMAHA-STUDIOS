@@ -61,7 +61,7 @@ function setupDialog() {
   function showGallery(index) {
     galleryIndex=index;
     const item=gallery[index], visible=visibleGallery();
-    content.innerHTML=`<div class="dialog-image">${crop(item.image,item.title)}</div><div class="dialog-copy"><p class="eyebrow">${item.category} · ILLUSTRATIVE IMAGE</p><h2 id="dialog-title">${item.title}</h2><p>A moment from the creative world, shown using the supplied visual references.</p></div><div class="dialog-nav"><button data-previous aria-label="Previous image">← Previous</button><span>${visible.indexOf(index)+1} / ${visible.length}</span><button data-next aria-label="Next image">Next →</button></div>`;
+    content.innerHTML=`<div class="dialog-image">${crop(item.image,item.title)}</div><div class="dialog-copy"><p class="eyebrow">${item.category} · ILLUSTRATIVE IMAGE</p><h2 id="dialog-title">${item.title}</h2><p>An AI-created scene illustrating the creative world, rather than a documented Namaha production.</p></div><div class="dialog-nav"><button data-previous aria-label="Previous image">← Previous</button><span>${visible.indexOf(index)+1} / ${visible.length}</span><button data-next aria-label="Next image">Next →</button></div>`;
     content.querySelector('[data-previous]').addEventListener('click',()=>advance(-1));
     content.querySelector('[data-next]').addEventListener('click',()=>advance(1));
   }

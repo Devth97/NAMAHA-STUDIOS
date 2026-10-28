@@ -40,3 +40,5 @@
 @layer responsive { body { min-width:0; } @media(max-width:380px) { .values { grid-template-columns:1fr; } .value { border-right:0; border-bottom:1px solid var(--line); padding-bottom:20px; } } }
 
 @layer components { #pigment { position:fixed; inset:0; width:100%; height:100dvh; z-index:35; } }
+
+@layer components { img.crop { object-fit:cover; object-position:center; } .hero-art img.crop { object-fit:contain; } .story-art img.crop { object-fit:contain; } }

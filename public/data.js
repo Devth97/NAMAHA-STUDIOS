@@ -3,30 +3,30 @@ export const references = {
   services: './assets/services-reference.jpg', work: './assets/work-reference.jpg',
   gallery: './assets/gallery-reference.jpg', contact: './assets/contact-reference.jpg'
 };
-// Coordinates identify artwork within the supplied references; originals remain intact.
+// Standalone high-resolution assets; the supplied references are retained for the original logo.
 export const art = {
-  hero: ['home', 318, 61, 535, 375],
-  aboutHero: ['about', 260, 52, 593, 292],
-  servicesHero: ['services', 245, 53, 608, 344],
-  workHero: ['work', 300, 53, 553, 310],
-  galleryHero: ['gallery', 300, 54, 553, 286],
-  contactHero: ['contact', 324, 54, 529, 385],
-  journey: ['home', 397, 869, 456, 228],
-  storyboard: ['about', 344, 353, 318, 239],
-  banner: ['contact', 0, 1005, 485, 229],
-  film: ['gallery', 22, 384, 305, 124],
-  television: ['gallery', 22, 520, 278, 112],
-  event: ['gallery', 558, 520, 275, 112],
-  brand: ['gallery', 22, 642, 249, 112],
-  digital: ['gallery', 22, 765, 277, 108],
-  portrait: ['gallery', 602, 384, 230, 124],
-  crew: ['gallery', 278, 642, 274, 112],
-  location: ['gallery', 307, 765, 261, 108],
-  green: ['gallery', 579, 765, 253, 108],
-  camera: ['gallery', 310, 520, 238, 112],
-  slate: ['gallery', 303, 886, 265, 108],
-  set: ['gallery', 558, 642, 274, 112],
-  development: ['services', 438, 889, 244, 176]
+  hero: './assets/hero-hq.jpg',
+  aboutHero: './assets/aboutHero-hq.jpg',
+  servicesHero: './assets/servicesHero-hq.jpg',
+  workHero: './assets/workHero-hq.jpg',
+  galleryHero: './assets/galleryHero-hq.jpg',
+  contactHero: './assets/contactHero-hq.jpg',
+  journey: './assets/journey-hq.jpg',
+  storyboard: './assets/storyboard-hq.jpg',
+  banner: './assets/banner-hq.jpg',
+  film: './assets/film-hq.jpg',
+  television: './assets/television-hq.jpg',
+  event: './assets/event-hq.jpg',
+  brand: './assets/brand-hq.jpg',
+  digital: './assets/digital-hq.jpg',
+  portrait: './assets/portrait-hq.jpg',
+  crew: './assets/crew-hq.jpg',
+  location: './assets/location-hq.jpg',
+  green: './assets/green-hq.jpg',
+  camera: './assets/camera-hq.jpg',
+  slate: './assets/slate-hq.jpg',
+  set: './assets/set-hq.jpg',
+  development: './assets/development-hq.jpg'
 };
 export const services = [
   { name: 'Film Production', short: 'Film', icon: 'reel', image: 'film', description: 'From the first page to the final frame. Films rooted in emotion, brought to life with care.', items: ['Feature & short films', 'Script-to-screen production', 'Production management'] },

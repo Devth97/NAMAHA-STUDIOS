@@ -1,5 +1,13 @@
 # Demo verification — 28 October 2026
 
+## Image refresh
+
+The previous browser checks below describe the original demo. The subsequent image refresh replaces screenshot crops with standalone AI-generated assets while preserving the original logo and existing card/layout dimensions. New image provenance and prompts are in `image-manifest.json`. Native images include intrinsic dimensions and descriptive/empty alternative text as appropriate; hero assets are eager-loaded, supporting assets lazy-loaded. Image exports retain source resolution at JPEG quality 92.
+
+New visual asset review was performed using a contact sheet. Fresh browser layout verification could not run because local browser use is disabled in Work settings. Do not interpret the earlier browser screenshots as verification of the new assets. Existing form tests and JavaScript syntax checks pass after the refresh. AI imagery continues to be identified as illustrative content, rather than real Namaha production evidence.
+
+Final refresh checks: all 22 images are 1536 × 1024; all 22 asset references resolve in the static build output; all six page renderers produce the new native image markup; build and diff whitespace checks pass. The original logo still uses the supplied reference and has not been regenerated. All generated artwork and photos were reviewed together for subject, style and consistency.
+
 ## Passed
 
 - Static production build creates six page entry points and all required assets without package installation.

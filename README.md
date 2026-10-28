@@ -1,6 +1,6 @@
 # Namaha Studios demo
 
-Six-page static website demo using the supplied reference artwork and original Namaha logo. Warm ivory, ink and muted gold palette, responsive layouts, site-wide fading pointer pigment, work filters, concept previews, gallery filters/lightbox, and validated enquiry form.
+Six-page static website demo using standalone high-resolution AI-created illustrations and cinematic photos, alongside the original Namaha logo. Warm ivory, ink and muted gold palette, responsive layouts, site-wide fading pointer pigment, work filters, concept previews, gallery filters/lightbox, and validated enquiry form.
 
 ## Run
 
@@ -25,7 +25,7 @@ Home `/`, About `/about.html`, Services `/services.html`, Work `/work.html`, Gal
 
 ## Demo and email behaviour
 
-Projects are labelled as illustrative concepts, not client production credits. Contact details from reference screenshots are not published as verified business information. The original reference files remain intact; inline SVG viewports display selected artwork regions and the exact logo.
+Projects are labelled as illustrative concepts, not client production credits. Contact details from reference screenshots are not published as verified business information. The original reference files remain intact; an inline SVG viewport preserves the exact logo. All other imagery uses standalone high-resolution assets through native responsive images. The hero loads eagerly; supporting images load lazily. Prompts and generation provenance are recorded in `image-manifest.json`. Images were generated with the built-in image tool and exported as quality-92 JPEGs without resizing.
 
 `public/config.js` has an empty `web3formsAccessKey`. A valid form submission displays a preview confirmation and makes no provider request. No enquiry data is persisted. Set only an owner-verified public Web3Forms form identifier after confirming the recipient; never add a mailbox password. Verify delivery to the actual inbox and reply-to before launch. Honeypot protection is included; configure the provider's additional spam protection for production. Update the privacy notice and demo wording for the final live configuration.
 
