@@ -1,6 +1,7 @@
 import { hero, crop, icon, button, sectionHead, serviceStrip, arrow, esc } from './components.js';
 import { services, projects, gallery } from './data.js';
 import { serviceTypes } from './enquiry.js';
+import { movingFilmStrip } from './film-strip.js';
 
 export function projectCard(project, index, feature = false) {
   return `<button class="project-card ${feature ? 'featured-card' : ''} reveal" data-project="${index}" aria-label="Explore ${esc(project.title)} — illustrative concept">${crop(project.image, '')}<span class="project-shade"></span><span class="project-info"><span class="project-category">${project.category} · CONCEPT</span><span class="project-title">${project.title}</span></span><span class="project-arrow" aria-hidden="true">↗</span></button>`;
@@ -9,6 +10,7 @@ function home() {
   return `${hero({ home: true, title: 'Stories<br><em>that move</em><br>the world<span class="gold-dot">.</span>', copy: 'We bring ideas to life through powerful storytelling, thoughtful visuals and a little bit of wonder.' })}
   <section class="section services-intro" id="next">${sectionHead('THE POSSIBILITIES', 'One studio.<br class="mobile-break"> Many ways to tell a story.', '<p>From the first spark to the final frame,<br>we create with purpose.</p>')}${serviceStrip()}</section>
   <section class="section work-section">${sectionHead('SELECTED PERSPECTIVES', 'Stories in every frame.', '<a class="quiet-link" href="./work.html">Explore all work '+arrow+'</a>')}<div class="featured-grid">${[projects[0], projects[3], projects[2]].map(project => projectCard(project, projects.indexOf(project), true)).join('')}</div><p class="caption">A glimpse of the possibilities — illustrative concepts for this studio preview.</p></section>
+  ${movingFilmStrip()}
   <section class="section home-about"><div class="about-visual reveal">${crop('journey', 'Illustrated film reel winding through a landscape with a production crew')}<span class="handwritten">From ideas<br>to impact.</span></div><div class="about-copy reveal"><p class="eyebrow">MEET NAMAHA</p><h2>Creative at heart.<br>Collaborative by nature.</h2><p>We’re a film, television and entertainment studio with a simple belief: the best stories bring people closer.</p><p>Bringing together ideas, people and perspectives, we shape meaningful visual experiences — from concept to screen.</p>${button('Our story', './about.html', 'outline')}</div></section>
   <div class="manifesto section reveal"><span>OUR KIND OF MAGIC</span><p>A good story makes you feel.<br><em>A great one stays with you.</em></p><span class="star-mark" aria-hidden="true">✳</span></div>`;
 }

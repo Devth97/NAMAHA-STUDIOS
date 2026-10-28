@@ -42,4 +42,12 @@ Projects are labelled as illustrative concepts, not client production credits. C
 - Remove preview `noindex,nofollow` and robots exclusion when appropriate; configure canonical URLs, social sharing images and sitemap for the final domain.
 - Record both the pushed source commit and verified deployment separately.
 
-No hosting destination has been configured and nothing has been pushed or published by this build.
+## Moving film cards
+
+Home and Work include a continuous film-card strip. Hover, keyboard focus or the explicit pause button pauses the strip. Reduced-motion preferences replace animation with a manually scrollable row. Images are illustrative studio concepts.
+
+## GitHub and Netlify
+
+Repository: https://github.com/Devth97/NAMAHA-STUDIOS.git . Connect this repository in Netlify with repository root as the base directory. The checked-in `netlify.toml` sets Node 24, build command `npm run build`, and publish directory `dist`. Do not set `public` as the publish directory: the build creates the six HTML route entry points in `dist`.
+
+The GitHub push and Netlify deployment are separate steps. Netlify deployment is being handled by the user. Live email delivery remains unconfigured until an owner-verified form key is supplied. Preview indexing exclusions intentionally remain enabled.
