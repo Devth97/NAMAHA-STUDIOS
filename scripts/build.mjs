@@ -1,0 +1,11 @@
+import { cp, mkdir, readFile, writeFile } from 'node:fs/promises';
+import { fileURLToPath } from 'node:url';
+const source=fileURLToPath(new URL('../public/',import.meta.url));
+const target=fileURLToPath(new URL('../dist/',import.meta.url));
+await mkdir(target,{recursive:true});
+await cp(source,target,{recursive:true});
+const template=await readFile(new URL('../public/index.html',import.meta.url),'utf8');
+const titles={about:'Our Story',services:'From Ideas to Impact',work:'Our Work',gallery:'Behind the Lens',contact:'Let’s Create Together'};
+for(const [page,title] of Object.entries(titles))await writeFile(new URL(`../dist/${page}.html`,import.meta.url),template.replace('<title>Namaha Studios — Stories that move the world</title>',`<title>Namaha Studios — ${title}</title>`));
+await writeFile(new URL('../dist/robots.txt',import.meta.url),'User-agent: *\nDisallow: /\n');
+console.log('Built six-page static demo in dist/. No archive created.');
