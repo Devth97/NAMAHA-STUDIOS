@@ -1,3 +1,7 @@
+# NAMAHA-STUDIOS
+
+Namaha Studios — studio website.
+
 # Namaha Studios demo
 
 Six-page static website demo using standalone high-resolution AI-created illustrations and cinematic photos, alongside the original Namaha logo. Warm ivory, ink and muted gold palette, responsive layouts, site-wide fading pointer pigment, work filters, concept previews, gallery filters/lightbox, and validated enquiry form.
