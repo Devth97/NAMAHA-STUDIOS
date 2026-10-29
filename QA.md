@@ -52,3 +52,6 @@ Final refresh checks: all 22 images are 1536 × 1024; all 22 asset references re
 - Imagery is cropped for presentation from the supplied reference JPEGs. Use higher-resolution original logo/artwork and approved production stills for the final client launch.
 
 Local QA screenshots are in ignored `qa/`; generated build output is in ignored `dist/`.
+
+## 29 October 2026 - kite cursor animation
+Replaced the pigment overlay with three original SVG paper kites and animated ribbon tails. Retained passive single-touch support, pause/resume and reduced-motion handling. Flight updates cap long frame gaps and stop after two idle seconds or on blur/visibility loss. Eleven unit tests and the six-route build/asset verification pass. Automated Chrome checks cover visible canvas output across all six pages, pause/resume, idle clearing, reduced motion, touch input and no horizontal overflow at 320, 768, 1024 and 1440 pixels. Desktop/mobile screenshots reviewed. Physical-device testing remains outstanding. Existing line-art work in data.js and its image files was preserved.

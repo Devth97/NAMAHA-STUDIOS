@@ -1,7 +1,7 @@
 import { header, footer, closing, dialogShell } from './components.js';
 import { pages } from './pages.js';
 import { setupInteractions } from './interactions.js';
-import { initPigment } from './pigment.js';
+import { initKites } from './kites.js';
 import { setupFilmStrip, movingFilmStrip } from './film-strip.js';
 
 const slug = location.pathname.split('/').filter(Boolean).pop()?.replace('.html','') || 'home';
@@ -10,8 +10,8 @@ const titles = {home:'Stories that move the world',about:'Our Story',services:'F
 document.title = `Namaha Studios — ${titles[page]}`;
 document.querySelector('#app').innerHTML = `<div id="top"></div>${header(page)}<main id="main">${pages[page]()}${page === 'work' ? movingFilmStrip() : ''}${closing(page)}</main>${footer()}${dialogShell()}`;
 // One viewport overlay follows the visitor across the entire page.
-document.body.prepend(document.querySelector('#pigment'));
+document.body.prepend(document.querySelector('#kites'));
 if (page === 'contact') document.querySelector('.hero-actions a').setAttribute('href', '#next');
 setupInteractions();
 setupFilmStrip();
-initPigment(document.querySelector('#pigment'));
+initKites(document.querySelector('#kites'));

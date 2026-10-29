@@ -4,7 +4,7 @@ Namaha Studios — studio website.
 
 # Namaha Studios demo
 
-Six-page static website demo using standalone high-resolution AI-created illustrations and cinematic photos, alongside the original Namaha logo. Warm ivory, ink and muted gold palette, responsive layouts, site-wide fading pointer pigment, work filters, concept previews, gallery filters/lightbox, and validated enquiry form.
+Six-page static website demo using standalone high-resolution AI-created illustrations and cinematic photos, alongside the original Namaha logo. Warm ivory, ink and muted gold palette, responsive layouts, three flowing cursor-following kites, work filters, concept previews, gallery filters/lightbox, and validated enquiry form.
 
 ## Run
 
@@ -38,7 +38,7 @@ Every generated asset also has 480px and 960px progressive JPEG delivery variant
 
 ## Motion
 
-`public/pigment.js` drives one fixed, pointer-transparent viewport canvas across all sections. It responds to mouse movement or single-finger touch movement, diffuses/fades existing trails, clears fully after idle, caps particles and render width, and stops when the page is hidden. Touch listeners are passive so native scrolling continues; pinch gestures do not emit new pigment. Mobile uses a smaller particle/render budget. Reduced-motion preferences disable the effect. A pause control is available in the hero footer on desktop and mobile.
+`public/kites.js` drives a fixed, pointer-transparent viewport canvas with three paper kites in gold, terracotta and sage. The three original SVG assets live in `public/assets/kite-*.svg`; their ribbon tails are drawn dynamically. The kites follow mouse or single-finger movement with staggered easing and sway, fade after inactivity and clear after two seconds. Passive touch listeners preserve native scrolling, while multitouch clears the effect. Reduced-motion preferences disable it. The hero pause control works on desktop and mobile. Rendering stops when the page is hidden, blurred, or the pointer leaves, and the pixel ratio is capped for performance.
 
 `public/mobile-fixes.css` keeps mobile hero illustrations within their content column at their natural 3:2 proportions with automatic image height, avoiding oversized images or clipped edges.
 
