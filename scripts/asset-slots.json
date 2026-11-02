@@ -1,0 +1,194 @@
+{
+  "note": "Artwork slots awaiting generated images. Until the real image is added, each slot holds a copy of `placeholder`. Prompts live in ASSET_PROMPTS.md. Drop the generated PNG/JPG into public/assets/source/ using the `source` name, then run `npm run assets`.",
+  "slots": [
+    {
+      "id": "A1",
+      "source": "showreel.png",
+      "file": "showreel-hq.jpg",
+      "placeholder": "banner-hq.jpg",
+      "use": "Home showreel poster"
+    },
+    {
+      "id": "B1",
+      "source": "project-01.png",
+      "file": "project-01-hq.jpg",
+      "placeholder": "film-hq.jpg",
+      "use": "Work: The art of a new beginning (Films)"
+    },
+    {
+      "id": "B2",
+      "source": "project-02.png",
+      "file": "project-02-hq.jpg",
+      "placeholder": "television-hq.jpg",
+      "use": "Work: Conversations that connect (Television)"
+    },
+    {
+      "id": "B3",
+      "source": "project-03.png",
+      "file": "project-03-hq.jpg",
+      "placeholder": "brand-hq.jpg",
+      "use": "Work: A taste of tradition (Brand films)"
+    },
+    {
+      "id": "B4",
+      "source": "project-04.png",
+      "file": "project-04-hq.jpg",
+      "placeholder": "event-hq.jpg",
+      "use": "Work: When the lights come alive (Events)"
+    },
+    {
+      "id": "B5",
+      "source": "project-05.png",
+      "file": "project-05-hq.jpg",
+      "placeholder": "portrait-hq.jpg",
+      "use": "Work: Stories, beyond the screen (Digital)"
+    },
+    {
+      "id": "B6",
+      "source": "project-06.png",
+      "file": "project-06-hq.jpg",
+      "placeholder": "location-hq.jpg",
+      "use": "Work: Somewhere along the way (Films)"
+    },
+    {
+      "id": "C1",
+      "source": "gallery-01.png",
+      "file": "gallery-01-hq.jpg",
+      "placeholder": "film-hq.jpg",
+      "use": "Gallery: Chasing the first light"
+    },
+    {
+      "id": "C2",
+      "source": "gallery-02.png",
+      "file": "gallery-02-hq.jpg",
+      "placeholder": "television-hq.jpg",
+      "use": "Gallery: Between takes"
+    },
+    {
+      "id": "C3",
+      "source": "gallery-03.png",
+      "file": "gallery-03-hq.jpg",
+      "placeholder": "event-hq.jpg",
+      "use": "Gallery: The energy of a live audience"
+    },
+    {
+      "id": "C4",
+      "source": "gallery-04.png",
+      "file": "gallery-04-hq.jpg",
+      "placeholder": "brand-hq.jpg",
+      "use": "Gallery: Details tell a story"
+    },
+    {
+      "id": "C5",
+      "source": "gallery-05.png",
+      "file": "gallery-05-hq.jpg",
+      "placeholder": "digital-hq.jpg",
+      "use": "Gallery: Where the pieces come together"
+    },
+    {
+      "id": "D1",
+      "source": "process-discover.png",
+      "file": "process-discover-line.jpg",
+      "placeholder": "storyboard-line.jpg",
+      "use": "Services process: Discover"
+    },
+    {
+      "id": "D2",
+      "source": "process-develop.png",
+      "file": "process-develop-line.jpg",
+      "placeholder": "development-line.jpg",
+      "use": "Services process: Develop"
+    },
+    {
+      "id": "D3",
+      "source": "process-create.png",
+      "file": "process-create-line.jpg",
+      "placeholder": "hero-line.jpg",
+      "use": "Services process: Create"
+    },
+    {
+      "id": "D4",
+      "source": "process-deliver.png",
+      "file": "process-deliver-line.jpg",
+      "placeholder": "journey-line.jpg",
+      "use": "Services process: Deliver"
+    },
+    {
+      "id": "E1",
+      "source": "notfound.png",
+      "file": "notfound-line.jpg",
+      "placeholder": "galleryHero-line.jpg",
+      "use": "404 page illustration"
+    },
+    {
+      "id": "E2",
+      "source": "success.png",
+      "file": "success-line.jpg",
+      "placeholder": "contactHero-line.jpg",
+      "use": "Enquiry success illustration"
+    },
+    {
+      "id": "H1",
+      "source": "hero.png",
+      "file": "hero-line.jpg",
+      "placeholder": "illustration-originals/hero-line.jpg",
+      "use": "Detailed editorial illustration: hero"
+    },
+    {
+      "id": "H2",
+      "source": "aboutHero.png",
+      "file": "aboutHero-line.jpg",
+      "placeholder": "illustration-originals/aboutHero-line.jpg",
+      "use": "Detailed editorial illustration: aboutHero"
+    },
+    {
+      "id": "H3",
+      "source": "servicesHero.png",
+      "file": "servicesHero-line.jpg",
+      "placeholder": "illustration-originals/servicesHero-line.jpg",
+      "use": "Detailed editorial illustration: servicesHero"
+    },
+    {
+      "id": "H4",
+      "source": "workHero.png",
+      "file": "workHero-line.jpg",
+      "placeholder": "illustration-originals/workHero-line.jpg",
+      "use": "Detailed editorial illustration: workHero"
+    },
+    {
+      "id": "H5",
+      "source": "galleryHero.png",
+      "file": "galleryHero-line.jpg",
+      "placeholder": "illustration-originals/galleryHero-line.jpg",
+      "use": "Detailed editorial illustration: galleryHero"
+    },
+    {
+      "id": "H6",
+      "source": "contactHero.png",
+      "file": "contactHero-line.jpg",
+      "placeholder": "illustration-originals/contactHero-line.jpg",
+      "use": "Detailed editorial illustration: contactHero"
+    },
+    {
+      "id": "H7",
+      "source": "journey.png",
+      "file": "journey-line.jpg",
+      "placeholder": "illustration-originals/journey-line.jpg",
+      "use": "Detailed editorial illustration: journey"
+    },
+    {
+      "id": "H8",
+      "source": "storyboard.png",
+      "file": "storyboard-line.jpg",
+      "placeholder": "illustration-originals/storyboard-line.jpg",
+      "use": "Detailed editorial illustration: storyboard"
+    },
+    {
+      "id": "H9",
+      "source": "development.png",
+      "file": "development-line.jpg",
+      "placeholder": "illustration-originals/development-line.jpg",
+      "use": "Detailed editorial illustration: development"
+    }
+  ]
+}

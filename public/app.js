@@ -1,17 +1,16 @@
-import { header, footer, closing, dialogShell } from './components.js';
-import { pages } from './pages.js';
+import { renderBody, resolvePage, pageMeta } from './render.js';
 import { setupInteractions } from './interactions.js';
 import { initKites } from './kites.js';
-import { setupFilmStrip, movingFilmStrip } from './film-strip.js';
+import { setupFilmStrip } from './film-strip.js';
 
-const slug = location.pathname.split('/').filter(Boolean).pop()?.replace('.html','') || 'home';
-const page = Object.hasOwn(pages,slug) ? slug : 'home';
-const titles = {home:'Stories that move the world',about:'Our Story',services:'From Ideas to Impact',work:'Our Work',gallery:'Behind the Lens',contact:'Let’s Create Together'};
-document.title = `Namaha Studios — ${titles[page]}`;
-document.querySelector('#app').innerHTML = `<div id="top"></div>${header(page)}<main id="main">${pages[page]()}${page === 'work' ? movingFilmStrip() : ''}${closing(page)}</main>${footer()}${dialogShell()}`;
-// One viewport overlay follows the visitor across the entire page.
-document.body.prepend(document.querySelector('#kites'));
-if (page === 'contact') document.querySelector('.hero-actions a').setAttribute('href', '#next');
+const root = document.querySelector('#app');
+// Production pages arrive fully prerendered; render in the browser only as a fallback.
+if (!root.hasAttribute('data-prerendered')) {
+  const page = resolvePage(location.pathname);
+  document.title = pageMeta[page].title;
+  root.innerHTML = renderBody(page);
+}
+document.documentElement.classList.add('js');
 setupInteractions();
 setupFilmStrip();
 initKites(document.querySelector('#kites'));
