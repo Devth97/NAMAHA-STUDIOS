@@ -2,6 +2,7 @@ import { renderBody, resolvePage, pageMeta } from './render.js';
 import { setupInteractions } from './interactions.js';
 import { initKites } from './kites.js';
 import { setupFilmStrip } from './film-strip.js';
+import { initIxora } from './ixora.js';
 
 const root = document.querySelector('#app');
 // Production pages arrive fully prerendered; render in the browser only as a fallback.
@@ -14,3 +15,4 @@ document.documentElement.classList.add('js');
 setupInteractions();
 setupFilmStrip();
 initKites(document.querySelector('#kites'));
+initIxora();

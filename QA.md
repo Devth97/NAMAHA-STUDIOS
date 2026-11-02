@@ -89,3 +89,9 @@ Replaced the pigment overlay with three original SVG paper kites and animated ri
 - All 18 unit tests and production verification pass: seven prerendered pages, 267 local references and all 40 referenced artworks with responsive delivery variants.
 - Chromium verified seven pages at 320, 390, 768 and 1440px without page overflow. Checked WhatsApp URL, demo label and new-tab behaviour. Form browser tests cover required fields, demo no-send with retained values, mocked provider rejection/retry, and mocked success with cleared fields. No real messages or emails were sent.
 - Visually reviewed all 15 illustrations together and Home/Contact desktop/phone layouts. Local review files are in ignored `qa/`. Browser tests used intercepted local build files and omitted Google Fonts because network access was restricted; remote font loading, physical devices and live email delivery remain unverified.
+
+## Light outline and ixora review preview — 2 November 2026
+
+On `preview/minimal-ixora`, all 15 illustrations now use minimal outlines with modest interior detail. The supplied orange logo is used directly. One kite replaces the three-kite flight. One isolated ixora flower follows a reversible scroll path to the header logo; pause and reduced-motion preferences govern both decorations. `MINIMAL_PREVIEW.md` records the assets, prompts and review scope.
+
+All 19 unit tests and build verification pass. Chromium checked seven routes at 320/390/768/1440px with no overflow or application errors, plus flower landing, reversal, pause/resume and reduced motion. Desktop and mobile screenshots were visually reviewed. The local preview returned HTTP 200 at `http://127.0.0.1:4175/`. Font/network and physical-device limits remain as documented above. This preview has not been pushed to main.

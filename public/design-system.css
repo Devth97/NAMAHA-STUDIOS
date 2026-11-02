@@ -8,6 +8,10 @@
 @view-transition { navigation: auto; }
 
 @layer refine {
+  .supplied-logo { filter: none; mix-blend-mode: multiply; aspect-ratio: 240 / 75; }
+  .ixora-flight { position: fixed; top: 0; left: 0; z-index: 45; pointer-events: none; object-fit: contain; will-change: transform; }
+  html.menu-open .ixora-flight, html.modal-open .ixora-flight { visibility: hidden; }
+  @media (prefers-reduced-motion: reduce) { .ixora-flight { display: none !important; } }
   .enquiry-title { font-family: var(--serif); font-size: clamp(30px, 3vw, 42px); line-height: 1.08; margin: 24px 0 12px; }
   .enquiry-intro { color: var(--muted); font-size: 14px; margin-bottom: 22px; }
   .contact-whatsapp { margin: 28px 0; }

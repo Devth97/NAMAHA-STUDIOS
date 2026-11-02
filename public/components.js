@@ -38,7 +38,7 @@ export function crop(key, label = '', className = '', sizes = '(max-width: 760px
 
 // Brand lockup: the hand-lettered Namaha mark (extracted from the supplied logo) with crisp, live
 // set type for STUDIOS and the descriptor. Replace with the studio's original vector when supplied.
-export const logo = (tone = 'ink') => `<svg class="logo" viewBox="0 0 240 91" aria-hidden="true" focusable="false"><image href="./assets/namaha-script-${tone}.png" width="240" height="91"/><text class="logo-studios" x="51.4" y="63.6" textLength="151" lengthAdjust="spacing">STUDIOS</text><text class="logo-descriptor" x="7.6" y="83.4" textLength="225" lengthAdjust="spacing">FILM | TELEVISION | ENTERTAINMENT</text></svg>`;
+export const logo = () => `<svg class="logo supplied-logo" viewBox="0 0 240 75" aria-hidden="true" focusable="false"><svg class="brand-symbol" x="0" y="1" width="54" height="70" viewBox="215 180 700 945"><image href="./assets/namaha-client-logo.jpg" width="1131" height="1600"/></svg><svg x="66" y="16" width="170" height="47" viewBox="178 1150 800 255"><image href="./assets/namaha-client-logo.jpg" width="1131" height="1600"/></svg></svg>`;
 export const button = (label, href, style = '') => `<a class="button ${style}" href="${href}"><span class="button-label">${label}</span>${arrow}</a>`;
 export function whatsappButton(floating = false) {
   const href = whatsappHref(siteConfig.whatsappNumber, siteConfig.whatsappMessage);

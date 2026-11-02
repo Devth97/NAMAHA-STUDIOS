@@ -1,5 +1,7 @@
 # NAMAHA-STUDIOS
 
+Current local review: `preview/minimal-ixora` uses lighter outlines with a little interior detail, one kite and the ixora-to-logo scroll trial. See `MINIMAL_PREVIEW.md`. Main remains on the previous published version while this trial is reviewed.
+
 Namaha Studios — studio website (design preview).
 
 Six-page static site plus a 404 page. Warm ivory, ink and muted gold editorial design with Instrument Serif and Manrope typography, detailed pen-and-ink illustrations, cinematic photography, a showreel band, three cursor-following paper kites, work filters, a bento gallery with lightbox, a validated enquiry form and labelled demo WhatsApp links.

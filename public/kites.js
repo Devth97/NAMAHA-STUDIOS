@@ -1,4 +1,4 @@
-// Three paper kites share one decorative, pointer-transparent canvas.
+// One light paper kite on a decorative, pointer-transparent canvas.
 export function bindKiteInput(target, onMove, onEnd) {
   target.addEventListener('pointermove', event => {
     if (event.pointerType !== 'touch') onMove({ x: event.clientX, y: event.clientY });
@@ -14,7 +14,7 @@ export function bindKiteInput(target, onMove, onEnd) {
   target.addEventListener('touchcancel', onEnd, { passive: true });
 }
 
-const colours = ['#b18a48', '#b76d53', '#77856b'];
+const colours = ['#b18a48'];
 export function createFlight(point) {
   return colours.map((colour, i) => ({
     x: point.x - 38 - i * 38, y: point.y + 18 + i * 25,
@@ -44,10 +44,11 @@ export function initKites(canvas) {
   const control = document.createElement('button');
   control.type = 'button';
   control.className = 'motion-toggle';
+  control.setAttribute('aria-description', 'Controls the paper kite and ixora flower animation.');
   document.querySelector('.hero-bottom')?.prepend(control);
   let enabled = true, frame = 0, lastTime = 0, lastMove = 0, width = 1, height = 1;
   let flight = [], target = null;
-  const sprites = ['gold', 'terracotta', 'sage'].map(colour => {
+  const sprites = ['gold'].map(colour => {
     const sprite = new Image();
     sprite.src = new URL(`./assets/kite-${colour}.svg`, import.meta.url).href;
     return sprite;
@@ -63,7 +64,8 @@ export function initKites(canvas) {
     control.hidden = motion.matches;
     control.setAttribute('aria-pressed', String(enabled));
     control.setAttribute('aria-label', enabled ? 'Pause kite animation' : 'Resume kite animation');
-    control.textContent = enabled ? 'KITES IN MOTION' : 'KITES PAUSED';
+    control.textContent = enabled ? 'KITE IN MOTION' : 'KITE PAUSED';
+    window.dispatchEvent(new CustomEvent('studio-motion', { detail: enabled }));
   }
   function resize() {
     stop();

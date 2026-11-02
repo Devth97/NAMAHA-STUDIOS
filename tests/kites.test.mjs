@@ -2,16 +2,16 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { createFlight, advanceFlight } from '../public/kites.js';
 
-test('a flight stays bounded to three kites and follows a moving target smoothly', () => {
+test('a flight contains exactly one kite and follows a moving target smoothly', () => {
   const flight = createFlight({ x: 200, y: 200 });
   const before = flight.map(kite => kite.x);
   advanceFlight(flight, { x: 600, y: 300 }, 16.667, 100);
-  assert.equal(flight.length, 3);
+  assert.equal(flight.length, 1);
   flight.forEach((kite, i) => {
     assert.ok(kite.x > before[i] && kite.x < 600);
     assert.ok(Number.isFinite(kite.angle));
   });
-  assert.equal(new Set(flight.map(kite => kite.x)).size, 3);
+  assert.equal(new Set(flight.map(kite => kite.x)).size, 1);
 });
 
 test('long frame gaps cannot send a kite into an unstable position', () => {

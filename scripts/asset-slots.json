@@ -87,108 +87,108 @@
     },
     {
       "id": "D1",
-      "source": "process-discover.png",
+      "source": "process-discover-minimal.png",
       "file": "process-discover-line.jpg",
       "placeholder": "storyboard-line.jpg",
       "use": "Services process: Discover"
     },
     {
       "id": "D2",
-      "source": "process-develop.png",
+      "source": "process-develop-minimal.png",
       "file": "process-develop-line.jpg",
       "placeholder": "development-line.jpg",
       "use": "Services process: Develop"
     },
     {
       "id": "D3",
-      "source": "process-create.png",
+      "source": "process-create-minimal.png",
       "file": "process-create-line.jpg",
       "placeholder": "hero-line.jpg",
       "use": "Services process: Create"
     },
     {
       "id": "D4",
-      "source": "process-deliver.png",
+      "source": "process-deliver-minimal.png",
       "file": "process-deliver-line.jpg",
       "placeholder": "journey-line.jpg",
       "use": "Services process: Deliver"
     },
     {
       "id": "E1",
-      "source": "notfound.png",
+      "source": "notfound-minimal.png",
       "file": "notfound-line.jpg",
       "placeholder": "galleryHero-line.jpg",
       "use": "404 page illustration"
     },
     {
       "id": "E2",
-      "source": "success.png",
+      "source": "success-minimal.png",
       "file": "success-line.jpg",
       "placeholder": "contactHero-line.jpg",
       "use": "Enquiry success illustration"
     },
     {
       "id": "H1",
-      "source": "hero.png",
+      "source": "hero-minimal.jpg",
       "file": "hero-line.jpg",
       "placeholder": "illustration-originals/hero-line.jpg",
-      "use": "Detailed editorial illustration: hero"
+      "use": "Light outline illustration: hero"
     },
     {
       "id": "H2",
-      "source": "aboutHero.png",
+      "source": "aboutHero-minimal.jpg",
       "file": "aboutHero-line.jpg",
       "placeholder": "illustration-originals/aboutHero-line.jpg",
-      "use": "Detailed editorial illustration: aboutHero"
+      "use": "Light outline illustration: aboutHero"
     },
     {
       "id": "H3",
-      "source": "servicesHero.png",
+      "source": "servicesHero-minimal.jpg",
       "file": "servicesHero-line.jpg",
       "placeholder": "illustration-originals/servicesHero-line.jpg",
-      "use": "Detailed editorial illustration: servicesHero"
+      "use": "Light outline illustration: servicesHero"
     },
     {
       "id": "H4",
-      "source": "workHero.png",
+      "source": "workHero-minimal.jpg",
       "file": "workHero-line.jpg",
       "placeholder": "illustration-originals/workHero-line.jpg",
-      "use": "Detailed editorial illustration: workHero"
+      "use": "Light outline illustration: workHero"
     },
     {
       "id": "H5",
-      "source": "galleryHero.png",
+      "source": "galleryHero-minimal.jpg",
       "file": "galleryHero-line.jpg",
       "placeholder": "illustration-originals/galleryHero-line.jpg",
-      "use": "Detailed editorial illustration: galleryHero"
+      "use": "Light outline illustration: galleryHero"
     },
     {
       "id": "H6",
-      "source": "contactHero.png",
+      "source": "contactHero-minimal.jpg",
       "file": "contactHero-line.jpg",
       "placeholder": "illustration-originals/contactHero-line.jpg",
-      "use": "Detailed editorial illustration: contactHero"
+      "use": "Light outline illustration: contactHero"
     },
     {
       "id": "H7",
-      "source": "journey.png",
+      "source": "journey-minimal.jpg",
       "file": "journey-line.jpg",
       "placeholder": "illustration-originals/journey-line.jpg",
-      "use": "Detailed editorial illustration: journey"
+      "use": "Light outline illustration: journey"
     },
     {
       "id": "H8",
-      "source": "storyboard.png",
+      "source": "storyboard-minimal.jpg",
       "file": "storyboard-line.jpg",
       "placeholder": "illustration-originals/storyboard-line.jpg",
-      "use": "Detailed editorial illustration: storyboard"
+      "use": "Light outline illustration: storyboard"
     },
     {
       "id": "H9",
-      "source": "development.png",
+      "source": "development-minimal.jpg",
       "file": "development-line.jpg",
       "placeholder": "illustration-originals/development-line.jpg",
-      "use": "Detailed editorial illustration: development"
+      "use": "Light outline illustration: development"
     }
   ]
 }
