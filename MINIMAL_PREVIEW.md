@@ -4,6 +4,12 @@ Latest revision: ixora is now click feedback, not a scroll decoration. All UI ic
 
 Current direction: minimal line drawings with a little interior detail. Use thin contours and a few camera features, facial/profile lines and clothing folds. Keep backgrounds open. Avoid dark fills, heavy strokes, crosshatching, engraving and dense scenery. The client's camera/clapperboard and director sketches set the detail ceiling. This supersedes the earlier detailed illustration direction in `ILLUSTRATION_PROMPTS.md`.
 
+Latest hero refinement: `public/assets/source/hero-refined.png` is an imagegen edit of the existing Home drawing, adding reel holes, lens rings and camera controls, tripod joints, light clothing seams, chair stitching, a script page, a small distant tiled-roof outline and a few grasses. The camera/director layout, light line work, open white background and small ochre sun remain. Delivery files are `public/assets/hero-line.jpg` and its responsive JPEG/WebP siblings. Prompt: retain the existing airy 3:2 composition; add about 25% more hand-sketched line detail; keep at least 65% open space; no dark fills, heavy outlines, dense hatching, shaded volumes, text or elaborate scenery.
+
+The supplied logo's near-white paper is removed at display time with an SVG alpha filter, masked to the original image alpha. This preserves the supplied artwork and prevents light rectangles or opaque filter padding over the translucent header. The WhatsApp symbol now uses the recognizable Simple Icons v13.21.0 brand path (CC0); the other interface symbols retain their hand-drawn contours.
+
+Sun refinement: the final Home source is `public/assets/source/hero-refined-sketched-sun.png`, created with the built-in image editor from `hero-refined.png`. Prompt: change only the small filled sun into fine, uneven diagonal ochre/golden-orange pencil strokes with visible white gaps and a delicate broken circular edge; preserve its position/size and all other illustration details exactly; no flat fill, gradients, texture, text or added scenery. The client's latest sketch was used only as a reference for the sun treatment. The pipeline continues to deliver `public/assets/hero-line.jpg` plus its responsive JPEG/WebP variants.
+
 ## Artwork
 
 The nine earlier outline illustrations are restored from `public/assets/illustration-originals/`. Their local editable pipeline inputs are `public/assets/source/{name}-minimal.jpg` (hero, aboutHero, servicesHero, workHero, galleryHero, contactHero, journey, storyboard and development).

@@ -8,7 +8,7 @@
 @view-transition { navigation: none; }
 
 @layer refine {
-  .supplied-logo { filter: none; mix-blend-mode: multiply; aspect-ratio: 240 / 75; }
+  .supplied-logo { filter: none; mix-blend-mode: normal; aspect-ratio: 240 / 75; }
   .ixora-flight { position: fixed; top: 0; left: 0; z-index: 45; pointer-events: none; object-fit: contain; will-change: transform; }
   html.menu-open .ixora-flight, html.modal-open .ixora-flight { visibility: hidden; }
   @media (prefers-reduced-motion: reduce) { .ixora-flight { display: none !important; } }
