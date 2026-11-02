@@ -1,5 +1,5 @@
 {
-  "note": "Artwork slots awaiting generated images. Until the real image is added, each slot holds a copy of `placeholder`. Prompts live in ASSET_PROMPTS.md. Drop the generated PNG/JPG into public/assets/source/ using the `source` name, then run `npm run assets`.",
+  "note": "Current illustration direction: LINE_DRAWING_STANDARD.md. All line-art colour is made from separated pencil strokes. Source artwork is local; responsive masters and variants are versioned.",
   "slots": [
     {
       "id": "A1",
@@ -87,108 +87,108 @@
     },
     {
       "id": "D1",
-      "source": "process-discover-minimal.png",
-      "file": "process-discover-line.jpg",
+      "source": "process-discover-consistent.png",
+      "file": "process-discover-consistent-line.jpg",
       "placeholder": "storyboard-line.jpg",
-      "use": "Services process: Discover"
+      "use": "Hand-sketched line illustration: process-discover"
     },
     {
       "id": "D2",
-      "source": "process-develop-minimal.png",
-      "file": "process-develop-line.jpg",
+      "source": "process-develop-consistent.png",
+      "file": "process-develop-consistent-line.jpg",
       "placeholder": "development-line.jpg",
-      "use": "Services process: Develop"
+      "use": "Hand-sketched line illustration: process-develop"
     },
     {
       "id": "D3",
-      "source": "process-create-minimal.png",
-      "file": "process-create-line.jpg",
+      "source": "process-create-consistent.png",
+      "file": "process-create-consistent-line.jpg",
       "placeholder": "hero-line.jpg",
-      "use": "Services process: Create"
+      "use": "Hand-sketched line illustration: process-create"
     },
     {
       "id": "D4",
-      "source": "process-deliver-minimal.png",
-      "file": "process-deliver-line.jpg",
+      "source": "process-deliver-consistent.png",
+      "file": "process-deliver-consistent-line.jpg",
       "placeholder": "journey-line.jpg",
-      "use": "Services process: Deliver"
+      "use": "Hand-sketched line illustration: process-deliver"
     },
     {
       "id": "E1",
-      "source": "notfound-minimal.png",
-      "file": "notfound-line.jpg",
+      "source": "notfound-consistent.png",
+      "file": "notfound-consistent-line.jpg",
       "placeholder": "galleryHero-line.jpg",
-      "use": "404 page illustration"
+      "use": "Hand-sketched line illustration: notfound"
     },
     {
       "id": "E2",
-      "source": "success-minimal.png",
-      "file": "success-line.jpg",
+      "source": "success-consistent.png",
+      "file": "success-consistent-line.jpg",
       "placeholder": "contactHero-line.jpg",
-      "use": "Enquiry success illustration"
+      "use": "Hand-sketched line illustration: success"
     },
     {
       "id": "H1",
       "source": "hero-refined-sketched-sun.png",
-      "file": "hero-line.jpg",
+      "file": "hero-consistent-line.jpg",
       "placeholder": "illustration-originals/hero-line.jpg",
-      "use": "Light outline illustration: hero"
+      "use": "Hand-sketched line illustration: hero"
     },
     {
       "id": "H2",
-      "source": "aboutHero-minimal.jpg",
-      "file": "aboutHero-line.jpg",
+      "source": "aboutHero-consistent.png",
+      "file": "aboutHero-consistent-line.jpg",
       "placeholder": "illustration-originals/aboutHero-line.jpg",
-      "use": "Light outline illustration: aboutHero"
+      "use": "Hand-sketched line illustration: aboutHero"
     },
     {
       "id": "H3",
-      "source": "servicesHero-minimal.jpg",
-      "file": "servicesHero-line.jpg",
+      "source": "servicesHero-consistent.png",
+      "file": "servicesHero-consistent-line.jpg",
       "placeholder": "illustration-originals/servicesHero-line.jpg",
-      "use": "Light outline illustration: servicesHero"
+      "use": "Hand-sketched line illustration: servicesHero"
     },
     {
       "id": "H4",
-      "source": "workHero-minimal.jpg",
-      "file": "workHero-line.jpg",
+      "source": "workHero-consistent.png",
+      "file": "workHero-consistent-line.jpg",
       "placeholder": "illustration-originals/workHero-line.jpg",
-      "use": "Light outline illustration: workHero"
+      "use": "Hand-sketched line illustration: workHero"
     },
     {
       "id": "H5",
-      "source": "galleryHero-minimal.jpg",
-      "file": "galleryHero-line.jpg",
+      "source": "galleryHero-consistent.png",
+      "file": "galleryHero-consistent-line.jpg",
       "placeholder": "illustration-originals/galleryHero-line.jpg",
-      "use": "Light outline illustration: galleryHero"
+      "use": "Hand-sketched line illustration: galleryHero"
     },
     {
       "id": "H6",
-      "source": "contactHero-minimal.jpg",
-      "file": "contactHero-line.jpg",
+      "source": "contactHero-consistent.png",
+      "file": "contactHero-consistent-line.jpg",
       "placeholder": "illustration-originals/contactHero-line.jpg",
-      "use": "Light outline illustration: contactHero"
+      "use": "Hand-sketched line illustration: contactHero"
     },
     {
       "id": "H7",
-      "source": "journey-minimal.jpg",
-      "file": "journey-line.jpg",
+      "source": "journey-consistent.png",
+      "file": "journey-consistent-line.jpg",
       "placeholder": "illustration-originals/journey-line.jpg",
-      "use": "Light outline illustration: journey"
+      "use": "Hand-sketched line illustration: journey"
     },
     {
       "id": "H8",
-      "source": "storyboard-minimal.jpg",
-      "file": "storyboard-line.jpg",
+      "source": "storyboard-consistent.png",
+      "file": "storyboard-consistent-line.jpg",
       "placeholder": "illustration-originals/storyboard-line.jpg",
-      "use": "Light outline illustration: storyboard"
+      "use": "Hand-sketched line illustration: storyboard"
     },
     {
       "id": "H9",
-      "source": "development-minimal.jpg",
-      "file": "development-line.jpg",
+      "source": "development-consistent.png",
+      "file": "development-consistent-line.jpg",
       "placeholder": "illustration-originals/development-line.jpg",
-      "use": "Light outline illustration: development"
+      "use": "Hand-sketched line illustration: development"
     }
   ]
 }

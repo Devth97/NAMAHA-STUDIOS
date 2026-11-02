@@ -1,6 +1,6 @@
 # Namaha Studios — artwork generation pack
 
-**2 November 2026 update:** the site's line drawings have been replaced with detailed pen-and-ink illustrations. Use `ILLUSTRATION_PROMPTS.md` for their current direction; its prompts supersede the older minimalist D/E prompts below. B1–B4 have also been generated and installed.
+**Current direction, 2 November 2026:** use `LINE_DRAWING_STANDARD.md` and the project `AGENTS.md` for all illustrations. Keep light hand-sketched contours, modest detail and separated pencil strokes for every colour accent. No solid gold suns or painted fills. Earlier detailed illustration prompts are historical. All fifteen illustration slots and project covers B1–B4 are installed; other photographic placeholders remain as listed by `npm run assets:status`.
 
 18 images to generate in ChatGPT. Every slot on the site already shows a **placeholder copy** of an existing image. Nothing is broken while you work, and each new image replaces its placeholder automatically.
 

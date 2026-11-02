@@ -1,5 +1,7 @@
 # Light line drawing and ixora review preview — 2 November 2026
 
+**Current site-wide drawing standard:** `LINE_DRAWING_STANDARD.md` and `AGENTS.md` supersede earlier illustration directions in this review record. All fifteen drawings use matching light line work and stroke-based colour accents, with fresh delivery URLs.
+
 Latest revision: ixora is now click feedback, not a scroll decoration. All UI icons use individually drawn, slightly asymmetric SVG paths in `public/sketch-icons.js`. The studio contact details are `+91 70228 33448` and `namahastudios.in@gmail.com`; WhatsApp uses the real phone number. See `FORM_SETUP.md` for the remaining form access-key step.
 
 Current direction: minimal line drawings with a little interior detail. Use thin contours and a few camera features, facial/profile lines and clothing folds. Keep backgrounds open. Avoid dark fills, heavy strokes, crosshatching, engraving and dense scenery. The client's camera/clapperboard and director sketches set the detail ceiling. This supersedes the earlier detailed illustration direction in `ILLUSTRATION_PROMPTS.md`.

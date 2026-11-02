@@ -50,7 +50,7 @@ export function initKites(canvas) {
   let flight = [], target = null;
   const sprites = ['gold'].map(colour => {
     const sprite = new Image();
-    sprite.src = new URL(`./assets/kite-${colour}.svg`, import.meta.url).href;
+    sprite.src = new URL(`./assets/kite-${colour}-sketch.svg`, import.meta.url).href;
     return sprite;
   });
   const allowed = () => enabled && !motion.matches && !document.hidden;
@@ -116,11 +116,10 @@ export function initKites(canvas) {
       for (const j of [7, 15, 23]) {
         const x = Math.sin(j * .25 - time * .005 + i * 2) * j * .45;
         const y = size * .62 + j * 2.3;
-        context.fillStyle = kite.colour;
         context.beginPath();
         context.moveTo(x - 4, y - 3); context.lineTo(x + 4, y + 3);
         context.lineTo(x + 4, y - 3); context.lineTo(x - 4, y + 3);
-        context.closePath(); context.fill();
+        context.closePath(); context.stroke();
       }
       if (sprites[i].complete && sprites[i].naturalWidth) {
         context.drawImage(sprites[i], -size / 2, -size * .62, size, size * 1.24);

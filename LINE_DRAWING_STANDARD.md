@@ -1,0 +1,17 @@
+# Drawing standard across the website — 2 November 2026
+
+All fifteen illustrations use the approved Home hero as their reference: lightly hand-sketched warm charcoal-brown line work, modest interior detail and generous open space. No cartoon rendering, paint, heavy dark areas or shaded volumes. Suns and every other warm colour accent must be made from separated ochre/golden-orange pencil strokes with visible paper gaps. No flat filled circles, opaque coloured surfaces, gradients or textured colour washes.
+
+The Home drawing is preserved. The other fourteen drawings are edited individually, preserving their existing subjects and layouts. Photographic project covers and gallery photos remain photographic; the studio logo and recognizable WhatsApp brand mark retain their supplied brand colours.
+
+The single pointer kite also uses an open line outline with separated ochre pencil strokes in `public/assets/kite-gold-sketch.svg`; its tail bows are outlined rather than filled. The ixora remains the supplied red flower treatment requested for click feedback.
+
+## Shared image edit prompt
+
+Edit image 1 to match the refined hand-sketched LINE DRAWING style of image 2. Image 1 is the EDIT TARGET. Image 2 is a STYLE REFERENCE ONLY; never copy its camera/director subjects into image 1. Preserve image 1's existing subjects, composition, object positions and generous empty background. Give the outlines a lightly hand-drawn character with a few broken/doubled pencil contours and modest interior detail: a few seams/folds on clothing, small functional camera/prop features, natural hair/profile/hand lines and a few construction details. About 15 to 20 percent more descriptive than the target, still minimal, airy and elegant. No cartoons, no painting, no smooth colour patches, no shaded volumes, no heavy dark strokes, no dense hatching, no realistic rendering. CRITICAL: replace EVERY flat gold/yellow/orange filled circle or coloured surface in image 1 with fine, uneven ochre/golden-orange pencil strokes with clearly visible white gaps. Suns must be softly sketched with loose diagonal coloured lines and a broken contour, never a filled disk. Any other coloured accents, including lamps, book edges, microphone covers or kite panels, must also be coloured ONLY with a few pencil strokes, never opaque fill. Keep all other ink light warm charcoal-brown. Pure flat white background, no paper texture, no vignette, no labels, letters, text or logos. Retain landscape 3:2 1536x1024 and at least 65 percent open white space. Do not add extra scenery, people or objects.
+
+Generated with the built-in image generator. Reference: `public/assets/source/hero-refined-sketched-sun.png`. New source files: `public/assets/source/{name}-consistent.png` for aboutHero, servicesHero, workHero, galleryHero, contactHero, journey, storyboard, development, process-discover, process-develop, process-create, process-deliver, notfound and success. The approved Home source remains unchanged.
+
+Delivery uses `public/assets/{name}-consistent-line.jpg` with 480/960px JPEG and 480/960/1536px WebP variants. All fifteen assets use new delivery URLs so browsers with the old week-long image cache request the corrected artwork. Old asset files are retained for visitors who still have an older page or script cached.
+
+This is the current drawing direction and supersedes the earlier illustration directions recorded in `ILLUSTRATION_PROMPTS.md` and `MINIMAL_PREVIEW.md`.

@@ -1,6 +1,6 @@
 # NAMAHA-STUDIOS
 
-Current local review: `preview/minimal-ixora` uses lighter outlines with a little interior detail, hand-drawn UI icons, one kite and a click-triggered ixora loading indicator beside the logo. Phone, email and WhatsApp details are installed. See `MINIMAL_PREVIEW.md`. Main remains on the previous published version while this trial is reviewed.
+Current illustration direction: `LINE_DRAWING_STANDARD.md` applies across all page heroes and supporting drawings. Use light, modestly detailed pencil-line work; suns and colour accents are made from separated sketch strokes, never flat fills. UI icons and the single kite also use drawn contours. Click-only ixora feedback, phone, email and WhatsApp details are installed. `MINIMAL_PREVIEW.md` records earlier review iterations.
 
 Namaha Studios — studio website (design preview).
 

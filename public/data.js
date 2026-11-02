@@ -5,14 +5,14 @@ export const references = {
 };
 // Standalone high-resolution assets; the supplied references are retained for the original logo.
 export const art = {
-  hero: './assets/hero-line.jpg',
-  aboutHero: './assets/aboutHero-line.jpg',
-  servicesHero: './assets/servicesHero-line.jpg',
-  workHero: './assets/workHero-line.jpg',
-  galleryHero: './assets/galleryHero-line.jpg',
-  contactHero: './assets/contactHero-line.jpg',
-  journey: './assets/journey-line.jpg',
-  storyboard: './assets/storyboard-line.jpg',
+  hero: './assets/hero-consistent-line.jpg',
+  aboutHero: './assets/aboutHero-consistent-line.jpg',
+  servicesHero: './assets/servicesHero-consistent-line.jpg',
+  workHero: './assets/workHero-consistent-line.jpg',
+  galleryHero: './assets/galleryHero-consistent-line.jpg',
+  contactHero: './assets/contactHero-consistent-line.jpg',
+  journey: './assets/journey-consistent-line.jpg',
+  storyboard: './assets/storyboard-consistent-line.jpg',
   banner: './assets/banner-hq.jpg',
   film: './assets/film-hq.jpg',
   television: './assets/television-hq.jpg',
@@ -26,7 +26,7 @@ export const art = {
   camera: './assets/camera-hq.jpg',
   slate: './assets/slate-hq.jpg',
   set: './assets/set-hq.jpg',
-  development: './assets/development-line.jpg',
+  development: './assets/development-consistent-line.jpg',
   // Slots awaiting newly generated artwork. Each currently holds a placeholder copy of an
   // existing image so the site never shows a broken image. See ASSET_PROMPTS.md.
   showreel: './assets/showreel-hq.jpg',
@@ -41,12 +41,12 @@ export const art = {
   gallery03: './assets/gallery-03-hq.jpg',
   gallery04: './assets/gallery-04-hq.jpg',
   gallery05: './assets/gallery-05-hq.jpg',
-  discover: './assets/process-discover-line.jpg',
-  develop: './assets/process-develop-line.jpg',
-  create: './assets/process-create-line.jpg',
-  deliver: './assets/process-deliver-line.jpg',
-  notFound: './assets/notfound-line.jpg',
-  success: './assets/success-line.jpg'
+  discover: './assets/process-discover-consistent-line.jpg',
+  develop: './assets/process-develop-consistent-line.jpg',
+  create: './assets/process-create-consistent-line.jpg',
+  deliver: './assets/process-deliver-consistent-line.jpg',
+  notFound: './assets/notfound-consistent-line.jpg',
+  success: './assets/success-consistent-line.jpg'
 };
 export const services = [
   { name: 'Film Production', short: 'Film', icon: 'reel', image: 'film', description: 'From the first page to the final frame. Films rooted in emotion, brought to life with care.', items: ['Feature & short films', 'Script-to-screen production', 'Production management'] },

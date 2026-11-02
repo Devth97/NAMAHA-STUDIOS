@@ -1,5 +1,7 @@
 # Detailed studio illustrations — 2 November 2026
 
+**Historical only.** The current site-wide direction is `LINE_DRAWING_STANDARD.md`, enforced by the project `AGENTS.md`. Do not regenerate dense or painted artwork from the prompts below.
+
 **Superseded for the current review preview:** see `MINIMAL_PREVIEW.md`. The client requested light outlines with a small amount of interior detail, without the dense treatment below. This document is retained as a record of the earlier direction.
 
 Generated with the built-in image generator. This direction supersedes the earlier minimalist line-art prompts, including D1–D4 and E1–E2 in `ASSET_PROMPTS.md`. Source PNGs are kept locally in `public/assets/source/`; responsive JPEG and WebP deliverables are versioned in `public/assets/`.
