@@ -1,5 +1,7 @@
 # Light line drawing and ixora review preview — 2 November 2026
 
+Latest revision: ixora is now click feedback, not a scroll decoration. All UI icons use individually drawn, slightly asymmetric SVG paths in `public/sketch-icons.js`. The studio contact details are `+91 70228 33448` and `namahastudios.in@gmail.com`; WhatsApp uses the real phone number. See `FORM_SETUP.md` for the remaining form access-key step.
+
 Current direction: minimal line drawings with a little interior detail. Use thin contours and a few camera features, facial/profile lines and clothing folds. Keep backgrounds open. Avoid dark fills, heavy strokes, crosshatching, engraving and dense scenery. The client's camera/clapperboard and director sketches set the detail ceiling. This supersedes the earlier detailed illustration direction in `ILLUSTRATION_PROMPTS.md`.
 
 ## Artwork
@@ -21,11 +23,11 @@ The supplied orange logo is used directly, without regeneration. The horizontal 
 - One gold paper kite follows the pointer or single-finger movement; native scrolling and pinch gestures remain available.
 - One transparent red ixora blossom was extracted from the supplied flower photo with the built-in image editor. Source: `public/assets/source/ixora-flower.png`; delivery: `public/assets/ixora-flower.webp`.
 - Ixora edit prompt: isolate the single prominent four-petal red blossom, retain its real shape and natural petals with a very short tube, remove paper/wires/other blooms, transparent background, no shadow or text.
-- Scrolling through the first hero moves the flower along a gentle curve to the header logo. Scrolling upward reverses the same path. Pause controls both decorations; reduced motion hides both. Decorations do not intercept taps or clicks.
+- Clicking a button or link briefly moves the flower to the right of the header logo, where it turns as a loading indicator and then clears. Scrolling alone never reveals it. Same-tab navigation carries the feedback to the destination without delaying the link. A real pending enquiry request keeps the indicator active until its response. Pause controls both decorations; reduced motion hides both. Decorations do not intercept taps or clicks.
 
 ## Verification and delivery
 
-All 19 unit tests and the seven-page production verification pass. Chromium checked seven routes at 320, 390, 768 and 1440px with no horizontal overflow or application errors. Scroll landing, scroll reversal, pause/resume and reduced motion were checked at each width. Screenshots are saved in ignored `qa/minimal-{width}-{start,mid,landed}.png`.
+All 21 unit tests and the seven-page production verification pass. Chromium checked seven routes at 320, 390, 768 and 1440px with no horizontal overflow. Click-only activation, right-of-logo placement, clearing, navigation carryover, reduced motion and a mocked pending/successful enquiry request were checked. No real enquiry or WhatsApp message was sent. Current screenshots are saved in ignored `qa/click-ixora-{width}-{idle,loading}.png`; earlier scroll-trial screenshots are retained separately.
 
 Browser verification served the built files through local request interception and omitted external Google Fonts. Physical devices and remote font delivery were not checked. The interactive local preview is at `http://127.0.0.1:4175/` while the preview server is running.
 

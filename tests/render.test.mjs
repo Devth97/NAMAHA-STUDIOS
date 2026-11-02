@@ -9,6 +9,7 @@ const template = await readFile(new URL('../public/index.html', import.meta.url)
 test('every route prerenders with one h1, unique ids and its own title', () => {
   for (const page of Object.keys(pageMeta)) {
     const html = renderDocument(template, page);
+    assert.doesNotMatch(html, /\$\{/, `${page}: no unevaluated template text`);
     assert.equal((html.match(/<h1[ >]/g) || []).length, 1, page);
     const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map(match => match[1]);
     assert.equal(new Set(ids).size, ids.length, `${page} ids`);

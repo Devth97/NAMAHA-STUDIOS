@@ -1,6 +1,6 @@
 # NAMAHA-STUDIOS
 
-Current local review: `preview/minimal-ixora` uses lighter outlines with a little interior detail, one kite and the ixora-to-logo scroll trial. See `MINIMAL_PREVIEW.md`. Main remains on the previous published version while this trial is reviewed.
+Current local review: `preview/minimal-ixora` uses lighter outlines with a little interior detail, hand-drawn UI icons, one kite and a click-triggered ixora loading indicator beside the logo. Phone, email and WhatsApp details are installed. See `MINIMAL_PREVIEW.md`. Main remains on the previous published version while this trial is reviewed.
 
 Namaha Studios — studio website (design preview).
 

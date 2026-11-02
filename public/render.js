@@ -24,7 +24,7 @@ export const resolvePage = pathname => {
 export function renderBody(page) {
   const film = page === 'work' ? movingFilmStrip() : '';
   const end = page === '404' ? '' : closing(page);
-  const flower = page === '404' ? '' : '<img class="ixora-flight" data-ixora src="./assets/ixora-flower.webp" width="54" height="54" alt="" aria-hidden="true" hidden>';
+  const flower = '<img class="ixora-flight" data-ixora src="./assets/ixora-flower.webp" width="54" height="54" alt="" aria-hidden="true" hidden>';
   return `<div id="top"></div><canvas id="kites" aria-hidden="true"></canvas>${header(page)}${flower}<main id="main" tabindex="-1">${pages[page]()}${film}${end}</main>${footer()}${page === 'contact' ? '' : whatsappButton(true)}${dialogShell()}`;
 }
 
@@ -35,7 +35,7 @@ export function renderHead(page, config = siteConfig) {
   const share = absolute('/assets/og-image.jpg');
   const indexable = Boolean(config.allowIndexing && origin) && page !== '404';
   const hero = art[meta.image].replace(/\.jpg$/, '');
-  const organisation = { '@context': 'https://schema.org', '@type': 'Organization', name: 'Namaha Studios', description: pageMeta.home.description, sameAs: [config.instagram], ...(config.location ? { address: { '@type': 'PostalAddress', addressLocality: config.location.split(',')[0].trim(), addressRegion: config.location.split(',')[1]?.trim() || undefined, addressCountry: 'IN' } } : {}), ...(origin ? { url: origin, logo: origin + '/assets/icon-512.png' } : {}) };
+  const organisation = { '@context': 'https://schema.org', '@type': 'Organization', name: 'Namaha Studios', description: pageMeta.home.description, ...(config.email ? {email:config.email} : {}), ...(config.phoneNumber ? {telephone:'+'+config.phoneNumber} : {}), sameAs: [config.instagram], ...(config.location ? { address: { '@type': 'PostalAddress', addressLocality: config.location.split(',')[0].trim(), addressRegion: config.location.split(',')[1]?.trim() || undefined, addressCountry: 'IN' } } : {}), ...(origin ? { url: origin, logo: origin + '/assets/icon-512.png' } : {}) };
   return [
     page === '404' ? '<base href="/">' : '',
     `<title>${esc(meta.title)}</title>`,

@@ -4,7 +4,7 @@ The Contact page has an enquiry form, inline validation, spam honeypot, loading 
 
 ## Activate email delivery
 
-1. Choose the studio email inbox that should receive enquiries.
+1. The studio has supplied `namahastudios.in@gmail.com` as its contact inbox. Use that inbox for the form setup.
 2. At https://web3forms.com/ create a form access key using that inbox. Complete the email verification requested by the provider.
 3. Put the form's public access key into `web3formsAccessKey` in `public/config.js`. This is the public submission key, not an account-management API credential or mailbox password.
 4. Rebuild and deploy through the configured GitHub/Netlify workflow. The existing security policy already allows the Web3Forms submission endpoint.
@@ -18,12 +18,12 @@ Official setup: https://docs.web3forms.com/getting-started/installation
 
 `public/config.js` contains `whatsappNumber`, `whatsappMessage` and `whatsappDemo`.
 
-The temporary number is the fictional North American example `+1 202-555-0147`. It is not a working studio number and may be rejected by WhatsApp. Both the floating button and Contact-page link show “Demo number”. The link opens WhatsApp's click-to-chat destination with an editable greeting; opening it does not send a message automatically.
+The studio number is now `+91 70228 33448`. Both WhatsApp links use `https://wa.me/917022833448` and `whatsappDemo` is false. Phone links use `tel:+917022833448`; email links use `mailto:namahastudios.in@gmail.com`. Opening WhatsApp prepares an editable greeting and does not send a message automatically.
 
-When the real number is provided, replace it with the full international number (country code included) and set `whatsappDemo: false`. A normal WhatsApp or WhatsApp Business account registered to that number is sufficient for this link; no WhatsApp API integration is required.
+A normal WhatsApp or WhatsApp Business account registered to that number is sufficient for this link; no WhatsApp API integration is required. Account registration and receipt of messages have not been independently tested.
 
 Official click-to-chat format: https://faq.whatsapp.com/5913398998672934
 
 ## Current validation
 
-Automated tests mock provider responses; they do not contact Web3Forms or send messages to WhatsApp. Live email delivery and the final WhatsApp account must be checked after the studio supplies its details.
+Automated tests mock provider responses; they do not contact Web3Forms or send messages to WhatsApp. The contact details are installed. Live form email delivery still needs the form access key and an inbox receipt test.

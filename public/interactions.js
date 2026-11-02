@@ -1,5 +1,5 @@
 import { projects, gallery } from './data.js';
-import { crop, button } from './components.js';
+import { crop, button, icon, arrow } from './components.js';
 import { validateEnquiry, submitEnquiry, serviceTypes, fieldError, validatedFields } from './enquiry.js';
 import { siteConfig } from './config.js';
 
@@ -34,6 +34,7 @@ function setupMenu() {
   const setOpen = open => {
     menu.setAttribute('aria-expanded', String(open));
     label.textContent = open ? 'Close menu' : 'Open menu';
+    menu.querySelector('.menu-lines').innerHTML = icon(open ? 'close' : 'menu');
     navigation.classList.toggle('open', open);
     document.documentElement.classList.toggle('menu-open', open);
     outside().forEach(element => { element.inert = open; });
@@ -142,14 +143,14 @@ function setupDialog() {
 
   document.querySelectorAll('[data-project]').forEach(control => control.addEventListener('click', () => {
     const project = projects[Number(control.dataset.project)];
-    show(`<div class="dialog-image">${crop(project.image, `${project.title} — illustrative concept`, '', '(max-width: 760px) 100vw, 840px')}</div><div class="dialog-copy"><p class="eyebrow">${project.category} · CONCEPT PREVIEW</p><h2 id="dialog-title">${project.title}</h2><p>${project.note}</p>${project.link ? `<p><a class="button outline" href="${project.link}" target="_blank" rel="noopener noreferrer"><span class="button-label">Watch the film</span><span aria-hidden="true">↗</span><span class="sr-only">(opens in a new tab)</span></a></p>` : ''}<p class="dialog-disclaimer">This is an illustrative concept for the website demo, rather than a credited Namaha production. Real projects, credits and film links will be added with the studio.</p>${button('Create a story with us', './contact.html')}</div>`, control);
+    show(`<div class="dialog-image">${crop(project.image, `${project.title} — illustrative concept`, '', '(max-width: 760px) 100vw, 840px')}</div><div class="dialog-copy"><p class="eyebrow">${project.category} · CONCEPT PREVIEW</p><h2 id="dialog-title">${project.title}</h2><p>${project.note}</p>${project.link ? `<p><a class="button outline" href="${project.link}" target="_blank" rel="noopener noreferrer"><span class="button-label">Watch the film</span>${arrow}<span class="sr-only">(opens in a new tab)</span></a></p>` : ''}<p class="dialog-disclaimer">This is an illustrative concept for the website demo, rather than a credited Namaha production. Real projects, credits and film links will be added with the studio.</p>${button('Create a story with us', './contact.html')}</div>`, control);
   }));
 
   const visibleGallery = () => [...document.querySelectorAll('[data-gallery]')].filter(item => !item.closest('.filter-item').hidden).map(item => Number(item.dataset.gallery));
   function showGallery(index, source) {
     galleryIndex = index;
     const item = gallery[index], visible = visibleGallery();
-    show(`<div class="dialog-image">${crop(item.image, item.title, '', '(max-width: 760px) 100vw, 840px')}</div><div class="dialog-copy"><p class="eyebrow">${item.category} · ILLUSTRATIVE IMAGE</p><h2 id="dialog-title">${item.title}</h2><p>An AI-created scene illustrating the creative world, rather than a documented Namaha production.</p></div><div class="dialog-nav"><button type="button" data-previous>← Previous<span class="sr-only"> image</span></button><span aria-live="polite">${visible.indexOf(index) + 1} / ${visible.length}</span><button type="button" data-next>Next<span class="sr-only"> image</span> →</button></div>`, source ?? trigger, 'is-gallery');
+    show(`<div class="dialog-image">${crop(item.image, item.title, '', '(max-width: 760px) 100vw, 840px')}</div><div class="dialog-copy"><p class="eyebrow">${item.category} · ILLUSTRATIVE IMAGE</p><h2 id="dialog-title">${item.title}</h2><p>An AI-created scene illustrating the creative world, rather than a documented Namaha production.</p></div><div class="dialog-nav"><button type="button" data-previous>${icon('left')}Previous<span class="sr-only"> image</span></button><span aria-live="polite">${visible.indexOf(index) + 1} / ${visible.length}</span><button type="button" data-next>Next<span class="sr-only"> image</span>${icon('right')}</button></div>`, source ?? trigger, 'is-gallery');
     content.querySelector('[data-previous]').addEventListener('click', () => advance(-1));
     content.querySelector('[data-next]').addEventListener('click', () => advance(1));
   }
@@ -179,7 +180,7 @@ function setupDialog() {
   const live = Boolean(siteConfig.web3formsAccessKey);
   document.querySelectorAll('[data-privacy]').forEach(control => control.addEventListener('click', () => show(`<div class="dialog-copy"><p class="eyebrow">YOUR INFORMATION</p><h2 id="dialog-title">A note on privacy.</h2>${live
     ? '<p>When you send an enquiry, the details you enter are processed by our form provider, Web3Forms, and emailed to the studio so we can reply. We use them only to respond to your enquiry and do not add you to any mailing list.</p><p>To ask about or remove your enquiry details, contact the studio through the email address you receive our reply from.</p>'
-    : '<p>This design preview does not send enquiry details or store them in a database. Information you type remains in the current page and is lost when you leave or reload it.</p><p>Once the studio activates the contact form, submitted details will be processed by the selected form provider and emailed to the studio to respond to your enquiry. The final privacy notice will identify the provider and studio contact details before launch.</p>'}<p>There are no analytics or advertising trackers on this site. Fonts are served by Google Fonts. Instagram and WhatsApp links open their respective services in a separate tab. WhatsApp messages are handled by WhatsApp; the demo number is not monitored.</p></div>`, control)));
+    : '<p>This design preview does not send enquiry details or store them in a database. Information you type remains in the current page and is lost when you leave or reload it.</p><p>Once the studio activates the contact form, submitted details will be processed by the selected form provider and emailed to the studio to respond to your enquiry. The final privacy notice will identify the provider and studio contact details before launch.</p>'}<p>There are no analytics or advertising trackers on this site. Fonts are served by Google Fonts. Instagram and WhatsApp links open their respective services in a separate tab. WhatsApp messages are handled by WhatsApp.</p></div>`, control)));
 }
 
 function setupForm() {
@@ -237,13 +238,15 @@ function setupForm() {
       return;
     }
     submit.disabled = true;
+    form.setAttribute('aria-busy', 'true');
+    window.dispatchEvent(new CustomEvent('studio-request', { detail: true }));
     submit.classList.add('is-loading');
     submit.querySelector('.button-label').textContent = live ? 'Sending…' : 'Preparing preview…';
     status.textContent = ''; status.className = '';
     try {
       const result = await submitEnquiry(data, siteConfig.web3formsAccessKey);
       success.querySelector('[data-success-copy]').textContent = result.status === 'demo'
-        ? `Thank you, ${data.name.trim().split(' ')[0]}. This is a design preview, so no email has been sent — delivery will be switched on once the studio’s receiving address is verified. Your details are still in the form.`
+        ? `Thank you, ${data.name.trim().split(' ')[0]}. This is a design preview, so no email has been sent — please email or WhatsApp the studio to send your brief. Your details are still in the form.`
         : `Thank you, ${data.name.trim().split(' ')[0]}. Your enquiry has reached the studio and we’ll reply to ${data.email.trim()} soon.`;
       if (result.status === 'sent') { form.reset(); touched.clear(); updateCounter(); form.querySelectorAll('.is-valid').forEach(field => field.classList.remove('is-valid')); }
       form.hidden = true;
@@ -254,6 +257,8 @@ function setupForm() {
       status.textContent = error.name === 'TimeoutError' ? 'The request timed out. Your details are still here — please try again.' : error.message;
       status.focus();
     } finally {
+      form.removeAttribute('aria-busy');
+      window.dispatchEvent(new CustomEvent('studio-request', { detail: false }));
       submit.disabled = false;
       submit.classList.remove('is-loading');
       submit.querySelector('.button-label').textContent = live ? 'Send enquiry' : 'Try the enquiry form';

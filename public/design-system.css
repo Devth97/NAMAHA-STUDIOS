@@ -5,13 +5,30 @@
 @font-face { font-family: 'Instrument Serif Fallback'; src: local('Georgia'), local('Times New Roman'); size-adjust: 88%; ascent-override: 100%; descent-override: 26%; }
 @font-face { font-family: 'Manrope Fallback'; src: local('Segoe UI'), local('Arial'), local('Helvetica Neue'); size-adjust: 103%; ascent-override: 102%; descent-override: 28%; }
 
-@view-transition { navigation: auto; }
+@view-transition { navigation: none; }
 
 @layer refine {
   .supplied-logo { filter: none; mix-blend-mode: multiply; aspect-ratio: 240 / 75; }
   .ixora-flight { position: fixed; top: 0; left: 0; z-index: 45; pointer-events: none; object-fit: contain; will-change: transform; }
   html.menu-open .ixora-flight, html.modal-open .ixora-flight { visibility: hidden; }
   @media (prefers-reduced-motion: reduce) { .ixora-flight { display: none !important; } }
+  .sketch-arrow { display: inline-flex; flex: none; align-items: center; justify-content: center; }
+  .sketch-arrow .icon, .project-arrow .icon { width: 20px; height: 20px; }
+  .project-arrow { border-radius: 46% 54% 49% 51%; }
+  .scroll-cue > .icon, .back-to-top > .icon { width: 18px; height: 18px; }
+  .back-to-top { gap: 8px; }
+  .menu-lines .icon { width: 24px; height: 24px; }
+  .dialog-close .icon { width: 24px; height: 24px; margin: auto; }
+  .dialog-nav button, .film-motion-toggle { display: inline-flex; align-items: center; gap: 10px; }
+  .dialog-nav .icon, .film-motion-toggle .icon { width: 20px; height: 20px; }
+  .contact-direct { display: grid; gap: 10px; margin-top: 26px; }
+  .contact-direct a { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; font-size: 15px; }
+  .contact-direct .icon { flex: none; width: 24px; height: 24px; color: var(--gold-ink); }
+  .contact-direct span, .contact-email span { overflow-wrap: anywhere; min-width: 0; }
+  .contact-email { font-size: 14px; }
+  .footer-connect { min-width: 0; }
+  .word-ribbon i .icon { width: 24px; height: 24px; }
+  .star-mark .icon { width: 54px; height: 54px; }
   .enquiry-title { font-family: var(--serif); font-size: clamp(30px, 3vw, 42px); line-height: 1.08; margin: 24px 0 12px; }
   .enquiry-intro { color: var(--muted); font-size: 14px; margin-bottom: 22px; }
   .contact-whatsapp { margin: 28px 0; }
@@ -454,4 +471,9 @@
     .featured-card:nth-child(2) .project-title, .featured-card:nth-child(3) .project-title { font-size: 20px; }
     .featured-card:nth-child(4) .project-cta { display: inline; }
   }
+}
+
+@layer refine {
+  .field select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='10' fill='none' stroke='%2322231e' stroke-width='1.2' stroke-linecap='round'%3E%3Cpath d='M1 2Q4 4 7 8Q10 5 13 1.5'/%3E%3C/svg%3E"); }
+  .footer-connect > .footer-social { justify-content: flex-start; }
 }

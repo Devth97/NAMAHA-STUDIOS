@@ -11,9 +11,11 @@ export const siteConfig = {
   showreelUrl: '',
   // Preview location from the supplied brief summary; confirm with the client before launch.
   location: 'Mangalore, Karnataka',
-  // Fictional demo number. Replace with the studio's WhatsApp number, including country code.
-  whatsappNumber: '12025550147',
-  whatsappDemo: true,
+  phoneNumber: '917022833448',
+  phoneDisplay: '+91 70228 33448',
+  email: 'namahastudios.in@gmail.com',
+  whatsappNumber: '917022833448',
+  whatsappDemo: false,
   whatsappMessage: 'Hello Namaha Studios! I would like to discuss a project.',
   instagram: 'https://www.instagram.com/namaha_studios/'
 };
