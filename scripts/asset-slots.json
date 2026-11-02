@@ -2,6 +2,14 @@
   "note": "Current illustration direction: LINE_DRAWING_STANDARD.md. All line-art colour is made from separated pencil strokes. Source artwork is local; responsive masters and variants are versioned.",
   "slots": [
     {
+      "id": "F1",
+      "source": "creative-development-photo.png",
+      "file": "creative-development-photo-hq.jpg",
+      "size": [1536, 1920],
+      "placeholder": "development-hq.jpg",
+      "use": "Creative Development service: photographic story planning and scriptwriting"
+    },
+    {
       "id": "A1",
       "source": "showreel.png",
       "file": "showreel-hq.jpg",

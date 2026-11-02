@@ -26,7 +26,7 @@ export const art = {
   camera: './assets/camera-hq.jpg',
   slate: './assets/slate-hq.jpg',
   set: './assets/set-hq.jpg',
-  development: './assets/development-consistent-line.jpg',
+  development: './assets/creative-development-photo-hq.jpg',
   // Slots awaiting newly generated artwork. Each currently holds a placeholder copy of an
   // existing image so the site never shows a broken image. See ASSET_PROMPTS.md.
   showreel: './assets/showreel-hq.jpg',

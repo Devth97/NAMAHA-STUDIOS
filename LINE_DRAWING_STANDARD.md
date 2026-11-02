@@ -15,3 +15,5 @@ Generated with the built-in image generator. Reference: `public/assets/source/he
 Delivery uses `public/assets/{name}-consistent-line.jpg` with 480/960px JPEG and 480/960/1536px WebP variants. All fifteen assets use new delivery URLs so browsers with the old week-long image cache request the corrected artwork. Old asset files are retained for visitors who still have an older page or script cached.
 
 This is the current drawing direction and supersedes the earlier illustration directions recorded in `ILLUSTRATION_PROMPTS.md` and `MINIMAL_PREVIEW.md`.
+
+Service-card exception requested after review: Creative Development now uses a generated photograph of script/storyboard collaboration to match the other photographic service cards. Its separate source is `public/assets/source/creative-development-photo.png`, delivered as `creative-development-photo-hq.jpg` with responsive variants. The line-art source is retained for reference; all other illustration placements keep the drawing direction above.

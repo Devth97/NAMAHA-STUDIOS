@@ -4,8 +4,8 @@
     python scripts/optimise-images.py --status   # list which artwork slots are still placeholders
 
 1. Any artwork saved in public/assets/source/ under a slot's `source` name (png, jpg or webp,
-   see scripts/asset-slots.json) is centre-cropped to 3:2, resized to 1536x1024 and exported as
-   the slot's delivery JPEG.
+   see scripts/asset-slots.json) is centre-cropped to its optional `size` (default 1536x1024)
+   and exported as the slot's delivery JPEG.
 2. Line drawings (*-line.jpg) have their paper tone mapped to white for seamless blending.
 3. Empty slots receive a copy of their placeholder so the site never shows a broken image.
 4. Every *-hq.jpg and *-line.jpg gets 480px and 960px JPEG variants plus WebP versions of all
@@ -56,7 +56,7 @@ def ingest() -> None:
         if source and (not target.exists() or source.stat().st_mtime > target.stat().st_mtime or same_bytes(target, assets / slot['placeholder'])):
             with Image.open(source) as image:
                 image = ImageOps.exif_transpose(image).convert('RGB')
-                image = ImageOps.fit(image, (WIDTH, HEIGHT), Image.Resampling.LANCZOS, centering=(0.5, 0.5))
+                image = ImageOps.fit(image, tuple(slot.get('size', (WIDTH, HEIGHT))), Image.Resampling.LANCZOS, centering=(0.5, 0.5))
                 image.save(target, quality=90, optimize=True, progressive=True)
             print(f"Ingested {source.name} -> {slot['file']}")
         elif not target.exists():
