@@ -2,7 +2,7 @@
 
 Uses the exact George Williams Monospace family linked by the client: https://www.1001fonts.com/monospace-font.html. Downloaded unmodified Medium, Bold and Oblique TTF files are self-hosted in `public/assets/fonts/`, with their copyright notice and SIL Open Font License in `OFL.txt`. Heading sizes and responsive spacing accommodate the wider letterforms. The supplied logo remains artwork.
 
-Latest client correction: opening the phone menu or activating a button/link reveals a loose scattering of six separate open flowers and five buds, with clear gaps and varied angles. After 420ms, one open flower lifts out (its original spot becomes empty), travels for 1000ms to the bud inside the supplied logo, and stays visible rotating there at one turn every four seconds. The remaining scatter fades away. Closing the menu retains the docked rotating flower. Navigation carries the effect to the destination without delaying the link. Scrolling never starts it; an active dock follows the condensed logo. Reduced motion, the existing pause control and backgrounding stop the effect. Resizing hides the scatter while the rotating flower tracks the logo.
+Latest client correction supersedes the earlier rotating-flower request: opening the phone menu or activating a button/link creates a brief outward flower splash at the clicked point, with no static hold. Individual flowers and buds burst outward and fade within 300ms. After 80ms, one closed bud flies for 650ms to the bud inside the supplied logo, aligns without spinning and fades into it over 120ms. The full effect stops and clears at 850ms. Nothing remains rotating or visible at the logo. Navigation carries only the remaining animation time to the destination without delaying the link or replaying the splash. Scrolling never starts it. Reduced motion, the existing pause control, resizing and backgrounding stop the effect.
 
 The landing point uses (29.6, 55.4) in the root logo's 240×75 viewBox, so it follows the responsive and condensed logo sizes. Nested symbol SVG bounds include clipped JPEG space and must not be used for docking. All decoration is non-interactive and hidden from assistive technology; the menu retains focus trapping, Escape dismissal and its accessible expanded state.
 
@@ -10,8 +10,8 @@ The landing point uses (29.6, 55.4) in the root logo's 240×75 viewBox, so it fo
 
 Generated using the built-in image generator with the client's 5 November orange-ixora photograph as reference. Assets have real alpha transparency. Current delivery:
 
-- `public/assets/ixora-orange-open.webp` (240px, reused for individually positioned blossoms and the flying/rotating flower)
-- `public/assets/ixora-orange-bud.webp`
+- `public/assets/ixora-orange-open.webp` (240px, individually positioned splash blossoms)
+- `public/assets/ixora-orange-bud.webp` (splash buds and the single bud that travels into the logo)
 
 The older compact bunch asset is retained for cached pages, but current pages do not reference it.
 

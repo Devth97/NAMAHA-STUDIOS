@@ -24,7 +24,6 @@
   .scatter-bud-2 { left: 72%; top: 31%; width: 44px; transform: rotate(72deg); }
   .scatter-bud-3 { left: 36%; top: 60%; width: 35px; transform: rotate(12deg); }
   .scatter-bud-4 { left: 3%; top: 85%; width: 43px; transform: rotate(95deg); }
-  .ixora-scatter.is-separated .scatter-pick { visibility: hidden; }
   @media(max-width:760px) { .ixora-scatter { width: min(160px, 36vw); } }
   html.modal-open .ixora-flight, html.modal-open .ixora-scatter { visibility: hidden; }
   @media (prefers-reduced-motion: reduce) { .ixora-flight, .ixora-scatter { display: none !important; } }
