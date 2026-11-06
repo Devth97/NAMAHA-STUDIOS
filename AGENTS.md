@@ -10,3 +10,5 @@ The user-approved style is a lightly detailed, hand-sketched line drawing. Use t
 - Use the existing asset pipeline, inspect every final image and verify its actual desktop/mobile placement. When replacing cached website assets, provide fresh delivery URLs and check that the pages reference them.
 
 Earlier detailed illustration prompts are historical and must not override this standard.
+
+The 6 November client update uses the exact George Williams Monospace family from the supplied 1001 Fonts link, self-hosted with its license. Ixora menu feedback uses orange botanical assets: a bunch appears when the menu opens and one bud joins the bud inside the logo. See `FONT_MENU_UPDATE.md`; do not restore the earlier red spinning loader or scroll-triggered flower.

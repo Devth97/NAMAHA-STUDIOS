@@ -24,7 +24,7 @@ export const resolvePage = pathname => {
 export function renderBody(page) {
   const film = page === 'work' ? movingFilmStrip() : '';
   const end = page === '404' ? '' : closing(page);
-  const flower = '<img class="ixora-flight" data-ixora src="./assets/ixora-flower.webp" width="54" height="54" alt="" aria-hidden="true" hidden>';
+  const flower = '<img class="ixora-bunch" data-ixora-bunch src="./assets/ixora-orange-bunch.webp" width="140" height="140" alt="" aria-hidden="true" hidden><img class="ixora-flight" data-ixora src="./assets/ixora-orange-bud.webp" width="46" height="46" alt="" aria-hidden="true" hidden>';
   return `<div id="top"></div><canvas id="kites" aria-hidden="true"></canvas>${header(page)}${flower}<main id="main" tabindex="-1">${pages[page]()}${film}${end}</main>${footer()}${page === 'contact' ? '' : whatsappButton(true)}${dialogShell()}`;
 }
 

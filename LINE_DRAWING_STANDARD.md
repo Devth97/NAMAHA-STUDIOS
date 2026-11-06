@@ -4,7 +4,7 @@ All fifteen illustrations use the approved Home hero as their reference: lightly
 
 The Home drawing is preserved. The other fourteen drawings are edited individually, preserving their existing subjects and layouts. Photographic project covers and gallery photos remain photographic; the studio logo and recognizable WhatsApp brand mark retain their supplied brand colours.
 
-The single pointer kite also uses an open line outline with separated ochre pencil strokes in `public/assets/kite-gold-sketch.svg`; its tail bows are outlined rather than filled. The ixora remains the supplied red flower treatment requested for click feedback.
+The single pointer kite also uses an open line outline with separated ochre pencil strokes in `public/assets/kite-gold-sketch.svg`; its tail bows are outlined rather than filled. The ixora now uses orange botanical cutouts from the client's newer reference, with a menu bunch and bud-to-logo flight; see `FONT_MENU_UPDATE.md`.
 
 ## Shared image edit prompt
 

@@ -37,6 +37,7 @@ function setupMenu() {
     menu.querySelector('.menu-lines').innerHTML = icon(open ? 'close' : 'menu');
     navigation.classList.toggle('open', open);
     document.documentElement.classList.toggle('menu-open', open);
+    dispatchEvent(new CustomEvent('studio-menu', {detail:open}));
     outside().forEach(element => { element.inert = open; });
     if (open) navigation.querySelector('a')?.focus({ preventScroll: true });
   };
