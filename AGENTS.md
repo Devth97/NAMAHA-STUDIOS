@@ -11,4 +11,4 @@ The user-approved style is a lightly detailed, hand-sketched line drawing. Use t
 
 Earlier detailed illustration prompts are historical and must not override this standard.
 
-The 6 November client update uses the exact George Williams Monospace family from the supplied 1001 Fonts link, self-hosted with its license. Ixora menu feedback uses orange botanical assets: a bunch appears when the menu opens and one bud joins the bud inside the logo. See `FONT_MENU_UPDATE.md`; do not restore the earlier red spinning loader or scroll-triggered flower.
+The 6 November client update uses the exact George Williams Monospace family from the supplied 1001 Fonts link, self-hosted with its license. Click feedback shows a loose scattering of orange ixora flowers and buds. One OPEN flower lifts out, travels to the bud inside the logo and stays visible rotating there. Do not replace it with a compact bouquet, a closed flying bud or a flower that disappears on arrival. Scrolling never starts it; pause/reduced motion still stop it. See `FONT_MENU_UPDATE.md`.
