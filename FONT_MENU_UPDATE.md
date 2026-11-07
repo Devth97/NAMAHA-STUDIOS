@@ -6,6 +6,8 @@ Latest client correction supersedes the earlier rotating-flower request: opening
 
 The landing point uses (29.6, 55.4) in the root logo's 240×75 viewBox, so it follows the responsive and condensed logo sizes. Nested symbol SVG bounds include clipped JPEG space and must not be used for docking. All decoration is non-interactive and hidden from assistive technology; the menu retains focus trapping, Escape dismissal and its accessible expanded state.
 
+7 November mobile performance correction: the flight is now a browser-managed animation of transform/opacity only, with a fixed 34px image scaled to the destination. Geometry is measured once per activation rather than every frame, and all initial reads are batched before animations start. Phone timings are 220ms for the splash and 600ms total (40ms delay, 480ms flight, 80ms merge). Desktop timings are 260ms for the splash and 730ms total (60ms delay, 570ms flight, 100ms merge). Phones show seven splash sprites instead of eleven. Rapid activations cancel previous animations and timers; finishing cancels all animation objects. Buttons use touch-action manipulation to avoid double-tap click delay while preserving scrolling and pinch zoom.
+
 ## Generated assets
 
 Generated using the built-in image generator with the client's 5 November orange-ixora photograph as reference. Assets have real alpha transparency. Current delivery:

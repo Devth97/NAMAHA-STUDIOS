@@ -14,39 +14,40 @@ export function flowerPose(progress, start, end, dockSize = 14) {
     rotation: -8 + 8 * t
   };
 }
+
+export function flightKeyframes(start, end, dockSize, timing) {
+  const transform = pose => `translate3d(${pose.x}px,${pose.y}px,0) translate(-50%,-50%) rotate(${pose.rotation}deg) scale(${pose.size/34})`;
+  const first = transform(flowerPose(0,start,end,dockSize));
+  const frames = [{offset:0,opacity:0,transform:first}, {offset:(timing.delay-1)/timing.total,opacity:0,transform:first}];
+  for (let i=0;i<=24;i++) {
+    const p=i/24;
+    frames.push({offset:(timing.delay+timing.flight*p)/timing.total,opacity:1,transform:transform(flowerPose(p,start,end,dockSize))});
+  }
+  frames.push({offset:1,opacity:0,transform:frames.at(-1).transform});
+  return frames;
+}
+
 export function initIxora() {
   const flower = document.querySelector('[data-ixora]');
   const scatter = document.querySelector('[data-ixora-scatter]');
   const logo = document.querySelector('.header .supplied-logo');
   if (!flower || !scatter || !logo) return;
   const motion = matchMedia('(prefers-reduced-motion: reduce)');
-  let enabled = true, frame = 0, began = 0, start = null;
+  const images = [...scatter.querySelectorAll('img')];
+  let enabled = true, flight = null, cleanup = 0;
   const allowed = () => enabled && !motion.matches && !document.hidden;
   function hideScatter() { scatter.hidden = true; }
   function stop() {
-    cancelAnimationFrame(frame); frame = 0; start = null;
+    clearTimeout(cleanup); cleanup = 0;
+    if (flight) { flight.onfinish = null; flight.cancel(); flight = null; }
     flower.hidden = true; flower.dataset.phase = 'idle'; hideScatter();
-    scatter.querySelectorAll('img').forEach(image => image.getAnimations().forEach(animation => animation.cancel()));
-  }
-  function paint(now) {
-    frame = 0;
-    if (!allowed()) { stop(); return; }
-    const elapsed = now - began;
-    if (elapsed >= 850) { stop(); return; }
-    const progress = clamp((elapsed - 80) / 650);
-    const box = logo.getBoundingClientRect();
-    const pose = flowerPose(progress, start, flowerDock(box), Math.min(14, box.width * .07));
-    flower.hidden = elapsed < 80;
-    flower.dataset.phase = elapsed < 80 ? 'splash' : progress < 1 ? 'flying' : 'merging';
-    if (elapsed >= 300) hideScatter();
-    flower.style.width = `${pose.size}px`; flower.style.height = `${pose.size}px`;
-    flower.style.opacity = String(elapsed < 730 ? 1 : clamp((850 - elapsed) / 120));
-    flower.style.transform = `translate3d(${pose.x}px,${pose.y}px,0) translate(-50%,-50%) rotate(${pose.rotation}deg)`;
-    frame = requestAnimationFrame(paint);
+    images.forEach(image => image.getAnimations().forEach(animation => animation.cancel()));
   }
   function play(anchor, age = 0) {
     if (!allowed()) return;
-    if (age >= 850) return;
+    const phone = matchMedia('(max-width:760px)').matches;
+    const timing = phone ? {delay:40,flight:480,total:600} : {delay:60,flight:570,total:730};
+    if (age >= timing.total) return;
     stop();
     scatter.hidden = false;
     const width = scatter.getBoundingClientRect().width;
@@ -54,21 +55,26 @@ export function initIxora() {
     const top = anchor.y - 95;
     scatter.style.left = `${Math.max(8, Math.min(innerWidth - width - 8, left))}px`;
     scatter.style.top = `${Math.max(8, Math.min(innerHeight - 198, top))}px`;
-    start = anchor;
-    // Each flower bursts out from the click and fades immediately; no static hold.
-    scatter.querySelectorAll('img').forEach(image => {
+    // Batch all geometry/style reads before starting any animations.
+    const box = logo.getBoundingClientRect();
+    const sprites = images.map(image => {
       const rect = image.getBoundingClientRect();
-      const dx = anchor.x - (rect.left + rect.width/2);
-      const dy = anchor.y - (rect.top + rect.height/2);
-      const transform = getComputedStyle(image).transform;
+      return {image,dx:anchor.x-(rect.left+rect.width/2),dy:anchor.y-(rect.top+rect.height/2),transform:getComputedStyle(image).transform,visible:rect.width>0};
+    }).filter(sprite => sprite.visible);
+    const splashDuration = phone ? 220 : 260;
+    sprites.forEach(({image,dx,dy,transform}) => {
       const animation = image.animate([
         {opacity:0,transform:`translate(${dx}px,${dy}px) scale(.2) ${transform}`,offset:0},
         {opacity:1,offset:.25},
         {opacity:0,transform:`translate(0,0) scale(1.08) ${transform}`,offset:1}
-      ], {duration:300,easing:'ease-out',fill:'both'});
+      ], {duration:splashDuration,easing:'ease-out',fill:'both'});
       animation.currentTime = age;
     });
-    began = performance.now() - age; frame = requestAnimationFrame(paint);
+    flower.hidden = false; flower.dataset.phase = 'animating';
+    flight = flower.animate(flightKeyframes(anchor,flowerDock(box),Math.min(14,box.width*.07),timing), {duration:timing.total,fill:'both'});
+    flight.currentTime = age;
+    flight.onfinish = stop;
+    cleanup = setTimeout(hideScatter,Math.max(0,splashDuration-age));
   }
   document.addEventListener('click', event => {
     // The menu replaces its icon during the same click; use the original event path.

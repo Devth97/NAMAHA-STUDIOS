@@ -10,7 +10,8 @@
 
 @layer refine {
   .supplied-logo { filter: none; mix-blend-mode: normal; aspect-ratio: 240 / 75; }
-  .ixora-flight { position: fixed; top: 0; left: 0; z-index: 45; pointer-events: none; object-fit: contain; will-change: transform; }
+  .ixora-flight { position: fixed; top: 0; left: 0; width: 34px; height: 34px; z-index: 45; pointer-events: none; object-fit: contain; will-change: transform, opacity; }
+  .menu-toggle, .button, .quiet-link, .filter, .service-index a { touch-action: manipulation; }
   .ixora-scatter { position: fixed; width: 160px; height: 190px; z-index: 44; pointer-events: none; }
   .ixora-scatter img { position: absolute; object-fit: contain; }
   .scatter-flower-0 { left: 3%; top: 4%; width: 32px; transform: rotate(-21deg); }
@@ -24,7 +25,10 @@
   .scatter-bud-2 { left: 72%; top: 31%; width: 44px; transform: rotate(72deg); }
   .scatter-bud-3 { left: 36%; top: 60%; width: 35px; transform: rotate(12deg); }
   .scatter-bud-4 { left: 3%; top: 85%; width: 43px; transform: rotate(95deg); }
-  @media(max-width:760px) { .ixora-scatter { width: min(160px, 36vw); } }
+  @media(max-width:760px) {
+    .ixora-scatter { width: min(160px, 36vw); }
+    .scatter-flower-4, .scatter-flower-5, .scatter-bud-3, .scatter-bud-4 { display: none; }
+  }
   html.modal-open .ixora-flight, html.modal-open .ixora-scatter { visibility: hidden; }
   @media (prefers-reduced-motion: reduce) { .ixora-flight, .ixora-scatter { display: none !important; } }
   .sketch-arrow { display: inline-flex; flex: none; align-items: center; justify-content: center; }

@@ -12,3 +12,5 @@ The user-approved style is a lightly detailed, hand-sketched line drawing. Use t
 Earlier detailed illustration prompts are historical and must not override this standard.
 
 The latest 6 November client correction uses the exact George Williams Monospace family from the supplied 1001 Fonts link, self-hosted with its license. Click feedback is a very brief outward splash of scattered orange ixora flowers at the clicked control (about 300ms). One CLOSED bud travels to the bud inside the logo, connects and disappears; the full effect ends within 850ms. No static bouquet, lingering scatter, persistent flower or spinning at the logo. Scrolling never starts it; pause/reduced motion stop it. This supersedes the earlier rotating-flower request. See `FONT_MENU_UPDATE.md`.
+
+Mobile performance correction (7 November): keep the bud flight on transform/opacity animations with fixed layout dimensions. Do not restore per-frame logo measurements or width/height writes. Phone effect ends in 600ms with seven splash sprites; desktop ends in 730ms. Batch initial geometry reads, cancel previous work on rapid taps, and clean up all animations at completion.

@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { flowerPose, flowerDock } from '../public/ixora.js';
+import { flowerPose, flowerDock, flightKeyframes } from '../public/ixora.js';
 
 const start = {x:800,y:500};
 const end = {x:120,y:40};
@@ -21,5 +21,27 @@ test('flower docks at the bud inside the supplied symbol at every header size', 
     assert.ok(dock.x>rect.left && dock.x<rect.left+width);
     assert.ok(Math.abs(dock.x-(20+width*29.6/240))<1e-9);
     assert.ok(Math.abs(dock.y-(10+width*55.4/240))<1e-9);
+  }
+});
+
+test('the flight animates only transform and opacity, without per-frame resizing', () => {
+  const frames=flightKeyframes(start,end,14,{delay:40,flight:480,total:600});
+  for (const frame of frames) {
+    assert.deepEqual(Object.keys(frame).sort(),['offset','opacity','transform']);
+    assert.ok(Number.isFinite(frame.offset) && frame.offset>=0 && frame.offset<=1);
+  }
+  assert.equal(frames[0].opacity,0);
+  assert.equal(frames.at(-1).opacity,0);
+  assert.match(frames.at(-1).transform,/translate3d\(120px,40px,0\).*rotate\(0deg\)/);
+});
+
+test('the bud reaches its destination before fading in both phone and desktop timing', () => {
+  for (const timing of [{delay:40,flight:480,total:600},{delay:60,flight:570,total:730}]) {
+    const frames=flightKeyframes(start,end,14,timing);
+    const arrived=frames.at(-2),finished=frames.at(-1);
+    assert.equal(arrived.transform,finished.transform);
+    assert.equal(arrived.opacity,1);
+    assert.ok(arrived.offset<finished.offset);
+    assert.ok(frames.every((frame,index)=>index===0 || frame.offset>=frames[index-1].offset));
   }
 });
