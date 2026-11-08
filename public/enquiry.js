@@ -17,6 +17,21 @@ export const validatedFields = Object.keys(rules);
 // Single-field check used for inline (on blur / on input) feedback.
 export const fieldError = (field, value) => rules[field]?.(value) || '';
 
+export function formatEnquiry(data) {
+  return [
+    'Project enquiry — Namaha Studios', '',
+    `Name: ${data.name.trim()}`, `Email: ${data.email.trim()}`,
+    `Project: ${data.type}`, `Company: ${data.company?.trim() || 'Not provided'}`,
+    `Phone: ${data.phone?.trim() || 'Not provided'}`,
+    `Budget: ${data.budget || 'Prefer to discuss'}`, `Timing: ${data.timeline || 'Not decided yet'}`,
+    '', data.message.trim()
+  ].join('\n');
+}
+
+export function enquiryEmailLink(data, inbox) {
+  return `mailto:${encodeURIComponent(inbox)}?subject=${encodeURIComponent(`New ${data.type} enquiry — Namaha Studios`)}&body=${encodeURIComponent(formatEnquiry(data))}`;
+}
+
 export function validateEnquiry(data) {
   const errors = {};
   for (const field of validatedFields) {

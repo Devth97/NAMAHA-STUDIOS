@@ -1,6 +1,6 @@
 import { projects, gallery } from './data.js';
 import { crop, button, icon, arrow } from './components.js';
-import { validateEnquiry, submitEnquiry, serviceTypes, fieldError, validatedFields } from './enquiry.js';
+import { validateEnquiry, submitEnquiry, serviceTypes, fieldError, validatedFields, formatEnquiry, enquiryEmailLink } from './enquiry.js';
 import { siteConfig } from './config.js';
 
 const reducedMotion = () => matchMedia('(prefers-reduced-motion:reduce)').matches;
@@ -180,7 +180,7 @@ function setupDialog() {
   const live = Boolean(siteConfig.web3formsAccessKey);
   document.querySelectorAll('[data-privacy]').forEach(control => control.addEventListener('click', () => show(`<div class="dialog-copy"><p class="eyebrow">YOUR INFORMATION</p><h2 id="dialog-title">A note on privacy.</h2>${live
     ? '<p>When you send an enquiry, the details you enter are processed by our form provider, Web3Forms, and emailed to the studio so we can reply. We use them only to respond to your enquiry and do not add you to any mailing list.</p><p>To ask about or remove your enquiry details, contact the studio through the email address you receive our reply from.</p>'
-    : '<p>This design preview does not send enquiry details or store them in a database. Information you type remains in the current page and is lost when you leave or reload it.</p><p>Once the studio activates the contact form, submitted details will be processed by the selected form provider and emailed to the studio to respond to your enquiry. The final privacy notice will identify the provider and studio contact details before launch.</p>'}<p>There are no analytics or advertising trackers on this site. Fonts are served by Google Fonts. Instagram and WhatsApp links open their respective services in a separate tab. WhatsApp messages are handled by WhatsApp.</p></div>`, control)));
+    : '<p>This design preview does not send enquiry details or store them in a database. Information you type remains in the current page and is lost when you leave or reload it.</p><p>Once the studio activates the contact form, submitted details will be processed by the selected form provider and emailed to the studio to respond to your enquiry. The final privacy notice will identify the provider and studio contact details before launch.</p>'}<p>There are no analytics or advertising trackers on this site. Fonts are hosted with this website. Instagram and WhatsApp links open their respective services in a separate tab. WhatsApp messages are handled by WhatsApp.</p></div>`, control)));
 }
 
 function setupForm() {
@@ -234,6 +234,8 @@ function setupForm() {
     if (invalid.length) {
       status.className = 'error';
       status.textContent = invalid.length === 1 ? 'Please check the highlighted field.' : `Please check the ${invalid.length} highlighted fields.`;
+      const optional = form.elements[invalid[0]].closest('details');
+      if (optional) optional.open = true;
       form.elements[invalid[0]].focus();
       return;
     }
@@ -241,13 +243,20 @@ function setupForm() {
     form.setAttribute('aria-busy', 'true');
     window.dispatchEvent(new CustomEvent('studio-request', { detail: true }));
     submit.classList.add('is-loading');
-    submit.querySelector('.button-label').textContent = live ? 'Sending…' : 'Preparing preview…';
+    submit.querySelector('.button-label').textContent = live ? 'Sending…' : 'Preparing your brief…';
     status.textContent = ''; status.className = '';
     try {
       const result = await submitEnquiry(data, siteConfig.web3formsAccessKey);
       success.querySelector('[data-success-copy]').textContent = result.status === 'demo'
-        ? `Thank you, ${data.name.trim().split(' ')[0]}. This is a design preview, so no email has been sent — please email or WhatsApp the studio to send your brief. Your details are still in the form.`
+        ? `${data.name.trim().split(' ')[0]}, your brief is ready. No email has been sent yet. Open the draft below to send it to ${siteConfig.email}, or copy the brief into WhatsApp. Your details are still in the form.`
         : `Thank you, ${data.name.trim().split(' ')[0]}. Your enquiry has reached the studio and we’ll reply to ${data.email.trim()} soon.`;
+      success.querySelector('[data-success-title]').textContent = result.status === 'demo' ? 'Your brief is ready.' : 'Thank you. Your story is in good hands.';
+      success.querySelector('[data-email-handoff]').hidden = result.status !== 'demo';
+      if (result.status === 'demo') {
+        success.querySelector('[data-email-draft]').href = enquiryEmailLink(data,siteConfig.email);
+        success.querySelector('[data-brief-text]').value = formatEnquiry(data);
+        success.querySelector('[data-copy-status]').textContent = '';
+      }
       if (result.status === 'sent') { form.reset(); touched.clear(); updateCounter(); form.querySelectorAll('.is-valid').forEach(field => field.classList.remove('is-valid')); }
       form.hidden = true;
       success.hidden = false;
@@ -261,12 +270,23 @@ function setupForm() {
       window.dispatchEvent(new CustomEvent('studio-request', { detail: false }));
       submit.disabled = false;
       submit.classList.remove('is-loading');
-      submit.querySelector('.button-label').textContent = live ? 'Send enquiry' : 'Try the enquiry form';
+      submit.querySelector('.button-label').textContent = live ? 'Send enquiry' : 'Prepare email brief';
     }
   });
   success.querySelector('[data-new-enquiry]').addEventListener('click', () => {
     success.hidden = true;
     form.hidden = false;
     form.elements.name.focus();
+  });
+  success.querySelector('[data-copy-brief]').addEventListener('click', async () => {
+    const text = success.querySelector('[data-brief-text]');
+    const message = success.querySelector('[data-copy-status]');
+    try {
+      await navigator.clipboard.writeText(text.value);
+      message.textContent = 'Brief copied. Paste it into your email or WhatsApp.';
+    } catch {
+      text.focus(); text.select();
+      message.textContent = 'Your brief is selected. Use your device’s Copy command.';
+    }
   });
 }

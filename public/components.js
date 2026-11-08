@@ -17,7 +17,8 @@ export function crop(key, label = '', className = '', sizes = '(max-width: 760px
   const base = source.replace(/\.jpg$/, '');
   const eager = priority || key === 'hero' || key.endsWith('Hero');
   const finalSizes = eager && sizes === '(max-width: 760px) 100vw, 50vw' ? '(max-width: 760px) calc(100vw - 48px), 70vw' : sizes;
-  return `<picture><source type="image/webp" srcset="${base}-480.webp 480w, ${base}-960.webp 960w, ${base}.webp 1536w" sizes="${finalSizes}"><img class="crop ${className}" src="${source}" srcset="${base}-480.jpg 480w, ${base}-960.jpg 960w, ${source} 1536w" sizes="${finalSizes}" alt="${esc(label)}" width="1536" height="1024" ${eager ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"'} decoding="async"></picture>`;
+  const height = key === 'development' ? 1920 : 1024;
+  return `<picture><source type="image/webp" srcset="${base}-480.webp 480w, ${base}-960.webp 960w, ${base}.webp 1536w" sizes="${finalSizes}"><img class="crop ${className}" src="${source}" srcset="${base}-480.jpg 480w, ${base}-960.jpg 960w, ${source} 1536w" sizes="${finalSizes}" alt="${esc(label)}" width="1536" height="${height}" ${eager ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"'} decoding="async"></picture>`;
 }
 
 // Display the supplied symbol and lettering directly, arranged horizontally for the header.
@@ -41,7 +42,7 @@ export function hero({ eyebrow = 'FILM · TELEVISION · ENTERTAINMENT', title, c
   return `<section class="hero ${home ? 'home-hero' : 'inner-hero'}"><div class="hero-inner"><div class="hero-copy"><p class="eyebrow hero-eyebrow">${eyebrow}</p><h1 class="kinetic">${lines}</h1><div class="gold-rule"></div><p class="hero-description">${copy}</p><div class="hero-actions">${button(home ? 'Let’s create' : 'Discuss your project', cta)}${home ? `<a class="quiet-link" href="./work.html">Explore our work ${arrow}</a>` : ''}</div></div><div class="hero-art">${crop(artwork, artLabel)}</div><span class="hero-note" aria-hidden="true">Ideas. People. Stories.<br><em>Always.</em></span></div><div class="hero-bottom"><span>INDEPENDENT SPIRIT. SHARED VISION.</span><a href="#next" class="scroll-cue">SCROLL TO EXPLORE ${icon('down')}</a></div></section>`;
 }
 export function serviceStrip() {
-  return `<div class="service-strip">${services.map((service, i) => `<a href="./services.html#service-${i}" class="service-link reveal">${icon(service.icon)}<h3>${service.name.replace(' & ', ' &amp; ')}</h3><span class="service-line"></span></a>`).join('')}</div>`;
+  return `<div class="service-strip">${services.map((service, i) => `<a href="./services.html#service-${i}" class="service-link reveal"><span class="service-card-top"><span class="number">0${i+1}</span>${icon(service.icon)}</span><h3>${esc(service.name)}</h3><p>${esc(service.items[0])}</p><span class="service-card-bottom">Explore service ${arrow}</span></a>`).join('')}</div>`;
 }
 export function closing(page = '') {
   return `<section class="closing" aria-labelledby="closing-title"><div class="closing-image">${crop('banner', '', '', '(max-width: 760px) 100vw, 50vw')}</div><div class="closing-copy"><p class="eyebrow">EVERY GREAT STORY STARTS SOMEWHERE</p><h2 id="closing-title">Let’s create<br>something <em>meaningful.</em></h2><p>Have a story in mind? We’d love to be part of it.</p>${button('Start a conversation', page === 'contact' ? '#next' : './contact.html', 'light')}</div><span class="closing-mark" aria-hidden="true">N.</span></section>`;

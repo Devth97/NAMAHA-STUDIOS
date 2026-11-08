@@ -12,6 +12,10 @@ The Contact page has an enquiry form, inline validation, spam honeypot, loading 
 
 Without that access key the form stays in clearly labelled demo mode, sends nothing and retains entered values. No email account connection to Codex is necessary.
 
+As of 8 November 2026, the unconfigured form also prepares a complete email draft addressed to `namahastudios.in@gmail.com`, or lets the visitor copy the brief into email/WhatsApp. This is a manual alternative: the visitor must open their email app and press Send. The website has not sent an enquiry merely because the brief-ready screen appears. A registered mail app is needed for the draft link; copying the text is the fallback.
+
+The only item needed from the studio for automatic form delivery is the Web3Forms public submission access key issued for this receiving inbox. Do not share a Gmail password, app password or private account-management API key. Once that public key is installed and deployed, confirm receipt of a real test in the receiving inbox (and Spam). Provider acceptance alone is not proof of inbox delivery.
+
 Official setup: https://docs.web3forms.com/getting-started/installation
 
 ## WhatsApp

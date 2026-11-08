@@ -523,3 +523,74 @@
     .service-detail h3 { font-size: 28px; }
   }
 }
+
+/* Service discovery and a shorter first conversation — 8 November 2026. */
+@layer refine {
+  .service-strip { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 0; padding: 0; border-top: 1px solid var(--line); }
+  .service-link, .service-link + .service-link { align-items: stretch; text-align: left; padding: 26px 28px; border: 0; border-bottom: 1px solid var(--line); border-right: 1px solid var(--line); min-width: 0; transition: background .25s; }
+  .service-link:nth-child(3n) { border-right: 0; }
+  .service-link:hover, .service-link:focus-visible { background: var(--paper-deep); }
+  .service-card-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+  .service-card-top .icon { width: 44px; height: 44px; color: var(--gold-ink); }
+  .service-link h3 { font-family: var(--serif); font-size: clamp(18px,1.7vw,24px); letter-spacing: -.035em; line-height: 1.3; text-transform: none; max-width: none; min-height: 2.6em; }
+  .service-link p { margin-top: 12px; color: var(--muted); font-size: 12px; line-height: 1.65; }
+  .service-card-bottom { display: flex; align-items: center; justify-content: space-between; margin-top: 28px; gap: 12px; font-size: 11px; }
+  .service-card-bottom .icon { width: 19px; height: 19px; transition: transform .25s; }
+  .service-link:hover .service-card-bottom .icon { transform: translate(3px,-3px); }
+  .form-shell { border: 1px solid var(--line); padding: clamp(22px,3.2vw,46px); background: rgb(255 255 255 / 22%); }
+  .form-heading { margin-top: 0; }
+  .form-delivery-note { display: flex; align-items: flex-start; gap: 12px; border-block: 1px solid var(--line); padding: 16px 0; margin: 20px 0 30px; }
+  .form-delivery-note .icon { width: 24px; height: 24px; flex: none; color: var(--gold-ink); }
+  .form-delivery-note p { font-size: 12px; line-height: 1.65; }
+  .brief-options { margin: 4px 0 30px; border-block: 1px solid var(--line); }
+  .brief-options summary { display: flex; align-items: center; gap: 12px; min-height: 58px; padding-block: 14px; font-size: 13px; cursor: pointer; list-style: none; }
+  .brief-options summary::-webkit-details-marker { display: none; }
+  .brief-options summary > span { color: var(--muted); font-size: 11px; }
+  .brief-options summary > .icon { width: 18px; height: 18px; margin-left: auto; }
+  .brief-options[open] summary > .icon { transform: rotate(180deg); }
+  .brief-options > p { font-size: 12px; color: var(--muted); margin: 0 0 24px; }
+  .brief-options .field { margin-bottom: 24px; }
+  .email-handoff { margin-top: 26px; }
+  .email-handoff > p { font-size: 12px; margin-top: 14px; color: var(--muted); }
+  .brief-copy { border-block: 1px solid var(--line); margin: 26px 0; padding-block: 14px; }
+  .brief-copy summary { min-height: 44px; display: flex; align-items: center; cursor: pointer; font-size: 13px; }
+  .brief-copy textarea { width: 100%; min-height: 200px; padding: 14px; border: 1px solid var(--field-line); background: var(--paper); font-family: var(--sans); font-size: 13px; line-height: 1.7; resize: vertical; margin-block: 14px; }
+  .brief-copy .quiet-link { display: inline-flex; gap: 10px; align-items: center; min-height: 44px; background: none; }
+  .brief-copy .icon { width: 22px; height: 22px; }
+  .brief-copy [role=status] { font-size: 12px; margin-top: 8px; }
+  @media(max-width:760px) {
+    .service-strip { grid-template-columns: repeat(2,minmax(0,1fr)); }
+    .service-link, .service-link + .service-link { padding: 22px 14px; }
+    .service-link:nth-child(3n) { border-right: 1px solid var(--line); }
+    .service-link:nth-child(2n) { border-right: 0; }
+    .service-card-top { margin-bottom: 20px; }
+    .service-card-top .icon { width: 36px; height: 36px; }
+    .service-link h3 { font-size: 18px; min-height: 0; overflow-wrap: normal; hyphens: auto; }
+    .service-link p { font-size: 11px; }
+    .service-card-bottom { margin-top: auto; padding-top: 24px; font-size: 10px; gap: 6px; }
+    .service-card-bottom .icon { width: 16px; height: 16px; }
+    .form-shell { padding: 24px 20px; }
+    .brief-options summary { flex-wrap: wrap; gap: 6px; }
+    .enquiry-title { font-size: 28px; }
+  }
+  @media(max-width:360px) {
+    .service-strip { grid-template-columns: minmax(0,1fr); }
+    .service-link:nth-child(n) { border-right: 0; padding-inline: 18px; }
+    .service-card-top { margin-bottom: 12px; }
+    .service-link h3 { font-size: 22px; }
+  }
+}
+
+@layer refine {
+  .contact-shortcuts { display: none; }
+  .contact-section .form-shell { grid-column: 2; grid-row: 1; }
+  .contact-section .contact-intro { grid-column: 1; grid-row: 1; }
+  @media(max-width:760px) {
+    .contact-shortcuts { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); border-block: 1px solid var(--line); }
+    .contact-shortcuts a { display: flex; align-items: center; justify-content: center; gap: 7px; min-height: 56px; font-size: 11px; }
+    .contact-shortcuts a + a { border-left: 1px solid var(--line); }
+    .contact-shortcuts .icon { width: 20px; height: 20px; color: var(--gold-ink); flex: none; }
+    .contact-section .form-shell, .contact-section .contact-intro { grid-column: auto; grid-row: auto; }
+    .contact-section { gap: 28px; }
+  }
+}
