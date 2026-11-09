@@ -5,7 +5,10 @@
       "id": "F1",
       "source": "creative-development-photo.png",
       "file": "creative-development-photo-hq.jpg",
-      "size": [1536, 1920],
+      "size": [
+        1536,
+        1920
+      ],
       "placeholder": "development-hq.jpg",
       "use": "Creative Development service: photographic story planning and scriptwriting"
     },
@@ -197,6 +200,62 @@
       "file": "development-consistent-line.jpg",
       "placeholder": "illustration-originals/development-line.jpg",
       "use": "Hand-sketched line illustration: development"
+    },
+    {
+      "id": "COLOUR1",
+      "source": "hero-colour-pencil.png",
+      "file": "hero-colour-pencil-line.jpg",
+      "placeholder": "hero-consistent-line.jpg",
+      "use": "Coloured hand-sketched cinema artwork: hero"
+    },
+    {
+      "id": "COLOUR2",
+      "source": "aboutHero-colour-pencil.png",
+      "file": "aboutHero-colour-pencil-line.jpg",
+      "placeholder": "aboutHero-consistent-line.jpg",
+      "use": "Coloured hand-sketched cinema artwork: aboutHero"
+    },
+    {
+      "id": "COLOUR3",
+      "source": "servicesHero-colour-pencil.png",
+      "file": "servicesHero-colour-pencil-line.jpg",
+      "placeholder": "servicesHero-consistent-line.jpg",
+      "use": "Coloured hand-sketched cinema artwork: servicesHero"
+    },
+    {
+      "id": "COLOUR4",
+      "source": "workHero-colour-pencil.png",
+      "file": "workHero-colour-pencil-line.jpg",
+      "placeholder": "workHero-consistent-line.jpg",
+      "use": "Coloured hand-sketched cinema artwork: workHero"
+    },
+    {
+      "id": "COLOUR5",
+      "source": "galleryHero-colour-pencil.png",
+      "file": "galleryHero-colour-pencil-line.jpg",
+      "placeholder": "galleryHero-consistent-line.jpg",
+      "use": "Coloured hand-sketched cinema artwork: galleryHero"
+    },
+    {
+      "id": "COLOUR6",
+      "source": "contactHero-colour-pencil.png",
+      "file": "contactHero-colour-pencil-line.jpg",
+      "placeholder": "contactHero-consistent-line.jpg",
+      "use": "Coloured hand-sketched cinema artwork: contactHero"
+    },
+    {
+      "id": "COLOUR7",
+      "source": "journey-colour-pencil.png",
+      "file": "journey-colour-pencil-line.jpg",
+      "placeholder": "journey-consistent-line.jpg",
+      "use": "Coloured hand-sketched cinema artwork: journey"
+    },
+    {
+      "id": "COLOUR8",
+      "source": "storyboard-colour-pencil.png",
+      "file": "storyboard-colour-pencil-line.jpg",
+      "placeholder": "storyboard-consistent-line.jpg",
+      "use": "Coloured hand-sketched cinema artwork: storyboard"
     }
   ]
 }

@@ -1,5 +1,10 @@
 const clamp = value => Math.max(0, Math.min(1, value));
 
+// Leave enough time to see the splash, flight and final connection at the logo.
+export const ixoraTiming = phone => phone
+  ? { delay: 150, flight: 1050, total: 1400, splash: 430 }
+  : { delay: 170, flight: 1150, total: 1520, splash: 470 };
+
 // Root viewBox coordinates of the bud; nested SVG bounds include clipped JPEG space.
 export function flowerDock(logo) {
   return { x: logo.left + logo.width * (29.6 / 240), y: logo.top + logo.height * (55.4 / 75) };
@@ -46,7 +51,7 @@ export function initIxora() {
   function play(anchor, age = 0) {
     if (!allowed()) return;
     const phone = matchMedia('(max-width:760px)').matches;
-    const timing = phone ? {delay:40,flight:480,total:600} : {delay:60,flight:570,total:730};
+    const timing = ixoraTiming(phone);
     if (age >= timing.total) return;
     stop();
     scatter.hidden = false;
@@ -61,7 +66,7 @@ export function initIxora() {
       const rect = image.getBoundingClientRect();
       return {image,dx:anchor.x-(rect.left+rect.width/2),dy:anchor.y-(rect.top+rect.height/2),transform:getComputedStyle(image).transform,visible:rect.width>0};
     }).filter(sprite => sprite.visible);
-    const splashDuration = phone ? 220 : 260;
+    const splashDuration = timing.splash;
     sprites.forEach(({image,dx,dy,transform}) => {
       const animation = image.animate([
         {opacity:0,transform:`translate(${dx}px,${dy}px) scale(.2) ${transform}`,offset:0},

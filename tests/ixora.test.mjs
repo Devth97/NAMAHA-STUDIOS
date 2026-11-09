@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { flowerPose, flowerDock, flightKeyframes } from '../public/ixora.js';
+import { flowerPose, flowerDock, flightKeyframes, ixoraTiming } from '../public/ixora.js';
 
 const start = {x:800,y:500};
 const end = {x:120,y:40};
@@ -36,12 +36,22 @@ test('the flight animates only transform and opacity, without per-frame resizing
 });
 
 test('the bud reaches its destination before fading in both phone and desktop timing', () => {
-  for (const timing of [{delay:40,flight:480,total:600},{delay:60,flight:570,total:730}]) {
+  for (const timing of [ixoraTiming(true), ixoraTiming(false)]) {
     const frames=flightKeyframes(start,end,14,timing);
     const arrived=frames.at(-2),finished=frames.at(-1);
     assert.equal(arrived.transform,finished.transform);
     assert.equal(arrived.opacity,1);
     assert.ok(arrived.offset<finished.offset);
     assert.ok(frames.every((frame,index)=>index===0 || frame.offset>=frames[index-1].offset));
+  }
+});
+
+test('click feedback leaves a clearly visible flight and a short logo landing', () => {
+  for (const timing of [ixoraTiming(true), ixoraTiming(false)]) {
+    assert.ok(timing.flight >= 1000 && timing.flight <= 1300);
+    assert.ok(timing.delay >= 100);
+    assert.ok(timing.splash < timing.flight);
+    assert.ok(timing.total - timing.delay - timing.flight >= 150);
+    assert.ok(timing.total < 1700);
   }
 });

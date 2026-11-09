@@ -1,4 +1,14 @@
-# Drawing standard across the website — 2 November 2026
+# Drawing standard across the website
+
+## Current update — 9 November 2026
+
+The six page heroes, Home journey and About storyboard now use original coloured pencil line drawings inspired by the client's cinema-object references: cameras, projectors, reels, film strips, director chairs, lights, microphones, popcorn and tickets. Thin warm brown, terracotta, muted teal, dusty blue and ochre contour lines keep object interiors open, with visible paper gaps. These are hand-sketched raster illustrations, not flat vector graphics. The exact eight generation prompts and delivery filenames are recorded in `scripts/colour-art-manifest.json`. Responsive JPEG/WebP variants use fresh `*-colour-pencil-line` URLs. The supplied logo and photographic work/gallery images are preserved.
+
+Hero headings now use smaller black type with brown emphasis 48% larger on desktop and 55% larger on phones. Click flowers take 1.4 seconds on phones and 1.52 seconds on desktop: a visible splash, a roughly one-second bud flight and a short fade into the logo. Reduced-motion and pause controls remain respected.
+
+This update supersedes the earlier restriction to brown/gold contours and the previous fast flower timing. The following older drawing rules still apply to supporting illustrations that were not replaced.
+
+## Earlier standard — 2 November 2026
 
 All fifteen illustrations use the approved Home hero as their reference: lightly hand-sketched warm charcoal-brown line work, modest interior detail and generous open space. No cartoon rendering, paint, heavy dark areas or shaded volumes. Suns and every other warm colour accent must be made from separated ochre/golden-orange pencil strokes with visible paper gaps. No flat filled circles, opaque coloured surfaces, gradients or textured colour washes.
 

@@ -5,14 +5,14 @@ export const references = {
 };
 // Standalone high-resolution assets; the supplied references are retained for the original logo.
 export const art = {
-  hero: './assets/hero-consistent-line.jpg',
-  aboutHero: './assets/aboutHero-consistent-line.jpg',
-  servicesHero: './assets/servicesHero-consistent-line.jpg',
-  workHero: './assets/workHero-consistent-line.jpg',
-  galleryHero: './assets/galleryHero-consistent-line.jpg',
-  contactHero: './assets/contactHero-consistent-line.jpg',
-  journey: './assets/journey-consistent-line.jpg',
-  storyboard: './assets/storyboard-consistent-line.jpg',
+  hero: './assets/hero-colour-pencil-line.jpg',
+  aboutHero: './assets/aboutHero-colour-pencil-line.jpg',
+  servicesHero: './assets/servicesHero-colour-pencil-line.jpg',
+  workHero: './assets/workHero-colour-pencil-line.jpg',
+  galleryHero: './assets/galleryHero-colour-pencil-line.jpg',
+  contactHero: './assets/contactHero-colour-pencil-line.jpg',
+  journey: './assets/journey-colour-pencil-line.jpg',
+  storyboard: './assets/storyboard-colour-pencil-line.jpg',
   banner: './assets/banner-hq.jpg',
   film: './assets/film-hq.jpg',
   television: './assets/television-hq.jpg',
