@@ -1,5 +1,9 @@
 # Film-crew animation for the header strip
 
+## Replacement clip installed
+
+The user supplied `Film crew header loop (1).mp4` (1280×720, 24fps, 10.04 seconds), a continuous wide scene with changing character poses. Replaced the previous montage with `studio-crew-loop-v2.mp4` (142,558 bytes) and matching v2 poster. Kept the complete source chronology, with no reverse playback or shot repetition. Four spatial crops at x=0/334/634/926, widths 334/300/292/354, y=210 and height=250 remove surrounding blank space; each is scaled to 176px high, padded to 480px width and combined into a 1920×176 strip. White-level/grayscale correction blends the paper background. Existing desktop/mobile framing and reduced-motion/offscreen controls remain in place. The previous installation details below are historical.
+
 ## Installed supplied video — 13 November
 
 Source: `C:/Users/KhalandarThameem/Downloads/Film crew header loop.mp4` (1280×720, 24fps, 10.04s, 6.86MB, silent). The source cuts from the whole row into four close-ups; a direct header crop would cut off the figures. Extracted planning at 2–4s, camera at 4–6s, sound at 6–8s, editing at 8–10s. Each full frame is scaled into a 480×176 panel, then stacked into one 1920×176 video. The 2-second sequence is followed by its reverse to avoid an abrupt loop reset. Grayscale/white-level correction lets its background blend into the paper. This preserves the supplied shot content; it does not generate new character motion. Movement within the supplied shots is minimal.

@@ -1,5 +1,7 @@
 # Namaha Studios artwork direction
 
+Latest replacement: use `Film crew header loop (1).mp4`, a continuous 10.04-second wide shot with character pose changes. `studio-crew-loop-v2.mp4` retains its complete chronology; four spatial crops remove excess blank space and retain the four workstations. Do not restore the older close-up montage or forward/reverse edit.
+
 13 November supplied video installed: `Film crew header loop.mp4` has a wide opening followed by four 2-second close-ups. The website uses a compact four-panel video derived from the close-ups (2–4s planning, 4–6s camera, 6–8s sound, 8–10s editing), played forward and backward for a continuous 4-second loop. No added sticker translation. Desktop shows all four; phones show the central camera/sound activities. Preserve global motion, reduced-motion and offscreen pause. See `STUDIO_VIDEO_BRIEF.md` for provenance and validation.
 
 Latest 13 November correction: the studio strip must use real video-like character/action animation, not drifting or bobbing sticker images. Dedicated strip pause button removed. Until a real video is provided, show static detailed reference artwork; do not fake a video with translating cutouts. `STUDIO_VIDEO_BRIEF.md` records the model prompt, framing and integration slot. Keep the existing global motion preference and reduced-motion fallback.

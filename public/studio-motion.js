@@ -10,7 +10,7 @@ const activities = [
 
 export function studioMotion() {
   const fallback = `<div class="studio-motion-group">${activities.map(([name,label])=>`<div class="studio-motion-scene"><img src="./assets/studio-strip-${name}.webp" width="600" height="400" alt="${label}" decoding="async"></div>`).join('')}</div>`;
-  return `<section class="studio-motion" aria-label="Film production artwork" data-studio-motion>${fallback}${siteConfig.studioVideoUrl ? `<video class="studio-activity-video" data-studio-video muted loop playsinline preload="none" poster="./assets/studio-crew-poster-v1.webp" aria-hidden="true" tabindex="-1"><source src="${esc(siteConfig.studioVideoUrl)}"></video>` : ''}</section>`;
+  return `<section class="studio-motion" aria-label="Film production artwork" data-studio-motion>${fallback}${siteConfig.studioVideoUrl ? `<video class="studio-activity-video" data-studio-video muted loop playsinline preload="none" poster="./assets/studio-crew-poster-v2.webp" aria-hidden="true" tabindex="-1"><source src="${esc(siteConfig.studioVideoUrl)}"></video>` : ''}</section>`;
 }
 
 export function initStudioMotion() {
