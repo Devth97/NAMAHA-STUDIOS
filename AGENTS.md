@@ -1,5 +1,7 @@
 # Namaha Studios artwork direction
 
+Latest explicit request supersedes the earlier stationary-strip direction: scroll the entire animated crew strip LEFT TO RIGHT on every device so mobile users can see all four activities. Keep the character video motion too. Duplicate the four-scene set for a continuous loop (48s desktop, 32s phone); preserve pause/reduced-motion/offscreen behaviour. Home hero starts 24px below the strip, with desktop copy aligned to the top to remove the old ~100px empty gap.
+
 Loading-size fix: fallback images must use the v3 video's first-frame poster in the same four video-panel wrappers and identical media geometry. Do not restore the separate original crew illustrations as the loading fallback; their different sizes/poses caused a visible shrink when playback began. Delayed-load geometry checks pass on phones and desktop.
 
 Latest full-width layout: four equal video windows spread the workstations across the entire desktop strip; two central windows fill phones. Each window displays its own quadrant of the same cached v3 clip at 112% height, preserving figure proportions and the thin strip. Hidden mobile windows pause. Do not return to a single centred video with large outer margins.

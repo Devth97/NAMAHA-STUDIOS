@@ -1,17 +1,26 @@
 /* Supplied crew footage, reformatted as four simultaneous film-production scenes. */
 @layer refine {
   .studio-motion { position: relative; height: var(--header-h); min-height: 72px; overflow: hidden; border-bottom: 1px solid var(--line); background: var(--paper); }
-  .studio-motion-group { display: flex; width: 100%; height: 100%; mix-blend-mode: multiply; }
-  .studio-video-scenes { position: absolute; inset: 0; display: flex; opacity: 0; pointer-events: none; mix-blend-mode: multiply; }
+  .studio-motion-group { mix-blend-mode: multiply; }
+  .studio-motion-track { display: flex; width: 200%; height: 100%; animation: crew-travel 48s linear infinite paused; }
+  .studio-motion-set { display: flex; width: 50%; height: 100%; flex: 0 0 50%; }
+  .studio-video-scenes { position: absolute; top: 0; left: 0; opacity: 0; pointer-events: none; mix-blend-mode: multiply; }
   .studio-video-panel { position: relative; flex: 1; min-width: 0; overflow: hidden; }
   .studio-activity-video, .studio-activity-poster { position: absolute; top: -6%; left: 50%; height: 112%; width: auto; max-width: none; transform: translateX(-12.5%); }
   .studio-video-panel:nth-child(2) > * { transform: translateX(-37.5%); }
   .studio-video-panel:nth-child(3) > * { transform: translateX(-62.5%); }
   .studio-video-panel:nth-child(4) > * { transform: translateX(-87.5%); }
   .studio-motion.is-playing .studio-video-scenes { opacity: 1; }
+  .studio-motion.is-playing .studio-video-scenes { animation-play-state: running; }
   .studio-motion.is-playing .studio-motion-group { visibility: hidden; }
+  .studio-motion + .home-hero .hero-inner { padding-top: 24px; }
+  @media(min-width:761px) {
+    .studio-motion + .home-hero .hero-inner { align-items: flex-start; }
+  }
   @media(max-width:760px) {
     .studio-motion { height: 72px; }
-    .studio-video-panel:first-child, .studio-video-panel:last-child { display: none; }
+    .studio-motion-track { width: 1600px; animation-duration: 32s; }
   }
+  @keyframes crew-travel { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+  @media(prefers-reduced-motion:reduce) { .studio-motion-track { animation: none; } }
 }

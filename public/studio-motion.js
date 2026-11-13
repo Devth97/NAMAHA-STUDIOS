@@ -9,8 +9,10 @@ const activities = [
 ];
 
 export function studioMotion() {
-  const fallback = `<div class="studio-motion-group">${activities.map(([,label])=>`<div class="studio-video-panel"><img class="studio-activity-poster" src="./assets/studio-crew-poster-v3.webp" width="1920" height="176" alt="${label}" decoding="async"></div>`).join('')}</div>`;
-  const scenes = siteConfig.studioVideoUrl ? `<div class="studio-video-scenes" aria-hidden="true">${activities.map(()=>`<div class="studio-video-panel"><video class="studio-activity-video" data-studio-video muted loop playsinline preload="none" tabindex="-1"><source src="${esc(siteConfig.studioVideoUrl)}"></video></div>`).join('')}</div>` : '';
+  const stills = activities.map(([,label])=>`<div class="studio-video-panel"><img class="studio-activity-poster" src="./assets/studio-crew-poster-v3.webp" width="1920" height="176" alt="${label}" decoding="async"></div>`).join('');
+  const fallback = `<div class="studio-motion-group studio-motion-track"><div class="studio-motion-set">${stills}</div><div class="studio-motion-set" aria-hidden="true">${stills}</div></div>`;
+  const clips = activities.map(()=>`<div class="studio-video-panel"><video class="studio-activity-video" data-studio-video muted loop playsinline preload="none" tabindex="-1"><source src="${esc(siteConfig.studioVideoUrl)}"></video></div>`).join('');
+  const scenes = siteConfig.studioVideoUrl ? `<div class="studio-video-scenes studio-motion-track" aria-hidden="true"><div class="studio-motion-set">${clips}</div><div class="studio-motion-set">${clips}</div></div>` : '';
   return `<section class="studio-motion" aria-label="Film production artwork" data-studio-motion>${fallback}${scenes}</section>`;
 }
 

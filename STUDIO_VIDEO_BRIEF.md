@@ -1,5 +1,9 @@
 # Film-crew animation for the header strip
 
+## Latest scrolling and spacing request
+
+Client now explicitly requests left-to-right strip travel on all devices in addition to character animation. Two identical four-scene sets form a continuous translating track. Desktop uses two viewport widths and a 48s loop; mobile uses a 1600px track and a 32s loop so all four activities pass through. The video track runs only during active playback and pauses offscreen or under the global motion control; reduced motion disables travel. Loading posters use identical duplicated framing. Hero top padding is 24px and desktop copy is top-aligned, removing the previously measured ~100px gap. Browser checks at 320/390/768/1440px confirm rightward travel, compact spacing, no overflow and pause/reduced-motion behaviour. Build/site verification passes.
+
 ## Full-width scene layout
 
 Four equal-width video windows now position the four source quadrants across the entire desktop width without stretching people. Videos use the same cached v3 media URL. Height is 112% of the strip, offset -6% for another 12% enlargement; checked heads, feet and the boom against the available margins. Phones display the two central workstations and pause the hidden outer videos. Global pause/resume, reduced motion, offscreen pause, responsive 320/390/768/1440px playback and the production verification pass. The strip remains 72–88px tall.
