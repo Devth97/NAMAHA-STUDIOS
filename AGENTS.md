@@ -1,5 +1,7 @@
 # Namaha Studios artwork direction
 
+Loading-size fix: fallback images must use the v3 video's first-frame poster in the same four video-panel wrappers and identical media geometry. Do not restore the separate original crew illustrations as the loading fallback; their different sizes/poses caused a visible shrink when playback began. Delayed-load geometry checks pass on phones and desktop.
+
 Latest full-width layout: four equal video windows spread the workstations across the entire desktop strip; two central windows fill phones. Each window displays its own quadrant of the same cached v3 clip at 112% height, preserving figure proportions and the thin strip. Hidden mobile windows pause. Do not return to a single centred video with large outer margins.
 
 Latest sizing correction: v3 crew video enlarges the individual scenes inside the same 72–88px strip. Each activity has its own tighter vertical crop to keep complete figures and the tall boom visible throughout the 10-second action. Preserve the strip height and responsive window.
