@@ -1,5 +1,9 @@
 # Film-crew animation for the header strip
 
+## Full-width scene layout
+
+Four equal-width video windows now position the four source quadrants across the entire desktop width without stretching people. Videos use the same cached v3 media URL. Height is 112% of the strip, offset -6% for another 12% enlargement; checked heads, feet and the boom against the available margins. Phones display the two central workstations and pause the hidden outer videos. Global pause/resume, reduced motion, offscreen pause, responsive 320/390/768/1440px playback and the production verification pass. The strip remains 72–88px tall.
+
 ## Larger crew within the same thin strip
 
 `studio-crew-loop-v3.mp4` and matching v3 poster replace v2. Per-scene source crops use y/height 248/208 planning, 258/198 camera, 222/234 sound, 262/194 editing. Relative to v2, planning/camera/editing are about 20–29% larger, with a smaller 7% increase for the tall boom scene to retain the microphone. The four panels, complete timeline, strip dimensions and playback controls are unchanged. Inspected frames across all ten seconds for clipping, and checked browser playback at 320/390/768/1440px, global pause/resume, reduced motion and offscreen pause.

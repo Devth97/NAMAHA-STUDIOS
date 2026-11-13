@@ -1,5 +1,7 @@
 # Namaha Studios artwork direction
 
+Latest full-width layout: four equal video windows spread the workstations across the entire desktop strip; two central windows fill phones. Each window displays its own quadrant of the same cached v3 clip at 112% height, preserving figure proportions and the thin strip. Hidden mobile windows pause. Do not return to a single centred video with large outer margins.
+
 Latest sizing correction: v3 crew video enlarges the individual scenes inside the same 72–88px strip. Each activity has its own tighter vertical crop to keep complete figures and the tall boom visible throughout the 10-second action. Preserve the strip height and responsive window.
 
 Latest replacement: use `Film crew header loop (1).mp4`, a continuous 10.04-second wide shot with character pose changes. `studio-crew-loop-v2.mp4` retains its complete chronology; four spatial crops remove excess blank space and retain the four workstations. Do not restore the older close-up montage or forward/reverse edit.

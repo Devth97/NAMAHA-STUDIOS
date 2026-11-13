@@ -10,29 +10,36 @@ const activities = [
 
 export function studioMotion() {
   const fallback = `<div class="studio-motion-group">${activities.map(([name,label])=>`<div class="studio-motion-scene"><img src="./assets/studio-strip-${name}.webp" width="600" height="400" alt="${label}" decoding="async"></div>`).join('')}</div>`;
-  return `<section class="studio-motion" aria-label="Film production artwork" data-studio-motion>${fallback}${siteConfig.studioVideoUrl ? `<video class="studio-activity-video" data-studio-video muted loop playsinline preload="none" poster="./assets/studio-crew-poster-v3.webp" aria-hidden="true" tabindex="-1"><source src="${esc(siteConfig.studioVideoUrl)}"></video>` : ''}</section>`;
+  const scenes = siteConfig.studioVideoUrl ? `<div class="studio-video-scenes" aria-hidden="true">${activities.map(()=>`<div class="studio-video-panel"><video class="studio-activity-video" data-studio-video muted loop playsinline preload="none" tabindex="-1"><source src="${esc(siteConfig.studioVideoUrl)}"></video></div>`).join('')}</div>` : '';
+  return `<section class="studio-motion" aria-label="Film production artwork" data-studio-motion>${fallback}${scenes}</section>`;
 }
 
 export function initStudioMotion() {
   const strip = document.querySelector('[data-studio-motion]');
-  const video = strip?.querySelector('[data-studio-video]');
-  if (!video) return;
-  video.muted = true;
+  const videos = [...(strip?.querySelectorAll('[data-studio-video]') || [])];
+  if (!videos.length) return;
+  videos.forEach(video=>{video.muted=true;});
   const reduced = matchMedia('(prefers-reduced-motion:reduce)');
   let enabled = true, visible = true;
-  function update() {
+  let generation = 0;
+  async function update() {
+    const current = ++generation;
     if (!enabled || !visible || reduced.matches || document.hidden) {
-      video.pause(); strip.classList.remove('is-playing'); return;
+      videos.forEach(video=>video.pause()); strip.classList.remove('is-playing'); return;
     }
-    video.play().then(()=>{
-      if (enabled && visible && !reduced.matches && !document.hidden) strip.classList.add('is-playing');
-      else { video.pause(); strip.classList.remove('is-playing'); }
-    }).catch(()=>strip.classList.remove('is-playing'));
+    const active = videos.filter(video=>video.parentElement.getClientRects().length);
+    videos.filter(video=>!active.includes(video)).forEach(video=>video.pause());
+    const results = await Promise.allSettled(active.map(video=>video.play()));
+    if (current !== generation) return;
+    const playing = results.length > 0 && results.every(result=>result.status==='fulfilled');
+    strip.classList.toggle('is-playing',playing);
+    if (!playing) videos.forEach(video=>video.pause());
   }
-  video.addEventListener('error',()=>strip.classList.remove('is-playing'));
+  videos.forEach(video=>video.addEventListener('error',()=>strip.classList.remove('is-playing')));
   addEventListener('studio-motion',event=>{enabled=event.detail;update();});
   reduced.addEventListener('change',update);
   document.addEventListener('visibilitychange',update);
+  matchMedia('(max-width:760px)').addEventListener('change',update);
   if ('IntersectionObserver' in window) new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;update();},{rootMargin:'80px'}).observe(strip);
   update();
 }
