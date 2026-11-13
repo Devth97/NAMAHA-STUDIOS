@@ -1,5 +1,7 @@
 # Namaha Studios artwork direction
 
+Latest 13 November correction: the studio strip must use real video-like character/action animation, not drifting or bobbing sticker images. Dedicated strip pause button removed. Until a real video is provided, show static detailed reference artwork; do not fake a video with translating cutouts. `STUDIO_VIDEO_BRIEF.md` records the model prompt, framing and integration slot. Keep the existing global motion preference and reduced-motion fallback.
+
 13 November latest correction: Home has a single-row moving film-crew art strip beneath the header, roughly the same height as the header (72–88px). Artwork should match the detailed hand-inked human figures and film equipment in the supplied reference, not simplified geometric SVG sketches. Use the generated detailed strip images, gentle horizontal sequence and subtle separate scene movement. Keep gaps, pause, offscreen suspension and reduced motion. See `STUDIO_MOTION_TRIAL.md`.
 
 The user-approved style is a lightly detailed, hand-sketched line drawing. Use the current Home hero and `LINE_DRAWING_STANDARD.md` as the reference for every illustration across the site.

@@ -1,5 +1,7 @@
 # Detailed moving film-crew strip — 13 November 2026
 
+Superseded by the latest client feedback: remove the dedicated pause control and all sticker-style motion. Current preview shows static detailed artwork while awaiting a genuine character-animation video. See `STUDIO_VIDEO_BRIEF.md` for the prompt and delivery requirements. The former moving-image implementation below is historical.
+
 The latest client correction replaces the simplified SVG figures with detailed ink artwork similar to the supplied film-crew examples. This is still a Home-only local preview, placed directly below the header.
 
 Four generated transparent illustrations show storyboard planning, a camera dolly operator, director/sound recording and an editing desk. Fine figure contours, clothing folds and equipment detail follow the client's latest references. They are served as four 600×400 WebP assets under `public/assets/studio-strip-{planning,camera,sound,editing}.webp`. Created with the built-in image generator, compressed for website delivery; total file sizes can be inspected in Git. No additional image service is required.
