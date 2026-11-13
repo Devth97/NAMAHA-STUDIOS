@@ -1,6 +1,6 @@
 # Namaha Studios artwork direction
 
-13 November: Home has a sparse animated studio-activity strip beneath the header. The client's crowded reference illustrations describe activities only; preserve generous gaps and subtle individual motion. See `STUDIO_MOTION_TRIAL.md`. Keep pause, offscreen suspension and reduced motion support.
+13 November latest correction: Home has a single-row moving film-crew art strip beneath the header, roughly the same height as the header (72–88px). Artwork should match the detailed hand-inked human figures and film equipment in the supplied reference, not simplified geometric SVG sketches. Use the generated detailed strip images, gentle horizontal sequence and subtle separate scene movement. Keep gaps, pause, offscreen suspension and reduced motion. See `STUDIO_MOTION_TRIAL.md`.
 
 The user-approved style is a lightly detailed, hand-sketched line drawing. Use the current Home hero and `LINE_DRAWING_STANDARD.md` as the reference for every illustration across the site.
 
