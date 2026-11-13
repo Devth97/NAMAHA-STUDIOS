@@ -1,5 +1,7 @@
 # Namaha Studios artwork direction
 
+13 November: Home has a sparse animated studio-activity strip beneath the header. The client's crowded reference illustrations describe activities only; preserve generous gaps and subtle individual motion. See `STUDIO_MOTION_TRIAL.md`. Keep pause, offscreen suspension and reduced motion support.
+
 The user-approved style is a lightly detailed, hand-sketched line drawing. Use the current Home hero and `LINE_DRAWING_STANDARD.md` as the reference for every illustration across the site.
 
 - Thin warm charcoal-brown contours, a modest amount of descriptive detail and generous open space.

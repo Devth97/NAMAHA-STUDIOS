@@ -4,6 +4,7 @@ import { pages } from './pages.js';
 import { movingFilmStrip } from './film-strip.js';
 import { art } from './data.js';
 import { siteConfig } from './config.js';
+import { studioMotion } from './studio-motion.js';
 
 export const pageMeta = {
   home: { path: '/', title: 'Namaha Studios — Stories that move the world', description: 'Namaha Studios is a film, television and entertainment studio — from the first spark of an idea to stories that stay with people.', image: 'hero' },
@@ -25,7 +26,7 @@ export function renderBody(page) {
   const film = page === 'work' ? movingFilmStrip() : '';
   const end = page === '404' ? '' : closing(page);
   const flower = `<div class="ixora-scatter" data-ixora-scatter aria-hidden="true" hidden>${Array.from({length:6},(_,i)=>`<img class="scatter-flower scatter-flower-${i}" src="./assets/ixora-orange-open.webp" alt="" width="40" height="40">`).join('')}${Array.from({length:5},(_,i)=>`<img class="scatter-bud scatter-bud-${i}" src="./assets/ixora-orange-bud.webp" alt="" width="48" height="48">`).join('')}</div><img class="ixora-flight" data-ixora src="./assets/ixora-orange-bud.webp" width="34" height="34" alt="" aria-hidden="true" hidden>`;
-  return `<div id="top"></div><canvas id="kites" aria-hidden="true"></canvas>${header(page)}${flower}<main id="main" tabindex="-1">${pages[page]()}${film}${end}</main>${footer()}${page === 'contact' ? '' : whatsappButton(true)}${dialogShell()}`;
+  return `<div id="top"></div><canvas id="kites" aria-hidden="true"></canvas>${header(page)}${flower}<main id="main" tabindex="-1">${page === 'home' ? studioMotion() : ''}${pages[page]()}${film}${end}</main>${footer()}${page === 'contact' ? '' : whatsappButton(true)}${dialogShell()}`;
 }
 
 export function renderHead(page, config = siteConfig) {

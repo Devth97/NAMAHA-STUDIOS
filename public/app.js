@@ -3,6 +3,7 @@ import { setupInteractions } from './interactions.js';
 import { initKites } from './kites.js';
 import { setupFilmStrip } from './film-strip.js';
 import { initIxora } from './ixora.js';
+import { initStudioMotion } from './studio-motion.js';
 
 const root = document.querySelector('#app');
 // Production pages arrive fully prerendered; render in the browser only as a fallback.
@@ -16,3 +17,4 @@ setupInteractions();
 setupFilmStrip();
 initKites(document.querySelector('#kites'));
 initIxora();
+initStudioMotion();

@@ -1,0 +1,33 @@
+/* Sparse individually animated sketches, never a packed sliding illustration. */
+@layer refine {
+  .studio-motion { padding: 10px max(24px,calc((100vw - 1280px)/2)) 0; border-bottom: 1px solid var(--line); background: var(--paper); }
+  .studio-motion-scenes { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: clamp(24px,5vw,85px); align-items: end; }
+  .studio-vignette { display: block; width: 100%; height: auto; max-height: 185px; color: #786b5a; overflow: visible; }
+  .studio-ground { stroke: #b4a796; stroke-width: .7; }
+  .studio-motion-caption { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 0 0 10px; color: var(--muted); font-size: 9px; letter-spacing: .1em; }
+  .studio-motion-toggle { min-height: 36px; background: none; font: inherit; letter-spacing: 0; text-decoration: underline; text-underline-offset: 4px; }
+  .studio-motion-toggle:disabled { cursor: default; text-decoration: none; }
+  .studio-dolly { animation: studio-dolly 9s ease-in-out infinite alternate; }
+  .studio-pencil-arm { transform-origin: 82px 84px; animation: studio-pencil 5.8s ease-in-out infinite alternate; }
+  .studio-boom { transform-origin: 138px 86px; animation: studio-boom 8.2s ease-in-out infinite alternate; }
+  .studio-idea { animation: studio-idea 7s ease-in-out infinite; }
+  .studio-sound { animation: studio-idea 6s ease-in-out -2s infinite; }
+  .studio-edit-lines { animation: studio-edit 4.6s ease-in-out infinite; }
+  .studio-slate { transform-origin: 39px 139px; animation: studio-slate 9s ease-in-out infinite; }
+  .studio-motion.is-paused svg *, .studio-motion.is-paused svg { animation-play-state: paused !important; }
+  @keyframes studio-dolly { from {transform:translateX(-5px)} to {transform:translateX(9px)} }
+  @keyframes studio-pencil { from {transform:rotate(-2deg)} to {transform:rotate(3deg)} }
+  @keyframes studio-boom { from {transform:rotate(-2deg)} to {transform:rotate(3deg)} }
+  @keyframes studio-idea { 0%,100% {opacity:.35} 40%,70% {opacity:1} }
+  @keyframes studio-edit { 0%,100% {opacity:.45;transform:translateX(0)} 50% {opacity:1;transform:translateX(2px)} }
+  @keyframes studio-slate { 0%,65%,100% {transform:rotate(0)} 76% {transform:rotate(-5deg)} 86% {transform:rotate(2deg)} }
+  @media(max-width:760px) {
+    .studio-motion { padding: 8px 20px 0; }
+    .studio-motion-scenes { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 0 24px; }
+    .studio-vignette { max-height: 126px; }
+    .studio-motion-caption { align-items: flex-start; gap: 12px; font-size: 8px; line-height: 1.6; padding-top: 6px; }
+    .studio-motion-caption>span { max-width: 155px; }
+    .studio-motion-toggle { text-align: right; flex-shrink: 0; }
+  }
+  @media(prefers-reduced-motion:reduce) { .studio-motion svg * { animation: none !important; } }
+}

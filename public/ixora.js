@@ -84,7 +84,7 @@ export function initIxora() {
   document.addEventListener('click', event => {
     // The menu replaces its icon during the same click; use the original event path.
     const control = event.composedPath().find(element => element.matches?.('button,a[href]'));
-    if (!control || control.matches('.motion-toggle,[disabled]') || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+    if (!control || control.matches('.motion-toggle,[data-studio-motion-toggle],[disabled]') || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
     if (control.matches('.menu-toggle[aria-expanded="false"]')) return;
     const box = control.getBoundingClientRect();
     const anchor = event.detail > 0 ? {x:event.clientX,y:event.clientY} : {x:box.left + box.width/2,y:box.top + box.height/2};
