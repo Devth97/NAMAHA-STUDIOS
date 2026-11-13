@@ -1,7 +1,7 @@
 // Site-wide settings. Public values only: never place mailbox passwords or private API secrets here.
 export const siteConfig = {
   // Optional generated film-crew animation. MP4/WebM, silent, landscape; blank keeps a still art strip.
-  studioVideoUrl: './assets/studio-crew-loop-v2.mp4',
+  studioVideoUrl: './assets/studio-crew-loop-v3.mp4',
   // Owner-verified Web3Forms access key. Leave blank for the demo (no email is sent).
   web3formsAccessKey: '',
   // Final production origin without a trailing slash, e.g. 'https://namahastudios.com'.

@@ -1,5 +1,9 @@
 # Film-crew animation for the header strip
 
+## Larger crew within the same thin strip
+
+`studio-crew-loop-v3.mp4` and matching v3 poster replace v2. Per-scene source crops use y/height 248/208 planning, 258/198 camera, 222/234 sound, 262/194 editing. Relative to v2, planning/camera/editing are about 20–29% larger, with a smaller 7% increase for the tall boom scene to retain the microphone. The four panels, complete timeline, strip dimensions and playback controls are unchanged. Inspected frames across all ten seconds for clipping, and checked browser playback at 320/390/768/1440px, global pause/resume, reduced motion and offscreen pause.
+
 ## Replacement clip installed
 
 The user supplied `Film crew header loop (1).mp4` (1280×720, 24fps, 10.04 seconds), a continuous wide scene with changing character poses. Replaced the previous montage with `studio-crew-loop-v2.mp4` (142,558 bytes) and matching v2 poster. Kept the complete source chronology, with no reverse playback or shot repetition. Four spatial crops at x=0/334/634/926, widths 334/300/292/354, y=210 and height=250 remove surrounding blank space; each is scaled to 176px high, padded to 480px width and combined into a 1920×176 strip. White-level/grayscale correction blends the paper background. Existing desktop/mobile framing and reduced-motion/offscreen controls remain in place. The previous installation details below are historical.
