@@ -1,5 +1,10 @@
 # Film-crew animation for the header strip
 
+## Latest correction — play the original video unchanged
+
+The user rejected the spacing between separated activity groups. `studio-film-set-original-v1.mp4` is a byte-for-byte copy of the supplied Telegram video (SHA-256 verified), with its original composition, colour, timing and audio track. HTML playback is muted and loops the complete 4.96-second source. One continuous video is used on every route. No group extraction, recomposition, padding or added spacing. The original 72–88px strip remains; CSS clips only the source's empty upper/lower paper, preserving the connected row of crew at native proportions. The full-frame first-frame poster uses identical CSS geometry. Earlier recomposed assets and instructions below are superseded.
+
+
 ## 14 November â€” final supplied thin-banner footage
 
 Latest instruction: use `Animating_film-production_bannerâ€¦_7897032d_1080p.mp4` from the user's Telegram Desktop downloads, retaining the original thin strip. This supersedes the taller-band trial below. The source is 1920 x 1080, 24 fps, 119 frames / 4.9583 seconds. All frames are retained in chronological order, with silent normal forward looping. No reversed playback or artificial new motion.

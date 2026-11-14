@@ -4,7 +4,7 @@ Current illustration direction: `LINE_DRAWING_STANDARD.md` applies across all pa
 
 Namaha Studios — studio website (design preview).
 
-14 November update: confirmed studio location is Venoor, Karnataka. A single orange ixora flower follows the pointer in place of the kite. The latest supplied Indian film-set animation plays in the original thin 72–88px strip on every route. Its complete 4.96-second sequence loops forward, with a matching loading/reduced-motion poster; see `STUDIO_VIDEO_BRIEF.md`.
+14 November update: confirmed studio location is Venoor, Karnataka. A single orange ixora flower follows the pointer in place of the kite. The latest supplied Indian film-set animation plays in the original thin 72–88px strip on every route. The original supplied video is played unchanged as one continuous scene, with no separated groups or added spacing. Its complete 4.96-second sequence loops forward, with a matching loading/reduced-motion poster; see `STUDIO_VIDEO_BRIEF.md`.
 
 Six-page static site plus a 404 page. Warm ivory, ink and muted gold editorial design with Instrument Serif and Manrope typography, detailed pen-and-ink illustrations, cinematic photography, a showreel band, three cursor-following paper kites, work filters, a bento gallery with lightbox, a validated enquiry form and labelled demo WhatsApp links.
 
