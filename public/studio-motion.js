@@ -1,19 +1,11 @@
 import { siteConfig } from './config.js';
 import { esc } from './components.js';
 
-const activities = [
-  ['planning','Writers planning a script and storyboard'],
-  ['camera','Camera operator working on a cinema dolly'],
-  ['sound','Director and sound recordist holding a boom microphone'],
-  ['editing','Editor reviewing footage at an editing desk']
-];
-
 export function studioMotion() {
-  const stills = activities.map(([,label])=>`<div class="studio-video-panel"><img class="studio-activity-poster" src="./assets/studio-crew-poster-v3.webp" width="1920" height="176" alt="${label}" decoding="async"></div>`).join('');
-  const fallback = `<div class="studio-motion-group studio-motion-set">${stills}</div>`;
-  const clips = activities.map(()=>`<div class="studio-video-panel"><video class="studio-activity-video" data-studio-video muted loop playsinline preload="none" tabindex="-1"><source src="${esc(siteConfig.studioVideoUrl)}"></video></div>`).join('');
-  const scenes = siteConfig.studioVideoUrl ? `<div class="studio-video-scenes studio-motion-set" aria-hidden="true">${clips}</div>` : '';
-  return `<section class="studio-motion" aria-label="Film production artwork" data-studio-motion>${fallback}${scenes}</section>`;
+  const poster = './assets/studio-indian-film-set-poster-v1.webp';
+  const fallback = `<img class="studio-activity-poster" src="${poster}" width="2560" height="160" alt="Line drawing of a film set with a production van, storyboard discussion, camera crew, tea service, lighting and editing." decoding="async">`;
+  const scene = siteConfig.studioVideoUrl ? `<video class="studio-activity-video" data-studio-video muted loop playsinline preload="none" poster="${poster}" tabindex="-1" aria-hidden="true"><source src="${esc(siteConfig.studioVideoUrl)}" type="video/mp4"></video>` : '';
+  return `<section class="studio-motion" aria-label="Film production artwork" data-studio-motion><div class="studio-scene">${fallback}${scene}</div></section>`;
 }
 
 export function initStudioMotion() {

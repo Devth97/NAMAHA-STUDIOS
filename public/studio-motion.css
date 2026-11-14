@@ -1,22 +1,13 @@
-/* Supplied crew footage, reformatted as four simultaneous film-production scenes. */
+/* Supplied Indian film-set actions, fitted to the original stationary thin strip. */
 @layer refine {
   .studio-motion { position: relative; height: var(--header-h); min-height: 72px; overflow: hidden; border-bottom: 1px solid var(--line); background: var(--paper); }
-  .studio-motion-group { mix-blend-mode: multiply; }
-  .studio-motion-set { display: flex; width: 100%; height: 100%; }
-  .studio-video-scenes { position: absolute; top: 0; left: 0; opacity: 0; pointer-events: none; mix-blend-mode: multiply; }
-  .studio-video-panel { position: relative; flex: 1; min-width: 0; overflow: hidden; }
-  .studio-activity-video, .studio-activity-poster { position: absolute; top: -6%; left: 50%; height: 112%; width: auto; max-width: none; transform: translateX(-12.5%); }
-  .studio-video-panel:nth-child(2) > * { transform: translateX(-37.5%); }
-  .studio-video-panel:nth-child(3) > * { transform: translateX(-62.5%); }
-  .studio-video-panel:nth-child(4) > * { transform: translateX(-87.5%); }
-  .studio-motion.is-playing .studio-video-scenes { opacity: 1; }
-  .studio-motion.is-playing .studio-motion-group { visibility: hidden; }
+  .studio-scene { position: relative; width: 100%; height: 100%; mix-blend-mode: multiply; }
+  .studio-activity-video, .studio-activity-poster { display: block; width: 100%; height: 100%; object-fit: contain; }
+  .studio-activity-video { position: absolute; inset: 0; opacity: 0; pointer-events: none; }
+  .studio-motion.is-playing .studio-activity-video { opacity: 1; }
+  .studio-motion.is-playing .studio-activity-poster { visibility: hidden; }
   .studio-motion + .home-hero .hero-inner { padding-top: 24px; }
   @media(min-width:761px) {
     .studio-motion + .home-hero .hero-inner { align-items: flex-start; }
-  }
-  @media(max-width:760px) {
-    .studio-motion { height: 72px; }
-    .studio-activity-video, .studio-activity-poster { top: 0; height: 100%; width: 400%; object-fit: contain; }
   }
 }

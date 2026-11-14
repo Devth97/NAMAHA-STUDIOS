@@ -1,5 +1,20 @@
 # Film-crew animation for the header strip
 
+## 14 November — final supplied thin-banner footage
+
+Latest instruction: use `Animating_film-production_banner…_7897032d_1080p.mp4` from the user's Telegram Desktop downloads, retaining the original thin strip. This supersedes the taller-band trial below. The source is 1920 x 1080, 24 fps, 119 frames / 4.9583 seconds. All frames are retained in chronological order, with silent normal forward looping. No reversed playback or artificial new motion.
+
+Installed `studio-indian-film-set-banner-v1.mp4` (2560 x 160, fast-start H.264) and its matching first-frame WebP poster. Remove blank source paper with a 540px-tall crop starting at y=300, then retain four interacting spatial groups: x=0–440 (van), 440–740 (storyboard), 740–1344 (director/camera/tea), 1344–1920 (lighting/editing). Each group scales proportionally to 160px high and is centred within a 640px-wide slot. Camera and tea interactions remain together. Monochrome paper/contrast normalization blends the source into the site's paper without rectangular backgrounds. No figures are stretched.
+
+The stationary stage remains 72–88px high on every page and scales the panoramic image proportionally, keeping all activities visible on phones. Global pause, reduced motion, document visibility and offscreen suspension remain supported. The earlier footage and taller-band trial below are historical only.
+
+## 14 November — supplied film-set animation, first five seconds only
+
+Latest user instruction replaces the earlier four-scene footage. Source: `C:/Users/KhalandarThameem/Downloads/Animation_of_film_production_set_3fe2b3d3_1080p.mp4` (1920 x 1080, 24 fps, 14.93 seconds). Installed `public/assets/studio-film-set-first-5s-v1.mp4`: exactly 120 frames / 5.00 seconds, silent H.264, fast-start MP4. No later footage, reverse playback, transition or crossfade is included. Normal HTML video looping returns directly to the opening frame.
+
+The user selected a taller responsive band to preserve the complete 16:9 scene. One video replaces the four cropped players on every route. The stage is at most 960px wide, retains its 16:9 proportions, and scales down to the phone width. Its first-frame poster has identical geometry. Preserve global pause, reduced-motion fallback and offscreen suspension. Earlier missing-footage notes below are historical and superseded by this supplied animation.
+
+
 ## Latest scrolling and spacing request
 
 Client now explicitly requests left-to-right strip travel on all devices in addition to character animation. Two identical four-scene sets form a continuous translating track. Desktop uses two viewport widths and a 48s loop; mobile uses a 1600px track and a 32s loop so all four activities pass through. The video track runs only during active playback and pauses offscreen or under the global motion control; reduced motion disables travel. Loading posters use identical duplicated framing. Hero top padding is 24px and desktop copy is top-aligned, removing the previously measured ~100px gap. Browser checks at 320/390/768/1440px confirm rightward travel, compact spacing, no overflow and pause/reduced-motion behaviour. Build/site verification passes.
