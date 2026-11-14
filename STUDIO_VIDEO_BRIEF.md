@@ -1,5 +1,10 @@
 # Film-crew animation for the header strip
 
+## Latest instruction — increase height and restore natural proportions
+
+The user now requests a taller full-width strip, all heads and feet visible, no distortion, no splitting and no added gaps. The original source MP4 remains unchanged. The stage uses width:100% and aspect-ratio:32/9, corresponding to the source's full-width 1920 x 540 active scene. The original full-frame video and matching poster occupy 200% of the stage height at width:100%, preserving their native 16:9 proportions exactly; top:-55% clips blank source paper outside y=297–837. Strip height now scales with viewport width (405px at 1440px, about 110px at 390px), with no maximum-height cap that could reintroduce cropping or compression. This supersedes the earlier thin-strip and compressed layouts below. All pages retain looping, global pause and reduced-motion support.
+
+
 ## Latest approved framing — compress the complete scene into the thin strip
 
 The user explicitly selected: keep the thin strip and compress the full scene vertically. The original video remains byte-for-byte unchanged, unsplit and uninterrupted. Video and poster fill the full strip width with `object-fit:fill`, `height:200%` and `top:-55%`. This maps the complete active crew band (source y=297–837) into the existing 72–88px strip; only blank paper above and below falls outside the viewport. All heads and feet remain visible, with no added spacing. The deliberate vertical compression supersedes the preceding proportional cover crop.
