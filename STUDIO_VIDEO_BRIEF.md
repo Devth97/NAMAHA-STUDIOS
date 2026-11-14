@@ -1,5 +1,10 @@
 # Film-crew animation for the header strip
 
+## Latest request — complete supplied frame in slim strip
+
+The supplied `Namaha silent letterhead (1).mp4` is already installed byte-for-byte (SHA-256 checked). Removed all vertical crop offsets. Both video and poster now occupy the band with object-fit:contain, showing the complete source frame at native proportions without any splitting, stretching or cropping. The header remains 88–120px high. Side space is inherent to fitting this 16:9 source inside the wide slim band.
+
+
 ## Latest source — Namaha silent letterhead (1).mp4
 
 Installed the new supplied file unchanged as `namaha-silent-letterhead-v2.mp4`, with its own first-frame poster. One uninterrupted video loops on all routes. Header band is 88–120px high. The full-width source crew scene is displayed at native proportions in a centred 16:5 window, removing only blank paper above/below (source y=240–840). No groups are split, repositioned, duplicated or stretched. The original source itself already cuts the extreme left van/right editing desk at its frame edges; the site adds no horizontal crop. Because this file remains 16:9, a slim band necessarily has side space when retaining full-scene natural proportions. This limitation was stated before applying the update; it is not a full-width panoramic replacement. Earlier framing notes below are superseded.

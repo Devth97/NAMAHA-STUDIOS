@@ -1,8 +1,8 @@
-/* Original continuous video at natural proportions; remove only blank paper above and below the crew. */
+/* Complete original video frame, contained without cropping or distortion in a slim band. */
 @layer refine {
   .studio-motion { position: relative; height: clamp(88px, 8vw, 120px); overflow: hidden; border-bottom: 1px solid var(--line); background: var(--paper); }
-  .studio-scene { position: relative; width: auto; max-width: 100%; height: 100%; aspect-ratio: 16 / 5; margin-inline: auto; overflow: hidden; mix-blend-mode: multiply; }
-  .studio-activity-video, .studio-activity-poster { position: absolute; display: block; left: 0; top: -40%; width: 100%; max-width: none; height: 180%; object-fit: contain; }
+  .studio-scene { position: relative; width: 100%; height: 100%; overflow: hidden; mix-blend-mode: multiply; }
+  .studio-activity-video, .studio-activity-poster { position: absolute; display: block; left: 0; top: 0; width: 100%; max-width: none; height: 100%; object-fit: contain; }
   .studio-activity-video { opacity: 0; pointer-events: none; }
   .studio-motion.is-playing .studio-activity-video { opacity: 1; }
   .studio-motion.is-playing .studio-activity-poster { visibility: hidden; }
