@@ -1,5 +1,10 @@
 # Film-crew animation for the header strip
 
+## Latest source — Namaha silent letterhead (1).mp4
+
+Installed the new supplied file unchanged as `namaha-silent-letterhead-v2.mp4`, with its own first-frame poster. One uninterrupted video loops on all routes. Header band is 88–120px high. The full-width source crew scene is displayed at native proportions in a centred 16:5 window, removing only blank paper above/below (source y=240–840). No groups are split, repositioned, duplicated or stretched. The original source itself already cuts the extreme left van/right editing desk at its frame edges; the site adds no horizontal crop. Because this file remains 16:9, a slim band necessarily has side space when retaining full-scene natural proportions. This limitation was stated before applying the update; it is not a full-width panoramic replacement. Earlier framing notes below are superseded.
+
+
 ## Latest instruction — increase height and restore natural proportions
 
 The user now requests a taller full-width strip, all heads and feet visible, no distortion, no splitting and no added gaps. The original source MP4 remains unchanged. The stage uses width:100% and aspect-ratio:32/9, corresponding to the source's full-width 1920 x 540 active scene. The original full-frame video and matching poster occupy 200% of the stage height at width:100%, preserving their native 16:9 proportions exactly; top:-55% clips blank source paper outside y=297–837. Strip height now scales with viewport width (405px at 1440px, about 110px at 390px), with no maximum-height cap that could reintroduce cropping or compression. This supersedes the earlier thin-strip and compressed layouts below. All pages retain looping, global pause and reduced-motion support.
