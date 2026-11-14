@@ -2,7 +2,7 @@
 
 ## Latest correction — play the original video unchanged
 
-The user rejected the spacing between separated activity groups. `studio-film-set-original-v1.mp4` is a byte-for-byte copy of the supplied Telegram video (SHA-256 verified), with its original composition, colour, timing and audio track. HTML playback is muted and loops the complete 4.96-second source. One continuous video is used on every route. No group extraction, recomposition, padding or added spacing. The original 72–88px strip remains; CSS clips only the source's empty upper/lower paper, preserving the connected row of crew at native proportions. The full-frame first-frame poster uses identical CSS geometry. Earlier recomposed assets and instructions below are superseded.
+The user rejected the spacing between separated activity groups. `studio-film-set-original-v1.mp4` is a byte-for-byte copy of the supplied Telegram video (SHA-256 verified), with its original composition, colour, timing and audio track. HTML playback is muted and loops the complete 4.96-second source. One continuous video is used on every route. No group extraction, recomposition, padding or added spacing. The original 72–88px strip remains; CSS fills the strip edge to edge with object-fit:cover and object-position:50% 35%, preserving the original proportions while cropping the upper/lower frame to the existing thin band. Both video and poster use width:100% and identical framing; there are no separate scene panels, stretched figures or added gaps. The full-frame first-frame poster uses identical CSS geometry. Earlier recomposed assets and instructions below are superseded.
 
 
 ## 14 November â€” final supplied thin-banner footage
