@@ -1,5 +1,10 @@
 # Film-crew animation for the header strip
 
+## Latest correction — remove stretched people
+
+The user identified stretched/squashed people as the defect. Restored object-fit:contain for video and poster. The source remains unchanged, the full frame remains visible, and the compact band stays 88–120px high. Side space is retained as necessary to preserve natural proportions; no cropping, stretching or splitting.
+
+
 ## Latest explicit request — stretch to fill the whole header section
 
 The user explicitly requested stretching the video across the full header section. Both video and first-frame poster now use width:100%, height:100%, object-fit:fill. This removes side space, shows the complete original frame, and intentionally changes its proportions to fit the existing 88–120px band. No scene splitting or media-file edits. This supersedes the earlier no-stretch/contain instructions below.
