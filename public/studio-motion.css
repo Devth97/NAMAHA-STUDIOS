@@ -1,4 +1,4 @@
-/* Complete original frame at natural proportions within the compact header band. */
+/* Activities spaced across a panoramic header, with naturally proportioned figures. */
 @layer refine {
   .studio-motion { position: relative; height: clamp(88px, 8vw, 120px); overflow: hidden; border-bottom: 1px solid var(--line); background: var(--paper); }
   .studio-scene { position: relative; width: 100%; height: 100%; overflow: hidden; mix-blend-mode: multiply; }

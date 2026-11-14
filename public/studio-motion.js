@@ -2,8 +2,8 @@ import { siteConfig } from './config.js';
 import { esc } from './components.js';
 
 export function studioMotion() {
-  const poster = './assets/namaha-silent-letterhead-v2.webp';
-  const fallback = `<img class="studio-activity-poster" src="${poster}" width="1920" height="1080" alt="Line drawing of a film set with a production van, storyboard discussion, camera crew, tea service, lighting and editing." decoding="async">`;
+  const poster = './assets/namaha-letterhead-blended-v4.webp';
+  const fallback = `<img class="studio-activity-poster" src="${poster}" width="2880" height="176" alt="Line drawing of a film set with a production van, storyboard discussion, camera crew, tea service, lighting and editing." decoding="async">`;
   const scene = siteConfig.studioVideoUrl ? `<video class="studio-activity-video" data-studio-video muted loop playsinline preload="none" poster="${poster}" tabindex="-1" aria-hidden="true"><source src="${esc(siteConfig.studioVideoUrl)}" type="video/mp4"></video>` : '';
   return `<section class="studio-motion" aria-label="Film production artwork" data-studio-motion><div class="studio-scene">${fallback}${scene}</div></section>`;
 }

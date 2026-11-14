@@ -56,7 +56,7 @@ test('all routes include one film-set stage and the confirmed studio location', 
     assert.equal((html.match(/data-studio-motion>/g) || []).length, 1, page);
     assert.equal((html.match(/data-studio-video /g) || []).length, 1, page);
     assert.match(html, /muted loop playsinline/, page);
-    assert.match(html, /namaha-silent-letterhead-v2\.mp4/, page);
+    assert.match(html, /namaha-letterhead-blended-v4\.mp4/, page);
     assert.doesNotMatch(html, /studio-crew-loop-v3|studio-video-panel/, page);
     assert.match(html, /Venoor, Karnataka/, page);
     assert.doesNotMatch(html, /Mangalore|studio-motion-track|id="kites"/, page);

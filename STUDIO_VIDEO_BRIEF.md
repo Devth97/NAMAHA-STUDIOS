@@ -1,5 +1,10 @@
 # Film-crew animation for the header strip
 
+## Latest request — fill header with spacing, then blend paper colour
+
+User authorized spacing between activities to fill the same compact header without squashing figures. Prepared five proportionally scaled spatial groups (van, storyboard, director/camera, tea/lighting, editing) across a 2880 x 176 video. Original chronology retained. Then normalized the source and added paper to neutral white, removing the source's peach tint and rectangular panels. Existing multiply blending lets the site's paper show through. Latest files: `namaha-letterhead-blended-v4.mp4` and matching first-frame WebP. No stretch or new character motion. This replaces earlier requests to keep the unmodified composition.
+
+
 ## Latest correction — remove stretched people
 
 The user identified stretched/squashed people as the defect. Restored object-fit:contain for video and poster. The source remains unchanged, the full frame remains visible, and the compact band stays 88–120px high. Side space is retained as necessary to preserve natural proportions; no cropping, stretching or splitting.
