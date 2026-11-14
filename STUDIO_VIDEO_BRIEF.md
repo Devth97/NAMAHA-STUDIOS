@@ -1,5 +1,10 @@
 # Film-crew animation for the header strip
 
+## Latest explicit request — stretch to fill the whole header section
+
+The user explicitly requested stretching the video across the full header section. Both video and first-frame poster now use width:100%, height:100%, object-fit:fill. This removes side space, shows the complete original frame, and intentionally changes its proportions to fit the existing 88–120px band. No scene splitting or media-file edits. This supersedes the earlier no-stretch/contain instructions below.
+
+
 ## Latest request — complete supplied frame in slim strip
 
 The supplied `Namaha silent letterhead (1).mp4` is already installed byte-for-byte (SHA-256 checked). Removed all vertical crop offsets. Both video and poster now occupy the band with object-fit:contain, showing the complete source frame at native proportions without any splitting, stretching or cropping. The header remains 88–120px high. Side space is inherent to fitting this 16:9 source inside the wide slim band.
