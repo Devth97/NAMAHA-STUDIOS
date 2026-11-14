@@ -1,6 +1,6 @@
 import { renderBody, resolvePage, pageMeta } from './render.js';
 import { setupInteractions } from './interactions.js';
-import { initKites } from './kites.js';
+import { initCursorFlower } from './cursor-flower.js';
 import { setupFilmStrip } from './film-strip.js';
 import { initIxora } from './ixora.js';
 import { initStudioMotion } from './studio-motion.js';
@@ -15,6 +15,6 @@ if (!root.hasAttribute('data-prerendered')) {
 document.documentElement.classList.add('js');
 setupInteractions();
 setupFilmStrip();
-initKites(document.querySelector('#kites'));
+initCursorFlower(document.querySelector('#cursor-flower'));
 initIxora();
 initStudioMotion();

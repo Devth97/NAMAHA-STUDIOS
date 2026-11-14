@@ -1,15 +1,15 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { bindKiteInput } from '../public/kites.js';
+import { bindFlowerInput } from '../public/cursor-flower.js';
 
 function input(type, values) {
   return Object.assign(new Event(type, { cancelable: true }), values);
 }
-test('finger movement moves kites without preventing native scrolling', () => {
+test('finger movement moves flowers without preventing native scrolling', () => {
   const target = new EventTarget();
   const moves = [];
   let ended = false;
-  bindKiteInput(target, point => moves.push(point), () => { ended = true; });
+  bindFlowerInput(target, point => moves.push(point), () => { ended = true; });
   const start = input('touchstart', { touches: [{ clientX: 90, clientY: 220 }] });
   const move = input('touchmove', { touches: [{ clientX: 95, clientY: 180 }] });
   target.dispatchEvent(start);
@@ -19,10 +19,10 @@ test('finger movement moves kites without preventing native scrolling', () => {
   assert.equal(start.defaultPrevented || move.defaultPrevented, false);
   assert.equal(ended, true);
 });
-test('mouse moves kites once and touch pointer events do not duplicate touch input', () => {
+test('mouse moves flowers once and touch pointer events do not duplicate touch input', () => {
   const target = new EventTarget();
   const moves = [];
-  bindKiteInput(target, point => moves.push(point), () => {});
+  bindFlowerInput(target, point => moves.push(point), () => {});
   target.dispatchEvent(input('pointermove', { pointerType: 'mouse', clientX: 15, clientY: 25 }));
   target.dispatchEvent(input('pointermove', { pointerType: 'touch', clientX: 90, clientY: 100 }));
   assert.deepEqual(moves, [{ x: 15, y: 25 }]);
@@ -30,7 +30,7 @@ test('mouse moves kites once and touch pointer events do not duplicate touch inp
 test('multi-touch does not interfere with pinch gestures', () => {
   const target = new EventTarget();
   const moves = [];
-  bindKiteInput(target, point => moves.push(point), () => {});
+  bindFlowerInput(target, point => moves.push(point), () => {});
   target.dispatchEvent(input('touchmove', { touches: [{ clientX: 1, clientY: 1 }, { clientX: 2, clientY: 2 }] }));
   assert.deepEqual(moves, []);
 });

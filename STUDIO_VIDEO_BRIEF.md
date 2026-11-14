@@ -22,7 +22,13 @@ Source: `C:/Users/KhalandarThameem/Downloads/Film crew header loop.mp4` (1280×7
 
 Installed `public/assets/studio-crew-loop-v1.mp4` (145,784 bytes) and `studio-crew-poster-v1.webp`. `studioVideoUrl` points to this clip. Desktop fits all four complete scenes; phones use a centred window on the camera/sound panels. No dedicated pause button or sliding stickers. Browser checks passed at 320, 390, 768 and 1440px: advancing playback, global pause/resume, reduced-motion fallback, offscreen pause, no page errors or horizontal overflow. All 25 tests and the production build/site verification pass. Updates are on the local trial branch pending publication.
 
-The following generation brief is retained for future replacement footage.
+## 14 November — latest client feedback
+
+The supplied Kannada transcription supersedes the earlier request to scroll the strip. Keep a stationary full-width stage on every route, including phones, with crew actions taking place inside it. The current implementation displays all four existing activities without a marquee or duplicated scene sets; video and first-frame poster use matching geometry. Global pause, reduced motion and offscreen suspension remain supported.
+
+New footage is still required for the client's complete film-set concept: a production van arriving, a camera operator interacting with a director, a tea assistant carrying cups and serving the crew, storyboard discussions and a lighting technician walking in with a light. Actions should overlap naturally and may enter, leave or change within the fixed stage. The existing v3 footage contains planning, camera, sound and editing actions only; do not describe it as delivering the additional interactions. Supply a panoramic desktop clip and a phone composition that keeps all actions readable, using the same lightly detailed hand-drawn style.
+
+The following earlier generation brief is retained for future replacement footage; the latest feedback above takes precedence.
 
 Create a genuine character-animation video, not cutout figures drifting sideways. Existing starter artwork: `public/assets/studio-strip-planning.webp`, `studio-strip-camera.webp`, `studio-strip-sound.webp` and `studio-strip-editing.webp`. Use the client's original crew illustrations as the primary style reference when the model accepts them.
 

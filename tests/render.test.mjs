@@ -33,11 +33,11 @@ test('routes resolve, including unknown paths to the 404 page', () => {
   assert.equal(resolvePage('/nope.html'), '404');
 });
 
-test('the mobile menu, showreel and kites canvas are present in the markup', () => {
+test('the mobile menu, showreel and cursor flower canvas are present in the markup', () => {
   const html = renderBody('home');
   assert.match(html, /aria-controls="navigation"/);
   assert.match(html, /showreel/);
-  assert.match(html, /<canvas id="kites"/);
+  assert.match(html, /<canvas id="cursor-flower"/);
 });
 
 test('inline validation reports single fields and accepts optional extras', () => {
@@ -48,4 +48,14 @@ test('inline validation reports single fields and accepts optional extras', () =
   assert.equal(fieldError('budget', ''), '');
   const valid = { name: 'A', email: 'a@example.com', type: 'Digital Content', message: 'Hello', budget: 'Not sure yet', timeline: 'Within 3 months' };
   assert.deepEqual(validateEnquiry(valid), {});
+});
+
+test('all routes include one film-set stage and the confirmed studio location', () => {
+  for (const page of Object.keys(pageMeta)) {
+    const html = renderBody(page);
+    assert.equal((html.match(/data-studio-motion>/g) || []).length, 1, page);
+    assert.equal((html.match(/data-studio-video /g) || []).length, 4, page);
+    assert.match(html, /Venoor, Karnataka/, page);
+    assert.doesNotMatch(html, /Mangalore|studio-motion-track|id="kites"/, page);
+  }
 });

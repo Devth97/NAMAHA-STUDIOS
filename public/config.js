@@ -11,8 +11,8 @@ export const siteConfig = {
   allowIndexing: false,
   // Showreel link: a YouTube or Vimeo URL, or a self-hosted .mp4 path. Blank shows "premiering soon".
   showreelUrl: '',
-  // Preview location from the supplied brief summary; confirm with the client before launch.
-  location: 'Mangalore, Karnataka',
+  // Studio location confirmed by the owner.
+  location: 'Venoor, Karnataka',
   phoneNumber: '917022833448',
   phoneDisplay: '+91 70228 33448',
   email: 'namahastudios.in@gmail.com',

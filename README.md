@@ -4,6 +4,8 @@ Current illustration direction: `LINE_DRAWING_STANDARD.md` applies across all pa
 
 Namaha Studios — studio website (design preview).
 
+14 November update: confirmed studio location is Venoor, Karnataka. A single orange ixora flower follows the pointer in place of the kite. The stationary crew strip now appears on every route and keeps all four activities visible on phones. The additional van, tea-serving and lighting interactions requested in the supplied video require replacement animation footage; see `STUDIO_VIDEO_BRIEF.md`.
+
 Six-page static site plus a 404 page. Warm ivory, ink and muted gold editorial design with Instrument Serif and Manrope typography, detailed pen-and-ink illustrations, cinematic photography, a showreel band, three cursor-following paper kites, work filters, a bento gallery with lightbox, a validated enquiry form and labelled demo WhatsApp links.
 
 See `FORM_SETUP.md` to activate enquiry email delivery and replace the demo WhatsApp number. `ILLUSTRATION_PROMPTS.md` records the new artwork direction and source filenames.

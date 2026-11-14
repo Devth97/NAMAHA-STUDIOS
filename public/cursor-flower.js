@@ -1,5 +1,5 @@
-// One light paper kite on a decorative, pointer-transparent canvas.
-export function bindKiteInput(target, onMove, onEnd) {
+// One orange ixora flower on a decorative, pointer-transparent canvas.
+export function bindFlowerInput(target, onMove, onEnd) {
   target.addEventListener('pointermove', event => {
     if (event.pointerType !== 'touch') onMove({ x: event.clientX, y: event.clientY });
   }, { passive: true });
@@ -24,18 +24,18 @@ export function createFlight(point) {
 
 export function advanceFlight(flight, target, elapsed, time) {
   const dt = Math.min(50, elapsed) / 16.667;
-  flight.forEach((kite, i) => {
-    const dx = target.x - 35 - i * 38 - kite.x;
-    const dy = target.y + 20 + i * 25 + Math.sin(time * .002 + i * 2) * 9 - kite.y;
+  flight.forEach((flower, i) => {
+    const dx = target.x - 35 - i * 38 - flower.x;
+    const dy = target.y + 20 + i * 25 + Math.sin(time * .002 + i * 2) * 9 - flower.y;
     const ease = 1 - Math.pow(1 - .12 / (1 + i * .6), dt);
-    kite.x += dx * ease;
-    kite.y += dy * ease;
+    flower.x += dx * ease;
+    flower.y += dy * ease;
     const tilt = Math.max(-.65, Math.min(.65, dx * .006)) + Math.sin(time * .0025 + i) * .1;
-    kite.angle += (tilt - kite.angle) * (1 - Math.pow(.88, dt));
+    flower.angle += (tilt - flower.angle) * (1 - Math.pow(.88, dt));
   });
 }
 
-export function initKites(canvas) {
+export function initCursorFlower(canvas) {
   if (!canvas) return;
   const context = canvas.getContext('2d');
   if (!context) return;
@@ -44,13 +44,12 @@ export function initKites(canvas) {
   const control = document.createElement('button');
   control.type = 'button';
   control.className = 'motion-toggle';
-  control.setAttribute('aria-description', 'Controls the paper kite and ixora flower animation.');
+  control.setAttribute('aria-description', 'Controls the cursor flower, click flowers and film-set animation.');
   document.querySelector('.hero-bottom')?.prepend(control);
   let enabled = true, frame = 0, lastTime = 0, lastMove = 0, width = 1, height = 1;
   let flight = [], target = null;
-  const sprites = ['gold'].map(colour => {
-    const sprite = new Image();
-    sprite.src = new URL(`./assets/kite-${colour}-sketch.svg`, import.meta.url).href;
+  const sprites = [new Image()].map(sprite => {
+    sprite.src = new URL('./assets/ixora-orange-open.webp', import.meta.url).href;
     return sprite;
   });
   const allowed = () => enabled && !motion.matches && !document.hidden;
@@ -63,8 +62,8 @@ export function initKites(canvas) {
     if (!allowed()) stop();
     control.hidden = motion.matches;
     control.setAttribute('aria-pressed', String(enabled));
-    control.setAttribute('aria-label', enabled ? 'Pause kite animation' : 'Resume kite animation');
-    control.textContent = enabled ? 'KITE IN MOTION' : 'KITE PAUSED';
+    control.setAttribute('aria-label', enabled ? 'Pause decorative animation' : 'Resume decorative animation');
+    control.textContent = enabled ? 'MOTION ON' : 'MOTION PAUSED';
     window.dispatchEvent(new CustomEvent('studio-motion', { detail: enabled }));
   }
   function resize() {
@@ -82,7 +81,7 @@ export function initKites(canvas) {
   window.addEventListener('resize', resize, { passive: true });
   window.addEventListener('blur', stop);
   document.documentElement.addEventListener('pointerleave', stop);
-  bindKiteInput(window, point => {
+  bindFlowerInput(window, point => {
     if (!allowed()) return;
     target = point;
     lastMove = performance.now();
@@ -98,31 +97,13 @@ export function initKites(canvas) {
     context.clearRect(0, 0, width, height);
     // A brief arrival and idle fade keep the decoration unobtrusive.
     context.globalAlpha = Math.min(1, (2000 - (time - lastMove)) / 650) * .9;
-    flight.forEach((kite, i) => {
-      const size = kite.size * (finePointer.matches ? 1 : .8);
+    flight.forEach((flower, i) => {
+      const size = flower.size * (finePointer.matches ? 1 : .8);
       context.save();
-      context.translate(kite.x, kite.y);
-      context.rotate(kite.angle);
-      context.strokeStyle = kite.colour;
-      context.lineWidth = 1;
-      context.beginPath();
-      context.moveTo(0, size * .62);
-      for (let j = 1; j <= 28; j++) {
-        const wave = Math.sin(j * .25 - time * .005 + i * 2) * j * .45;
-        context.lineTo(wave, size * .62 + j * 2.3);
-      }
-      context.stroke();
-      // Tiny ribbon bows travel with the flowing tail.
-      for (const j of [7, 15, 23]) {
-        const x = Math.sin(j * .25 - time * .005 + i * 2) * j * .45;
-        const y = size * .62 + j * 2.3;
-        context.beginPath();
-        context.moveTo(x - 4, y - 3); context.lineTo(x + 4, y + 3);
-        context.lineTo(x + 4, y - 3); context.lineTo(x - 4, y + 3);
-        context.closePath(); context.stroke();
-      }
+      context.translate(flower.x, flower.y);
+      context.rotate(flower.angle);
       if (sprites[i].complete && sprites[i].naturalWidth) {
-        context.drawImage(sprites[i], -size / 2, -size * .62, size, size * 1.24);
+        context.drawImage(sprites[i], -size / 2, -size / 2, size, size);
       }
       context.restore();
     });

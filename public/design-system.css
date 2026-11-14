@@ -449,7 +449,7 @@
     .showreel-media img, .project-card .crop, .gallery-item .crop { transform: none !important; }
   }
   @media print {
-    .header, #kites, .moving-films, .word-ribbon, .showreel, .closing, dialog, .hero-bottom { display: none !important; }
+    .header, #cursor-flower, .moving-films, .word-ribbon, .showreel, .closing, dialog, .hero-bottom { display: none !important; }
     body::before { display: none; }
     .reveal { opacity: 1 !important; transform: none !important; }
   }
