@@ -1,10 +1,12 @@
 /* Namaha Studios — design system refinements (Nov 2026).
    Loaded last; the `refine` layer intentionally sits above the original layers.
-   Typography: George Williams Monospace, supplied client reference (SIL OFL). */
+   Typography: client-approved directions 2 + 4, Instrument Serif / Space Grotesk / DM Sans (SIL OFL). */
 
-@font-face { font-family: 'Namaha Monospace'; src: url('./assets/fonts/Monospace.ttf') format('truetype'); font-weight: 400 500; font-display: swap; }
-@font-face { font-family: 'Namaha Monospace'; src: url('./assets/fonts/MonospaceBold.ttf') format('truetype'); font-weight: 600 900; font-display: swap; }
-@font-face { font-family: 'Namaha Monospace'; src: url('./assets/fonts/MonospaceOblique.ttf') format('truetype'); font-style: italic; font-weight: 400 500; font-display: swap; }
+@font-face { font-family: 'Instrument Serif'; src: url('./assets/fonts/InstrumentSerif-Regular.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Instrument Serif'; src: url('./assets/fonts/InstrumentSerif-Italic.ttf') format('truetype'); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: 'DM Sans'; src: url('./assets/fonts/DMSans-Variable.ttf') format('truetype'); font-weight: 100 1000; font-style: normal; font-display: swap; }
+@font-face { font-family: 'DM Sans'; src: url('./assets/fonts/DMSans-Italic-Variable.ttf') format('truetype'); font-weight: 100 1000; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Space Grotesk'; src: url('./assets/fonts/SpaceGrotesk-Variable.ttf') format('truetype'); font-weight: 300 700; font-style: normal; font-display: swap; }
 
 @view-transition { navigation: none; }
 
@@ -70,8 +72,9 @@
     .contact-section .form-row { grid-template-columns: minmax(0, 1fr); gap: 0; }
   }
   :root {
-    --serif: 'Namaha Monospace', 'Courier New', monospace;
-    --sans: 'Namaha Monospace', 'Courier New', monospace;
+    --serif: 'Instrument Serif', Georgia, serif;
+    --sans: 'DM Sans', 'Segoe UI', sans-serif;
+    --studio-sans: 'Space Grotesk', 'DM Sans', sans-serif;
     --gold-ink: #86622f;          /* AA text on paper (4.9:1) */
     --muted: #5c5c52;             /* AA body copy on paper (6:1) */
     --field-line: #8c8775;        /* 3:1 non-text contrast for inputs */
@@ -597,13 +600,33 @@
 
 /* 9 November: smaller ink copy, larger brown emphasis in every page hero. */
 @layer refine {
-  .hero h1, .home-hero h1 { font-size:clamp(28px,3.4vw,46px); line-height:1.28; letter-spacing:-.045em; }
-  .hero h1 em { font-size:1.48em; line-height:1.12; color:var(--gold-ink); }
+  .hero h1, .home-hero h1 { font-size:clamp(44px,5.2vw,76px); line-height:1.08; letter-spacing:-.025em; }
+  .hero h1 em { font-size:1.16em; line-height:1.08; color:var(--gold-ink); }
   .hero h1 .line { overflow:visible; padding-bottom:.12em; margin-bottom:0; }
   .hero h1 .line > span { max-width:100%; }
   @media(max-width:760px) {
-    .hero h1, .home-hero h1 { font-size:clamp(24px,6.5vw,36px); line-height:1.3; }
-    .hero h1 em { font-size:1.55em; }
+    .hero h1, .home-hero h1 { font-size:clamp(40px,10.5vw,64px); line-height:1.12; }
+    .hero h1 em { font-size:1.16em; }
     .home-hero h1 em { white-space:normal; }
+  }
+}
+
+/* 18 November: blend approved cinematic and contemporary typography directions. */
+@layer refine {
+  body { font-optical-sizing: auto; }
+  h1, h2, .project-title, .gallery-overlay, .enquiry-title { font-family: var(--serif); font-weight: 400; }
+  h3, .service-link h3, .header nav a, .button, .quiet-link, .filter,
+  .eyebrow, .hero-eyebrow, .footer-label, .project-category, .field label,
+  .service-index a, .service-card-bottom, .contact-process h3 {
+    font-family: var(--studio-sans); font-style: normal;
+  }
+  h3, .service-link h3 { font-weight: 500; letter-spacing: -.025em; }
+  h3 em, .header nav a[aria-current] { font-style: normal; }
+  .hero-description { font-size: 16px; line-height: 1.75; }
+  .button, .quiet-link { letter-spacing: .08em; }
+  .footer-talk { font-family: var(--studio-sans); font-weight: 500; }
+  @media(max-width:760px) {
+    .hero-description { font-size: 15px; }
+    .header nav a { font-weight: 500; }
   }
 }

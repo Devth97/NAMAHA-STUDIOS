@@ -1,5 +1,7 @@
 # Namaha Studios artwork direction
 
+18 November client typography approval supersedes the earlier George Williams Monospace requirement: combine options 2 and 4 from the supplied comparison. Instrument Serif regular/real italic for expressive hero and section headings; Space Grotesk for navigation, buttons, service/supporting headings and labels; DM Sans for body, forms and readable copy. Self-host the actual fonts with their OFL licenses. Preserve supplied logo artwork, palette and illustration/video treatment. Do not restore the all-monospace style.
+
 Latest explicit request supersedes the earlier stationary-strip direction: scroll the entire animated crew strip LEFT TO RIGHT on every device so mobile users can see all four activities. Keep the character video motion too. Duplicate the four-scene set for a continuous loop (48s desktop, 32s phone); preserve pause/reduced-motion/offscreen behaviour. Home hero starts 24px below the strip, with desktop copy aligned to the top to remove the old ~100px empty gap.
 
 Loading-size fix: fallback images must use the v3 video's first-frame poster in the same four video-panel wrappers and identical media geometry. Do not restore the separate original crew illustrations as the loading fallback; their different sizes/poses caused a visible shrink when playback began. Delayed-load geometry checks pass on phones and desktop.

@@ -1,5 +1,7 @@
 # NAMAHA-STUDIOS
 
+18 November approved typography: Instrument Serif for editorial headings, Space Grotesk for navigation and supporting headings, DM Sans for body copy and forms. Actual font files are self-hosted with their OFL licenses in `public/assets/fonts/`. This combines client-selected options 2 and 4 and supersedes the former all-monospace typography.
+
 Current illustration direction: `LINE_DRAWING_STANDARD.md` applies across all page heroes and supporting drawings. Use light, modestly detailed pencil-line work; suns and colour accents are made from separated sketch strokes, never flat fills. UI icons and the single kite also use drawn contours. Click-only ixora feedback, phone, email and WhatsApp details are installed. `MINIMAL_PREVIEW.md` records earlier review iterations.
 
 Namaha Studios — studio website (design preview).
