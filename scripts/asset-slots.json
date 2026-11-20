@@ -277,6 +277,48 @@
       "file": "galleryHero-equipment-v2-line.jpg",
       "placeholder": "galleryHero-colour-pencil-line.jpg",
       "use": "Character-free equipment illustration, 20 November"
+    },
+    {
+      "id": "STUDIO-INK-idea",
+      "source": "studio-idea-ink-v2.png",
+      "file": "studio-idea-ink-v2-line.jpg",
+      "placeholder": "hero-colour-pencil-line.jpg",
+      "use": "Detailed graphite header vignette: idea"
+    },
+    {
+      "id": "STUDIO-INK-story",
+      "source": "studio-story-ink-v2.png",
+      "file": "studio-story-ink-v2-line.jpg",
+      "placeholder": "hero-colour-pencil-line.jpg",
+      "use": "Detailed graphite header vignette: story"
+    },
+    {
+      "id": "STUDIO-INK-camera",
+      "source": "studio-camera-ink-v2.png",
+      "file": "studio-camera-ink-v2-line.jpg",
+      "placeholder": "hero-colour-pencil-line.jpg",
+      "use": "Detailed graphite header vignette: camera"
+    },
+    {
+      "id": "STUDIO-INK-light",
+      "source": "studio-light-ink-v2.png",
+      "file": "studio-light-ink-v2-line.jpg",
+      "placeholder": "hero-colour-pencil-line.jpg",
+      "use": "Detailed graphite header vignette: light"
+    },
+    {
+      "id": "STUDIO-INK-edit",
+      "source": "studio-edit-ink-v2.png",
+      "file": "studio-edit-ink-v2-line.jpg",
+      "placeholder": "hero-colour-pencil-line.jpg",
+      "use": "Detailed graphite header vignette: edit"
+    },
+    {
+      "id": "STUDIO-INK-screen",
+      "source": "studio-screen-ink-v2.png",
+      "file": "studio-screen-ink-v2-line.jpg",
+      "placeholder": "hero-colour-pencil-line.jpg",
+      "use": "Detailed graphite header vignette: screen"
     }
   ]
 }

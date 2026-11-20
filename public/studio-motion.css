@@ -1,19 +1,17 @@
-/* Original equipment-led ink timeline: motion inside a stationary band. */
+/* Detailed graphite equipment vignettes on one quiet, stationary production line. */
 @layer refine {
   .studio-motion { position:relative; border-bottom:1px solid var(--line); background:var(--paper); }
-  .studio-stages { display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); max-width:1280px; margin:0 auto; padding:12px 32px 10px; list-style:none; gap:22px; }
+  .studio-stages { display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); max-width:1280px; margin:0 auto; padding:12px 30px 12px; list-style:none; gap:24px; }
   .studio-stage { position:relative; min-width:0; color:#4b4a43; }
-  .studio-stage:not(:last-child)::after { content:'→'; position:absolute; right:-16px; top:36%; color:#9b9688; font-size:13px; }
-  .equipment-drawing { display:block; width:100%; height:auto; max-height:84px; overflow:visible; }
-  .studio-stage-label { display:flex; align-items:center; justify-content:center; gap:8px; margin-top:3px; font-family:var(--studio-sans); font-size:10px; letter-spacing:.08em; text-transform:uppercase; }
-  .studio-stage-label small { font:inherit; color:#8c887c; font-size:9px; }
+  .studio-stage .studio-plate { height:96px; }
+  .studio-stage-label { display:flex; align-items:center; justify-content:center; gap:8px; margin-top:7px; font-family:var(--studio-sans); font-size:9px; letter-spacing:.1em; text-transform:uppercase; line-height:1.5; }
+  .studio-stage-label small { font:inherit; color:#8c887c; font-size:8px; }
   .studio-motion + .home-hero .hero-inner { padding-top:24px; }
   @media(min-width:761px) { .studio-motion + .home-hero .hero-inner { align-items:flex-start; } }
   @media(max-width:760px) {
-    .studio-stages { grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px 24px; padding:12px 24px; }
-    .equipment-drawing { max-height:53px; }
-    .studio-stage-label { font-size:8px; gap:5px; }
-    .studio-stage-label small { font-size:8px; }
-    .studio-stage:nth-child(3)::after { display:none; }
+    .studio-stages { grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px 22px; padding:13px 24px; }
+    .studio-stage .studio-plate { height:62px; }
+    .studio-stage-label { font-size:8px; gap:5px; margin-top:3px; }
+    .studio-stage-label small { font-size:7px; }
   }
 }

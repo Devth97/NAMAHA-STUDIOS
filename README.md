@@ -1,5 +1,7 @@
 # NAMAHA-STUDIOS
 
+Latest animation-quality repair: detailed graphite header illustrations replace the outline icons. Mounted inner reel faces rotate without moving the camera, duplicating the source image or drifting away. Quiet lamp/progress accents replace whole-object wobble. See `ARTWORK_UPDATE_2026-11-20.md` for asset provenance and phase/regression checks.
+
 20 November revision: option 1 typography (DM Mono + Manrope), a black-and-white six-stage production motion bar, equipment-led About/Gallery artwork, and a distinct planning-desk Contact illustration. Real reel regions rotate within the line drawings; lamp rays, camera pivots, storyboard detail and editing controls have restrained motion. Global pause, reduced motion, offscreen and hidden-document suspension apply. New illustrations were generated with the built-in imagegen tool, installed through `scripts/asset-slots.json` and `scripts/optimise-images.py`, and have fresh `*-equipment-v2-line` delivery URLs. Supplied logo and photographic portfolio imagery are preserved. Earlier typography and video notes below are historical.
 
 18 November approved typography: Instrument Serif for editorial headings, Space Grotesk for navigation and supporting headings, DM Sans for body copy and forms. Actual font files are self-hosted with their OFL licenses in `public/assets/fonts/`. This combines client-selected options 2 and 4 and supersedes the former all-monospace typography.
