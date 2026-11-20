@@ -256,6 +256,27 @@
       "file": "storyboard-colour-pencil-line.jpg",
       "placeholder": "storyboard-consistent-line.jpg",
       "use": "Coloured hand-sketched cinema artwork: storyboard"
+    },
+    {
+      "id": "EQUIPMENT-aboutHero",
+      "source": "aboutHero-equipment-v2.png",
+      "file": "aboutHero-equipment-v2-line.jpg",
+      "placeholder": "aboutHero-colour-pencil-line.jpg",
+      "use": "Character-free equipment illustration, 20 November"
+    },
+    {
+      "id": "EQUIPMENT-contactHero",
+      "source": "contactHero-equipment-v2.png",
+      "file": "contactHero-equipment-v2-line.jpg",
+      "placeholder": "contactHero-colour-pencil-line.jpg",
+      "use": "Character-free equipment illustration, 20 November"
+    },
+    {
+      "id": "EQUIPMENT-galleryHero",
+      "source": "galleryHero-equipment-v2.png",
+      "file": "galleryHero-equipment-v2-line.jpg",
+      "placeholder": "galleryHero-colour-pencil-line.jpg",
+      "use": "Character-free equipment illustration, 20 November"
     }
   ]
 }

@@ -54,9 +54,9 @@ test('all routes include one film-set stage and the confirmed studio location', 
   for (const page of Object.keys(pageMeta)) {
     const html = renderBody(page);
     assert.equal((html.match(/data-studio-motion>/g) || []).length, 1, page);
-    assert.equal((html.match(/data-studio-video /g) || []).length, 1, page);
-    assert.match(html, /muted loop playsinline/, page);
-    assert.match(html, /namaha-letterhead-blended-v4\.mp4/, page);
+    assert.equal((html.match(/class="studio-stage"/g) || []).length, 6, page);
+    assert.match(html, /From the first idea to the final screen/, page);
+    assert.match(html, /data-ink-motion/, page);
     assert.doesNotMatch(html, /studio-crew-loop-v3|studio-video-panel/, page);
     assert.match(html, /Venoor, Karnataka/, page);
     assert.doesNotMatch(html, /Mangalore|studio-motion-track|id="kites"/, page);

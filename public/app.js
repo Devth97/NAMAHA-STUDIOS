@@ -3,7 +3,7 @@ import { setupInteractions } from './interactions.js';
 import { initCursorFlower } from './cursor-flower.js';
 import { setupFilmStrip } from './film-strip.js';
 import { initIxora } from './ixora.js';
-import { initStudioMotion } from './studio-motion.js';
+import { initArtMotion } from './art-motion.js';
 
 const root = document.querySelector('#app');
 // Production pages arrive fully prerendered; render in the browser only as a fallback.
@@ -17,4 +17,4 @@ setupInteractions();
 setupFilmStrip();
 initCursorFlower(document.querySelector('#cursor-flower'));
 initIxora();
-initStudioMotion();
+initArtMotion();

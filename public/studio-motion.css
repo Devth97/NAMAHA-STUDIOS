@@ -1,13 +1,19 @@
-/* Activities spaced across a panoramic header, with naturally proportioned figures. */
+/* Original equipment-led ink timeline: motion inside a stationary band. */
 @layer refine {
-  .studio-motion { position: relative; height: clamp(88px, 8vw, 120px); overflow: hidden; border-bottom: 1px solid var(--line); background: var(--paper); }
-  .studio-scene { position: relative; width: 100%; height: 100%; overflow: hidden; mix-blend-mode: multiply; }
-  .studio-activity-video, .studio-activity-poster { position: absolute; display: block; left: 0; top: 0; width: 100%; max-width: none; height: 100%; object-fit: contain; }
-  .studio-activity-video { opacity: 0; pointer-events: none; }
-  .studio-motion.is-playing .studio-activity-video { opacity: 1; }
-  .studio-motion.is-playing .studio-activity-poster { visibility: hidden; }
-  .studio-motion + .home-hero .hero-inner { padding-top: 24px; }
-  @media(min-width:761px) {
-    .studio-motion + .home-hero .hero-inner { align-items: flex-start; }
+  .studio-motion { position:relative; border-bottom:1px solid var(--line); background:var(--paper); }
+  .studio-stages { display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); max-width:1280px; margin:0 auto; padding:12px 32px 10px; list-style:none; gap:22px; }
+  .studio-stage { position:relative; min-width:0; color:#4b4a43; }
+  .studio-stage:not(:last-child)::after { content:'→'; position:absolute; right:-16px; top:36%; color:#9b9688; font-size:13px; }
+  .equipment-drawing { display:block; width:100%; height:auto; max-height:84px; overflow:visible; }
+  .studio-stage-label { display:flex; align-items:center; justify-content:center; gap:8px; margin-top:3px; font-family:var(--studio-sans); font-size:10px; letter-spacing:.08em; text-transform:uppercase; }
+  .studio-stage-label small { font:inherit; color:#8c887c; font-size:9px; }
+  .studio-motion + .home-hero .hero-inner { padding-top:24px; }
+  @media(min-width:761px) { .studio-motion + .home-hero .hero-inner { align-items:flex-start; } }
+  @media(max-width:760px) {
+    .studio-stages { grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px 24px; padding:12px 24px; }
+    .equipment-drawing { max-height:53px; }
+    .studio-stage-label { font-size:8px; gap:5px; }
+    .studio-stage-label small { font-size:8px; }
+    .studio-stage:nth-child(3)::after { display:none; }
   }
 }

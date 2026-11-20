@@ -44,7 +44,7 @@ export function initCursorFlower(canvas) {
   const control = document.createElement('button');
   control.type = 'button';
   control.className = 'motion-toggle';
-  control.setAttribute('aria-description', 'Controls the cursor flower, click flowers and film-set animation.');
+  control.setAttribute('aria-description', 'Controls the cursor flower, click flowers and illustration animation.');
   document.querySelector('.hero-bottom')?.prepend(control);
   let enabled = true, frame = 0, lastTime = 0, lastMove = 0, width = 1, height = 1;
   let flight = [], target = null;

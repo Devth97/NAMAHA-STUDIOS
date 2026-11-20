@@ -1,0 +1,29 @@
+@layer refine {
+  .ink-art { position:relative; display:block; width:100%; height:100%; isolation:isolate; color:#625f55; filter:grayscale(1); }
+  .ink-art > picture { display:contents; }
+  .ink-art > picture > img.crop { width:100%; height:100%; object-fit:contain; }
+  .ink-detail { position:absolute; inset:0; width:100%; height:100%; pointer-events:none; }
+  .ink-corner-detail { position:absolute; right:3%; bottom:3%; width:20%; max-width:130px; pointer-events:none; background:var(--paper); }
+  .ink-process { display:grid; place-items:center; }
+  .ink-process .equipment-drawing { max-height:none; width:85%; }
+  .ink-reel { transform-box:view-box; animation:ink-reel 14s linear infinite paused; }
+  .ink-reverse { animation-direction:reverse; animation-duration:19s; }
+  .ink-pencil { animation:ink-pencil 6s ease-in-out infinite paused; transform-origin:110px 70px; }
+  .ink-trace { animation:ink-trace 7s ease-in-out infinite paused; }
+  .ink-light-rays { animation:ink-light 5.5s ease-in-out infinite paused; }
+  .ink-camera { animation:ink-camera 9s ease-in-out infinite paused; transform-origin:70px 78px; }
+  .ink-playhead { animation:ink-playhead 7s linear infinite paused; }
+  .ink-screen-frame { animation:ink-screen 9s ease-in-out infinite paused; }
+  .is-animating :is(.ink-reel,.ink-pencil,.ink-trace,.ink-light-rays,.ink-camera,.ink-playhead,.ink-screen-frame) { animation-play-state:running; }
+  .studio-stage:nth-child(2n) :is(.ink-light-rays,.ink-pencil,.ink-trace) { animation-delay:-2s; }
+  @keyframes ink-reel { to { transform:rotate(360deg); } }
+  @keyframes ink-pencil { 0%,30%,100% { transform:rotate(0); } 40%,60% { transform:rotate(-5deg); } 50% { transform:rotate(-2deg); } }
+  @keyframes ink-trace { 0%,100% { opacity:.55; } 45%,65% { opacity:1; } }
+  @keyframes ink-light { 0%,25%,100% { opacity:.25; } 40%,75% { opacity:.85; } }
+  @keyframes ink-camera { 0%,30%,100% { transform:rotate(0); } 55%,75% { transform:rotate(-2deg); } }
+  @keyframes ink-playhead { from { transform:translateX(-33px); } to { transform:translateX(36px); } }
+  @keyframes ink-screen { 0%,100% { opacity:.5; } 25%,75% { opacity:1; } }
+  @media(prefers-reduced-motion:reduce) {
+    :is(.ink-reel,.ink-pencil,.ink-trace,.ink-light-rays,.ink-camera,.ink-playhead,.ink-screen-frame) { animation:none!important; }
+  }
+}
