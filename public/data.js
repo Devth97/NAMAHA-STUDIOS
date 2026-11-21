@@ -10,7 +10,7 @@ export const art = {
   servicesHero: './assets/services-dolly-v1-line.jpg',
   workHero: './assets/workHero-colour-pencil-line.jpg',
   galleryHero: './assets/gallery-papers-v1-line.jpg',
-  contactHero: './assets/contactHero-equipment-v2-line.jpg',
+  contactHero: './assets/contact-desk-v1-line.jpg',
   journey: './assets/journey-colour-pencil-line.jpg',
   storyboard: './assets/storyboard-colour-pencil-line.jpg',
   banner: './assets/banner-hq.jpg',

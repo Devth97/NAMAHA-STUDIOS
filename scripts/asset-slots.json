@@ -341,6 +341,17 @@
         864
       ],
       "use": "First-frame poster for supplied Gallery paper and light video; preserve 16:9"
+    },
+    {
+      "id": "CONTACT-DESK",
+      "source": "contact-desk-v1.png",
+      "file": "contact-desk-v1-line.jpg",
+      "placeholder": "contactHero-equipment-v2-line.jpg",
+      "size": [
+        1536,
+        864
+      ],
+      "use": "First-frame poster for supplied Contact phone, pages and lamp video; preserve 16:9"
     }
   ]
 }

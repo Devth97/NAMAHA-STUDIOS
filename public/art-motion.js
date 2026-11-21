@@ -23,7 +23,6 @@ function details(key) {
   if (key === 'story') return detailSvg(key,`<path class="ink-story-focus" d="M388 291h29m-29 0v23M600 298h-29m29 0v23M400 408h29m-29 0v-23M611 409h-29m29 0v-23"/>`);
   if (key === 'light') return detailSvg(key,`<g class="ink-lamp-breath" stroke-width="2.4"><path d="M907 237l303-87M934 291l326-1M908 346l294 107"/></g>`);
   if (key === 'edit') return detailSvg(key,`<g class="ink-edit-progress"><path d="M500 408h470"/></g>`);
-  if (key === 'contactHero') return detailSvg(key,`<g class="ink-lamp-breath"><path d="M877 313l-33 42m86-35-14 50m65-47 6 51"/></g>`);
   if (key === 'storyboard') return detailSvg(key,`<path class="ink-writing" d="M585 684l143 9m-132 14 121 6"/>`);
   return '';
 }
@@ -32,7 +31,7 @@ export function equipmentDrawing(kind) {
   return `<span class="studio-plate"><img class="equipment-plate" src="./assets/studio-${name}-ink-v2-line-480.webp" width="1536" height="1024" alt="" aria-hidden="true" decoding="async">${details(name)}</span>`;
 }
 export function decorateArtwork(key, picture) {
-  const videoArtwork = {servicesHero:['services-dolly-loop-v1','services-dolly-v1-line'], galleryHero:['gallery-papers-loop-v1','gallery-papers-v1-line']}[key];
+  const videoArtwork = {servicesHero:['services-dolly-loop-v1','services-dolly-v1-line'], galleryHero:['gallery-papers-loop-v1','gallery-papers-v1-line'], contactHero:['contact-desk-loop-v1','contact-desk-v1-line']}[key];
   if (videoArtwork) {
     const [clip, poster] = videoArtwork;
     return `<span class="ink-art ink-video" data-ink-motion data-artwork="${key}">${picture}<video class="artwork-video" data-artwork-video muted loop playsinline preload="none" poster="./assets/${poster}.webp" width="1536" height="864" tabindex="-1" aria-hidden="true"><source src="./assets/${clip}.mp4" type="video/mp4"></video></span>`;

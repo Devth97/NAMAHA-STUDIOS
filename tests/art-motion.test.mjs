@@ -27,7 +27,7 @@ test('Services uses the supplied silent looping video with its accessible still 
 });
 
 test('supplied Services video is not added to other page illustrations', () => {
-  for (const key of ['hero','contactHero']) {
+  for (const key of ['hero','aboutHero','workHero']) {
     assert.doesNotMatch(decorateArtwork(key, '<picture></picture>'), /data-artwork-video|services-dolly-loop/);
   }
 });
@@ -40,4 +40,14 @@ test('Gallery uses its own supplied video and still without simulated reel overl
   assert.match(html, /muted loop playsinline/);
   assert.ok(html.includes(picture));
   assert.doesNotMatch(html, /ink-mounted-rotor|services-dolly/);
+});
+
+test('Contact uses its supplied desk video with a still fallback and no simulated light overlay', () => {
+  const picture = '<picture><img alt="Telephone, notebook and desk lamp"></picture>';
+  const html = decorateArtwork('contactHero', picture);
+  assert.match(html, /contact-desk-loop-v1\.mp4/);
+  assert.match(html, /contact-desk-v1-line\.webp/);
+  assert.match(html, /muted loop playsinline/);
+  assert.ok(html.includes(picture));
+  assert.doesNotMatch(html, /ink-detail-contactHero|services-dolly|gallery-papers/);
 });
