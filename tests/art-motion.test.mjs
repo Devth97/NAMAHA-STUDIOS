@@ -4,7 +4,7 @@ import { decorateArtwork } from '../public/art-motion.js';
 
 test('reel animation does not overlay rotating copies of the complete raster drawing', () => {
   const picture = '<picture><img src="hero.jpg" alt="A camera"></picture>';
-  const result = decorateArtwork('hero', picture, './assets/hero-colour-pencil-line.jpg');
+  const result = decorateArtwork('aboutHero', picture, './assets/aboutHero-equipment-v2-line.jpg');
   assert.doesNotMatch(result, /<image\b/, 'a rotated full raster can expose duplicate reels');
   assert.equal((result.match(/<picture>/g) || []).length, 1, 'keep one accessible source drawing');
   assert.match(result, /ink-mounted-rotor/, 'animate the wheel inside a fixed mounting');
@@ -27,7 +27,7 @@ test('Services uses the supplied silent looping video with its accessible still 
 });
 
 test('supplied Services video is not added to other page illustrations', () => {
-  for (const key of ['hero','aboutHero','workHero']) {
+  for (const key of ['aboutHero','workHero']) {
     assert.doesNotMatch(decorateArtwork(key, '<picture></picture>'), /data-artwork-video|services-dolly-loop/);
   }
 });
@@ -50,4 +50,14 @@ test('Contact uses its supplied desk video with a still fallback and no simulate
   assert.match(html, /muted loop playsinline/);
   assert.ok(html.includes(picture));
   assert.doesNotMatch(html, /ink-detail-contactHero|services-dolly|gallery-papers/);
+});
+
+test('Home uses its complete production video without simulated reel overlays', () => {
+  const picture = '<picture><img alt="Indian film production journey"></picture>';
+  const html = decorateArtwork('hero', picture);
+  assert.match(html, /home-production-loop-v1\.mp4/);
+  assert.match(html, /home-production-v1-line\.webp/);
+  assert.match(html, /muted loop playsinline/);
+  assert.ok(html.includes(picture));
+  assert.doesNotMatch(html, /ink-mounted-rotor|studio-stage|services-dolly|gallery-papers|contact-desk/);
 });

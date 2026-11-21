@@ -352,6 +352,17 @@
         864
       ],
       "use": "First-frame poster for supplied Contact phone, pages and lamp video; preserve 16:9"
+    },
+    {
+      "id": "HOME-PRODUCTION",
+      "source": "home-production-v1.png",
+      "file": "home-production-v1-line.jpg",
+      "placeholder": "hero-colour-pencil-line.jpg",
+      "size": [
+        1536,
+        864
+      ],
+      "use": "Matching first-frame poster for supplied Home production journey; preserve 16:9"
     }
   ]
 }
