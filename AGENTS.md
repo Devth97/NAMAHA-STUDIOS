@@ -1,3 +1,5 @@
+21 November Home video direction: remove the shared six-stage header strip on every route. A single integrated Home studio animation will cover idea, storyboarding, camera production, lighting, editing and projection. Keep the current Home illustration until the user supplies the generated video; do not restore the old letterhead/crew clips. Reference image is output/home-film-studio-reference-v1.png.
+
 21 November Contact supplied video: contact-desk-loop-v1.mp4 replaces the Contact hero still and simulated lamp rays. Preserve full 16:9 chronology, phone vibration, page turns and gentle lamp action. Silent monochrome delivery, normalized paper, matching first-frame contact-desk-v1-line poster, shared motion/reduced-motion/offscreen controls.
 
 21 November Gallery supplied video: gallery-papers-loop-v1.mp4 replaces the Gallery hero illustration and simulated reel overlays. Preserve the full 16:9 clip, swinging papers and light-on action. Silent, monochrome, paper normalized; matching first-frame gallery-papers-v1-line poster. Reuse Services playback, pause, reduced-motion and visibility controls.
