@@ -3,6 +3,9 @@
   .ink-art > picture { display:contents; }
   .ink-art > picture > img.crop { width:100%; height:100%; object-fit:contain; object-position:center; }
   .ink-detail { position:absolute; inset:0; width:100%; height:100%; pointer-events:none; overflow:visible; }
+  .artwork-video { position:absolute; inset:0; display:block; width:100%; height:100%; object-fit:contain; object-position:center; opacity:0; pointer-events:none; }
+  .ink-video.is-video-playing .artwork-video { opacity:1; }
+  .ink-video.is-video-playing > picture > img { visibility:hidden; }
   .ink-process { display:grid; place-items:center; }
   .ink-process .studio-plate { width:90%; height:auto; aspect-ratio:3/2; }
   .studio-plate { position:relative; display:block; width:100%; aspect-ratio:3/2; mix-blend-mode:multiply; }

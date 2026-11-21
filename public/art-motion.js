@@ -25,7 +25,6 @@ function details(key) {
   if (key === 'light') return detailSvg(key,`<g class="ink-lamp-breath" stroke-width="2.4"><path d="M907 237l303-87M934 291l326-1M908 346l294 107"/></g>`);
   if (key === 'edit') return detailSvg(key,`<g class="ink-edit-progress"><path d="M500 408h470"/></g>`);
   if (key === 'contactHero') return detailSvg(key,`<g class="ink-lamp-breath"><path d="M877 313l-33 42m86-35-14 50m65-47 6 51"/></g>`);
-  if (key === 'servicesHero') return detailSvg(key,`<g class="ink-lamp-breath"><path d="M480 300l96 40m-92-5 93 47m-93-11 74 44"/></g>`);
   if (key === 'storyboard') return detailSvg(key,`<path class="ink-writing" d="M585 684l143 9m-132 14 121 6"/>`);
   return '';
 }
@@ -34,6 +33,7 @@ export function equipmentDrawing(kind) {
   return `<span class="studio-plate"><img class="equipment-plate" src="./assets/studio-${name}-ink-v2-line-480.webp" width="1536" height="1024" alt="" aria-hidden="true" decoding="async">${details(name)}</span>`;
 }
 export function decorateArtwork(key, picture) {
+  if (key === 'servicesHero') return `<span class="ink-art ink-video" data-ink-motion data-artwork="servicesHero">${picture}<video class="artwork-video" data-artwork-video muted loop playsinline preload="none" poster="./assets/services-dolly-v1-line.webp" width="1536" height="864" tabindex="-1" aria-hidden="true"><source src="./assets/services-dolly-loop-v1.mp4" type="video/mp4"></video></span>`;
   if (processKinds[key]) return `<span class="ink-art ink-process" data-ink-motion>${equipmentDrawing(processKinds[key])}</span>`;
   const decorative = ['hero','aboutHero','servicesHero','workHero','galleryHero','contactHero','journey','storyboard','notFound','success'];
   if (!decorative.includes(key)) return picture;
@@ -44,7 +44,37 @@ export function initArtMotion() {
   const reduced = matchMedia('(prefers-reduced-motion:reduce)');
   const visible = new Set();
   let enabled = true;
-  function update() { elements.forEach(element=>element.classList.toggle('is-animating', enabled && !reduced.matches && !document.hidden && visible.has(element))); }
+  const versions = new WeakMap();
+  const videos = new Map(elements.map(element=>[element,element.querySelector('[data-artwork-video]')]));
+  videos.forEach((video, element)=>{
+    if (!video) return;
+    video.muted = true;
+    video.addEventListener('error',()=>element.classList.remove('is-video-playing'));
+  });
+  function update() {
+    elements.forEach(element=>{
+      const active = enabled && !reduced.matches && !document.hidden && visible.has(element);
+      element.classList.toggle('is-animating',active);
+      const video = videos.get(element);
+      if (!video) return;
+      const version = (versions.get(element) || 0) + 1;
+      versions.set(element,version);
+      if (!active) {
+        video.pause();
+        element.classList.remove('is-video-playing');
+        return;
+      }
+      if (!video.paused && video.readyState >= 2) {
+        element.classList.add('is-video-playing');
+        return;
+      }
+      video.play().then(()=>{
+        if (versions.get(element) === version) element.classList.add('is-video-playing');
+      }).catch(()=>{
+        if (versions.get(element) === version) element.classList.remove('is-video-playing');
+      });
+    });
+  }
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver(entries=>{entries.forEach(entry=>entry.isIntersecting ? visible.add(entry.target) : visible.delete(entry.target));update();},{rootMargin:'40px'});
     elements.forEach(element=>observer.observe(element));

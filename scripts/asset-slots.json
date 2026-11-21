@@ -319,6 +319,17 @@
       "file": "studio-screen-ink-v2-line.jpg",
       "placeholder": "hero-colour-pencil-line.jpg",
       "use": "Detailed graphite header vignette: screen"
+    },
+    {
+      "id": "SERVICES-DOLLY",
+      "source": "services-dolly-v1.png",
+      "file": "services-dolly-v1-line.jpg",
+      "placeholder": "servicesHero-colour-pencil-line.jpg",
+      "size": [
+        1536,
+        864
+      ],
+      "use": "First-frame poster for supplied Services dolly video; preserve 16:9"
     }
   ]
 }
