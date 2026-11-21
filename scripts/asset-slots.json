@@ -330,6 +330,17 @@
         864
       ],
       "use": "First-frame poster for supplied Services dolly video; preserve 16:9"
+    },
+    {
+      "id": "GALLERY-PAPERS",
+      "source": "gallery-papers-v1.png",
+      "file": "gallery-papers-v1-line.jpg",
+      "placeholder": "galleryHero-equipment-v2-line.jpg",
+      "size": [
+        1536,
+        864
+      ],
+      "use": "First-frame poster for supplied Gallery paper and light video; preserve 16:9"
     }
   ]
 }

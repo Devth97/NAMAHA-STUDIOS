@@ -3,7 +3,6 @@ const processKinds = {discover:'idea', develop:'story', create:'camera', deliver
 const reels = {
   hero:[[389,307,51,55],[501,272,57,59]],
   aboutHero:[[374,246,109,116]],
-  galleryHero:[[326,345,76,82],[486,371,53,62]],
   workHero:[[559,381,122,132],[797,398,88,100]],
   journey:[[218,428,52,57],[329,416,53,57]],
   camera:[[570,214,142,142],[909,211,138,138]],
@@ -33,7 +32,11 @@ export function equipmentDrawing(kind) {
   return `<span class="studio-plate"><img class="equipment-plate" src="./assets/studio-${name}-ink-v2-line-480.webp" width="1536" height="1024" alt="" aria-hidden="true" decoding="async">${details(name)}</span>`;
 }
 export function decorateArtwork(key, picture) {
-  if (key === 'servicesHero') return `<span class="ink-art ink-video" data-ink-motion data-artwork="servicesHero">${picture}<video class="artwork-video" data-artwork-video muted loop playsinline preload="none" poster="./assets/services-dolly-v1-line.webp" width="1536" height="864" tabindex="-1" aria-hidden="true"><source src="./assets/services-dolly-loop-v1.mp4" type="video/mp4"></video></span>`;
+  const videoArtwork = {servicesHero:['services-dolly-loop-v1','services-dolly-v1-line'], galleryHero:['gallery-papers-loop-v1','gallery-papers-v1-line']}[key];
+  if (videoArtwork) {
+    const [clip, poster] = videoArtwork;
+    return `<span class="ink-art ink-video" data-ink-motion data-artwork="${key}">${picture}<video class="artwork-video" data-artwork-video muted loop playsinline preload="none" poster="./assets/${poster}.webp" width="1536" height="864" tabindex="-1" aria-hidden="true"><source src="./assets/${clip}.mp4" type="video/mp4"></video></span>`;
+  }
   if (processKinds[key]) return `<span class="ink-art ink-process" data-ink-motion>${equipmentDrawing(processKinds[key])}</span>`;
   const decorative = ['hero','aboutHero','servicesHero','workHero','galleryHero','contactHero','journey','storyboard','notFound','success'];
   if (!decorative.includes(key)) return picture;

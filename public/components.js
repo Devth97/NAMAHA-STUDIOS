@@ -18,7 +18,7 @@ export function crop(key, label = '', className = '', sizes = '(max-width: 760px
   const base = source.replace(/\.jpg$/, '');
   const eager = priority || key === 'hero' || key.endsWith('Hero');
   const finalSizes = eager && sizes === '(max-width: 760px) 100vw, 50vw' ? '(max-width: 760px) calc(100vw - 48px), 70vw' : sizes;
-  const height = key === 'development' ? 1920 : key === 'servicesHero' ? 864 : 1024;
+  const height = key === 'development' ? 1920 : ['servicesHero','galleryHero'].includes(key) ? 864 : 1024;
   const picture = `<picture><source type="image/webp" srcset="${base}-480.webp 480w, ${base}-960.webp 960w, ${base}.webp 1536w" sizes="${finalSizes}"><img class="crop ${className}" src="${source}" srcset="${base}-480.jpg 480w, ${base}-960.jpg 960w, ${source} 1536w" sizes="${finalSizes}" alt="${esc(label)}" width="1536" height="${height}" ${eager ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"'} decoding="async"></picture>`;
   return decorateArtwork(key, picture);
 }

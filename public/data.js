@@ -9,7 +9,7 @@ export const art = {
   aboutHero: './assets/aboutHero-equipment-v2-line.jpg',
   servicesHero: './assets/services-dolly-v1-line.jpg',
   workHero: './assets/workHero-colour-pencil-line.jpg',
-  galleryHero: './assets/galleryHero-equipment-v2-line.jpg',
+  galleryHero: './assets/gallery-papers-v1-line.jpg',
   contactHero: './assets/contactHero-equipment-v2-line.jpg',
   journey: './assets/journey-colour-pencil-line.jpg',
   storyboard: './assets/storyboard-colour-pencil-line.jpg',

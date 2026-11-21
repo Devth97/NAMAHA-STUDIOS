@@ -27,7 +27,17 @@ test('Services uses the supplied silent looping video with its accessible still 
 });
 
 test('supplied Services video is not added to other page illustrations', () => {
-  for (const key of ['hero','galleryHero','contactHero']) {
+  for (const key of ['hero','contactHero']) {
     assert.doesNotMatch(decorateArtwork(key, '<picture></picture>'), /data-artwork-video|services-dolly-loop/);
   }
+});
+
+test('Gallery uses its own supplied video and still without simulated reel overlays', () => {
+  const picture = '<picture><img alt="Hanging contact sheets and studio light"></picture>';
+  const html = decorateArtwork('galleryHero', picture);
+  assert.match(html, /gallery-papers-loop-v1\.mp4/);
+  assert.match(html, /gallery-papers-v1-line\.webp/);
+  assert.match(html, /muted loop playsinline/);
+  assert.ok(html.includes(picture));
+  assert.doesNotMatch(html, /ink-mounted-rotor|services-dolly/);
 });
