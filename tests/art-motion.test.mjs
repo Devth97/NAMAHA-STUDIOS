@@ -55,8 +55,8 @@ test('Contact uses its supplied desk video with a still fallback and no simulate
 test('Home uses its complete production video without simulated reel overlays', () => {
   const picture = '<picture><img alt="Indian film production journey"></picture>';
   const html = decorateArtwork('hero', picture);
-  assert.match(html, /home-production-loop-v1\.mp4/);
-  assert.match(html, /home-production-v1-line\.webp/);
+  assert.match(html, /home-production-loop-v2\.mp4/);
+  assert.match(html, /home-production-v2-line\.webp/);
   assert.match(html, /muted loop playsinline/);
   assert.ok(html.includes(picture));
   assert.doesNotMatch(html, /ink-mounted-rotor|studio-stage|services-dolly|gallery-papers|contact-desk/);

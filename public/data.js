@@ -5,7 +5,7 @@ export const references = {
 };
 // Standalone high-resolution assets; the supplied references are retained for the original logo.
 export const art = {
-  hero: './assets/home-production-v1-line.jpg',
+  hero: './assets/home-production-v2-line.jpg',
   aboutHero: './assets/aboutHero-equipment-v2-line.jpg',
   servicesHero: './assets/services-dolly-v1-line.jpg',
   workHero: './assets/workHero-colour-pencil-line.jpg',

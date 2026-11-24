@@ -363,6 +363,17 @@
         864
       ],
       "use": "Matching first-frame poster for supplied Home production journey; preserve 16:9"
+    },
+    {
+      "id": "HOME-PRODUCTION-V2",
+      "source": "home-production-v2.png",
+      "file": "home-production-v2-line.jpg",
+      "placeholder": "home-production-v1-line.jpg",
+      "size": [
+        1536,
+        864
+      ],
+      "use": "Thinking-stage still for latest blank-page Home animation and reduced-motion fallback"
     }
   ]
 }

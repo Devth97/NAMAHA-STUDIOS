@@ -30,7 +30,7 @@ export function equipmentDrawing(kind) {
   return `<span class="studio-plate"><img class="equipment-plate" src="./assets/studio-${name}-ink-v2-line-480.webp" width="1536" height="1024" alt="" aria-hidden="true" decoding="async">${details(name)}</span>`;
 }
 export function decorateArtwork(key, picture) {
-  const videoArtwork = {hero:['home-production-loop-v1','home-production-v1-line'], servicesHero:['services-dolly-loop-v1','services-dolly-v1-line'], galleryHero:['gallery-papers-loop-v1','gallery-papers-v1-line'], contactHero:['contact-desk-loop-v1','contact-desk-v1-line']}[key];
+  const videoArtwork = {hero:['home-production-loop-v2','home-production-v2-line'], servicesHero:['services-dolly-loop-v1','services-dolly-v1-line'], galleryHero:['gallery-papers-loop-v1','gallery-papers-v1-line'], contactHero:['contact-desk-loop-v1','contact-desk-v1-line']}[key];
   if (videoArtwork) {
     const [clip, poster] = videoArtwork;
     return `<span class="ink-art ink-video" data-ink-motion data-artwork="${key}">${picture}<video class="artwork-video" data-artwork-video muted loop playsinline preload="none" poster="./assets/${poster}.webp" width="1536" height="864" tabindex="-1" aria-hidden="true"><source src="./assets/${clip}.mp4" type="video/mp4"></video></span>`;
