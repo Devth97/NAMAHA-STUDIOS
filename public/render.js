@@ -35,7 +35,7 @@ export function renderHead(page, config = siteConfig) {
   const share = absolute('/assets/og-image.jpg');
   const indexable = Boolean(config.allowIndexing && origin) && page !== '404';
   const hero = art[meta.image].replace(/\.jpg$/, '');
-  const organisation = { '@context': 'https://schema.org', '@type': 'Organization', name: 'Namaha Studios', description: pageMeta.home.description, ...(config.email ? {email:config.email} : {}), ...(config.phoneNumber ? {telephone:'+'+config.phoneNumber} : {}), sameAs: [config.instagram], ...(config.location ? { address: { '@type': 'PostalAddress', addressLocality: config.location.split(',')[0].trim(), addressRegion: config.location.split(',')[1]?.trim() || undefined, addressCountry: 'IN' } } : {}), ...(origin ? { url: origin, logo: origin + '/assets/icon-512.png' } : {}) };
+  const organisation = { '@context': 'https://schema.org', '@type': 'Organization', name: 'Namaha Studios', description: pageMeta.home.description, ...(config.email ? {email:config.email} : {}), ...(config.phoneNumber ? {telephone:'+'+config.phoneNumber} : {}), sameAs: [config.instagram], ...(config.location ? { address: { '@type': 'PostalAddress', addressLocality: config.location.split(',')[0].trim(), addressRegion: config.location.split(',')[1]?.trim() || undefined, addressCountry: 'IN' } } : {}), ...(origin ? { url: origin, logo: origin + '/assets/logo-icon-v2-512.png' } : {}) };
   return [
     page === '404' ? '<base href="/">' : '',
     `<title>${esc(meta.title)}</title>`,

@@ -19,8 +19,8 @@ test('flower docks at the bud inside the supplied symbol at every header size', 
     const rect={left:20,top:10,width,height:width*75/240};
     const dock=flowerDock(rect);
     assert.ok(dock.x>rect.left && dock.x<rect.left+width);
-    assert.ok(Math.abs(dock.x-(20+width*29.6/240))<1e-9);
-    assert.ok(Math.abs(dock.y-(10+width*55.4/240))<1e-9);
+    assert.ok(Math.abs(dock.x-(20+width*31.5/240))<1e-9);
+    assert.ok(Math.abs(dock.y-(10+width*55.6/240))<1e-9);
   }
 });
 

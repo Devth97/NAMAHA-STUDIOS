@@ -7,7 +7,7 @@ export const ixoraTiming = phone => phone
 
 // Root viewBox coordinates of the bud; nested SVG bounds include clipped JPEG space.
 export function flowerDock(logo) {
-  return { x: logo.left + logo.width * (29.6 / 240), y: logo.top + logo.height * (55.4 / 75) };
+  return { x: logo.left + logo.width * (31.5 / 240), y: logo.top + logo.height * (55.6 / 75) };
 }
 export function flowerPose(progress, start, end, dockSize = 14) {
   const p = clamp(progress), t = p * p * (3 - 2 * p);
