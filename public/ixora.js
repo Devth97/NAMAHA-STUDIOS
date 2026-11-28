@@ -5,7 +5,15 @@ export const ixoraTiming = phone => phone
   ? { delay: 150, flight: 1050, total: 1400, splash: 430 }
   : { delay: 170, flight: 1150, total: 1520, splash: 470 };
 
-// Root viewBox coordinates of the bud; nested SVG bounds include clipped JPEG space.
+// Carry the click across page loads without letting network time consume the flight.
+export function resumeIxora(recent, now, phone) {
+  if (!Number.isFinite(recent?.at) || !Number.isFinite(recent?.anchor?.x) || !Number.isFinite(recent?.anchor?.y)) return null;
+  const age = now - recent.at;
+  if (age < 0 || age > 10000) return null;
+  return {anchor:recent.anchor, age:Math.min(age,ixoraTiming(phone).delay)};
+}
+
+// Root viewBox coordinates of the bud in the supplied vector symbol.
 export function flowerDock(logo) {
   return { x: logo.left + logo.width * (31.5 / 240), y: logo.top + logo.height * (55.6 / 75) };
 }
@@ -39,21 +47,26 @@ export function initIxora() {
   if (!flower || !scatter || !logo) return;
   const motion = matchMedia('(prefers-reduced-motion: reduce)');
   const images = [...scatter.querySelectorAll('img')];
-  let enabled = true, flight = null, cleanup = 0;
+  let enabled = true, flight = null, cleanup = 0, playVersion = 0;
+  const spritesReady = Promise.all([flower,...images].map(image => image.decode().catch(() => {})));
   const allowed = () => enabled && !motion.matches && !document.hidden;
   function hideScatter() { scatter.hidden = true; }
   function stop() {
+    playVersion++;
     clearTimeout(cleanup); cleanup = 0;
     if (flight) { flight.onfinish = null; flight.cancel(); flight = null; }
     flower.hidden = true; flower.dataset.phase = 'idle'; hideScatter();
     images.forEach(image => image.getAnimations().forEach(animation => animation.cancel()));
   }
-  function play(anchor, age = 0) {
+  async function play(anchor, age = 0) {
     if (!allowed()) return;
     const phone = matchMedia('(max-width:760px)').matches;
     const timing = ixoraTiming(phone);
     if (age >= timing.total) return;
     stop();
+    const version = playVersion;
+    await spritesReady;
+    if (version !== playVersion || !allowed() || !flower.naturalWidth) return;
     scatter.hidden = false;
     const width = scatter.getBoundingClientRect().width;
     const left = anchor.x - width/2;
@@ -104,6 +117,7 @@ export function initIxora() {
   try {
     const recent = JSON.parse(sessionStorage.getItem('namaha-ixora-splash') || 'null');
     sessionStorage.removeItem('namaha-ixora-splash');
-    if (recent && Number.isFinite(recent.anchor?.x) && Number.isFinite(recent.anchor?.y)) play(recent.anchor, Math.max(0,Date.now() - recent.at));
+    const resumed = resumeIxora(recent,Date.now(),matchMedia('(max-width:760px)').matches);
+    if (resumed) play(resumed.anchor,resumed.age);
   } catch {}
 }
