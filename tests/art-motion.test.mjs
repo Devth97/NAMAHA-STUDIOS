@@ -52,12 +52,13 @@ test('Contact uses its supplied desk video with a still fallback and no simulate
   assert.doesNotMatch(html, /ink-detail-contactHero|services-dolly|gallery-papers/);
 });
 
-test('Home tells the story with six ordered images and retains a static fallback', () => {
+test('Home tells the expanded story with twelve sketches and a blank-book fallback', () => {
   const picture = '<picture><img alt="Indian film production journey"></picture>';
   const html = decorateArtwork('hero', picture);
   assert.match(html, /data-home-story/);
-  assert.equal((html.match(/class="story-scene"/g) || []).length, 6);
-  const keys = ['thinking','preproduction','production','postproduction','release','watching'];
+  assert.match(html, /data-opening="blank-book"/);
+  assert.equal((html.match(/class="story-scene"/g) || []).length, 12);
+  const keys = ['walk','river','writing','planning','vans','lighting','tea','acting','dolly','editing','cinema','watching'];
   let previous = -1;
   for (const key of keys) {
     const position = html.indexOf(`data-story-scene="${key}"`);

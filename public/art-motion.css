@@ -44,25 +44,37 @@
 @layer refine {
   .ink-story { aspect-ratio:16/9; }
   .story-scenes { position:absolute; inset:0; display:block; opacity:0; }
-  .story-scene { position:absolute; inset:0; display:block; opacity:0; clip-path:inset(0 100% 0 0); animation:home-story-reveal 15s linear infinite; animation-play-state:paused; }
-  .story-scene:nth-child(1) { animation-delay:0.6s; }
-  .story-scene:nth-child(2) { animation-delay:2.8s; }
-  .story-scene:nth-child(3) { animation-delay:5.0s; }
-  .story-scene:nth-child(4) { animation-delay:7.2s; }
-  .story-scene:nth-child(5) { animation-delay:9.4s; }
-  .story-scene:nth-child(6) { animation-delay:11.6s; }
+  .story-scene { position:absolute; inset:0; display:block; opacity:0; clip-path:inset(0 100% 0 0); animation:home-story-reveal 40s linear infinite; animation-play-state:paused; }
+  .story-scene:nth-child(1) { animation-delay:2s; }
+  .story-scene:nth-child(2) { animation-delay:5s; }
+  .story-scene:nth-child(3) { animation-delay:8s; }
+  .story-scene:nth-child(4) { animation-delay:11s; }
+  .story-scene:nth-child(5) { animation-delay:14s; }
+  .story-scene:nth-child(6) { animation-delay:17s; }
+  .story-scene:nth-child(7) { animation-delay:20s; }
+  .story-scene:nth-child(8) { animation-delay:23s; }
+  .story-scene:nth-child(9) { animation-delay:26s; }
+  .story-scene:nth-child(10) { animation-delay:29s; }
+  .story-scene:nth-child(11) { animation-delay:32s; }
+  .story-scene:nth-child(12) { animation-delay:35s; }
   .story-scene img { display:block; width:100%; height:100%; object-fit:contain; }
-  .ink-story.story-ready > picture > img { visibility:hidden; }
+  .ink-story.story-ready > picture > img { animation:home-story-book 40s linear infinite; animation-play-state:paused; }
   .ink-story.story-ready .story-scenes { opacity:1; }
-  .ink-story.story-ready.is-animating .story-scene { animation-play-state:running; }
+  .ink-story.story-ready.is-animating .story-scene,
+  .ink-story.story-ready.is-animating > picture > img { animation-play-state:running; }
   @keyframes home-story-reveal {
     0% { opacity:0; clip-path:inset(0 100% 0 0); }
-    3% { opacity:1; clip-path:inset(0); }
-    10.5% { opacity:1; clip-path:inset(0); }
-    13%,100% { opacity:0; clip-path:inset(0); }
+    1% { opacity:1; clip-path:inset(0); }
+    5.75% { opacity:1; clip-path:inset(0); }
+    7%,100% { opacity:0; clip-path:inset(0); }
+  }
+  @keyframes home-story-book {
+    0%,4% { opacity:1; }
+    5.5%,94% { opacity:0; }
+    95%,100% { opacity:1; }
   }
   @media(prefers-reduced-motion:reduce) {
-    .ink-story > picture > img { visibility:visible!important; }
+    .ink-story > picture > img { animation:none!important; opacity:1!important; visibility:visible!important; }
     .ink-story .story-scenes { display:none; }
     .ink-story .story-scene { animation:none; }
   }

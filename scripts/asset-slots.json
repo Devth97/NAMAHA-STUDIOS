@@ -440,6 +440,149 @@
         864
       ],
       "use": "28 November separate Home story illustration: watching"
+    },
+    {
+      "id": "HOME-SKETCH-BOOK",
+      "source": "home-sketch-book-v2.png",
+      "file": "home-sketch-book-v2-line.jpg",
+      "placeholder": "home-story-thinking-v1-line.jpg",
+      "size": [
+        1536,
+        864
+      ],
+      "use": "28 November loose multi-stroke story scene: book"
+    },
+    {
+      "id": "HOME-SKETCH-WALK",
+      "source": "home-sketch-walk-v2.png",
+      "file": "home-sketch-walk-v2-line.jpg",
+      "placeholder": "home-story-thinking-v1-line.jpg",
+      "size": [
+        1536,
+        864
+      ],
+      "use": "28 November loose multi-stroke story scene: walk"
+    },
+    {
+      "id": "HOME-SKETCH-RIVER",
+      "source": "home-sketch-river-v2.png",
+      "file": "home-sketch-river-v2-line.jpg",
+      "placeholder": "home-story-thinking-v1-line.jpg",
+      "size": [
+        1536,
+        864
+      ],
+      "use": "28 November loose multi-stroke story scene: river"
+    },
+    {
+      "id": "HOME-SKETCH-WRITING",
+      "source": "home-sketch-writing-v2.png",
+      "file": "home-sketch-writing-v2-line.jpg",
+      "placeholder": "home-story-thinking-v1-line.jpg",
+      "size": [
+        1536,
+        864
+      ],
+      "use": "28 November loose multi-stroke story scene: writing"
+    },
+    {
+      "id": "HOME-SKETCH-PLANNING",
+      "source": "home-sketch-planning-v2.png",
+      "file": "home-sketch-planning-v2-line.jpg",
+      "placeholder": "home-story-thinking-v1-line.jpg",
+      "size": [
+        1536,
+        864
+      ],
+      "use": "28 November loose multi-stroke story scene: planning"
+    },
+    {
+      "id": "HOME-SKETCH-VANS",
+      "source": "home-sketch-vans-v2.png",
+      "file": "home-sketch-vans-v2-line.jpg",
+      "placeholder": "home-story-thinking-v1-line.jpg",
+      "size": [
+        1536,
+        864
+      ],
+      "use": "28 November loose multi-stroke story scene: vans"
+    },
+    {
+      "id": "HOME-SKETCH-LIGHTING",
+      "source": "home-sketch-lighting-v2.png",
+      "file": "home-sketch-lighting-v2-line.jpg",
+      "placeholder": "home-story-thinking-v1-line.jpg",
+      "size": [
+        1536,
+        864
+      ],
+      "use": "28 November loose multi-stroke story scene: lighting"
+    },
+    {
+      "id": "HOME-SKETCH-TEA",
+      "source": "home-sketch-tea-v2.png",
+      "file": "home-sketch-tea-v2-line.jpg",
+      "placeholder": "home-story-thinking-v1-line.jpg",
+      "size": [
+        1536,
+        864
+      ],
+      "use": "28 November loose multi-stroke story scene: tea"
+    },
+    {
+      "id": "HOME-SKETCH-ACTING",
+      "source": "home-sketch-acting-v2.png",
+      "file": "home-sketch-acting-v2-line.jpg",
+      "placeholder": "home-story-thinking-v1-line.jpg",
+      "size": [
+        1536,
+        864
+      ],
+      "use": "28 November loose multi-stroke story scene: acting"
+    },
+    {
+      "id": "HOME-SKETCH-DOLLY",
+      "source": "home-sketch-dolly-v2.png",
+      "file": "home-sketch-dolly-v2-line.jpg",
+      "placeholder": "home-story-thinking-v1-line.jpg",
+      "size": [
+        1536,
+        864
+      ],
+      "use": "28 November loose multi-stroke story scene: dolly"
+    },
+    {
+      "id": "HOME-SKETCH-EDITING",
+      "source": "home-sketch-editing-v2.png",
+      "file": "home-sketch-editing-v2-line.jpg",
+      "placeholder": "home-story-thinking-v1-line.jpg",
+      "size": [
+        1536,
+        864
+      ],
+      "use": "28 November loose multi-stroke story scene: editing"
+    },
+    {
+      "id": "HOME-SKETCH-CINEMA",
+      "source": "home-sketch-cinema-v2.png",
+      "file": "home-sketch-cinema-v2-line.jpg",
+      "placeholder": "home-story-thinking-v1-line.jpg",
+      "size": [
+        1536,
+        864
+      ],
+      "use": "28 November loose multi-stroke story scene: cinema"
+    },
+    {
+      "id": "HOME-SKETCH-WATCHING",
+      "source": "home-sketch-watching-v2.png",
+      "file": "home-sketch-watching-v2-line.jpg",
+      "placeholder": "home-story-thinking-v1-line.jpg",
+      "size": [
+        1536,
+        864
+      ],
+      "use": "28 November loose multi-stroke story scene: watching"
     }
   ]
 }

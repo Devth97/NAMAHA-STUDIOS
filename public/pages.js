@@ -23,7 +23,7 @@ function wordRibbon() {
 }
 
 function home() {
-  return `${hero({ home: true, title: 'Stories<br><em>that move</em><br>the world<span class="gold-dot">.</span>', copy: 'We bring ideas to life through powerful storytelling, thoughtful visuals and a little bit of wonder.', artLabel: 'A sequence of monochrome illustrations: a blank page, thinking, pre-production, production, post-production, release and an audience watching, before a new beginning.' })}
+  return `${hero({ home: true, title: 'Stories<br><em>that move</em><br>the world<span class="gold-dot">.</span>', copy: 'We bring ideas to life through powerful storytelling, thoughtful visuals and a little bit of wonder.', artLabel: 'An open sketchbook with blank pages begins a hand-drawn story: a writer finds inspiration, a crew makes the film, and an audience watches it, before returning to the empty book.' })}
   <section class="section services-intro" id="next">${sectionHead('THE POSSIBILITIES', 'One studio.<br class="mobile-break"> Many ways to tell a story.', '<p>From the first spark to the final frame,<br>we create with purpose.</p>')}${serviceStrip()}</section>
   ${showreel()}
   <section class="section work-section">${sectionHead('SELECTED PERSPECTIVES', 'Stories in every frame.', '<a class="quiet-link" href="./work.html">Explore all work ' + arrow + '</a>')}<div class="featured-grid">${[0, 1, 2, 3].map(index => projectCard(projects[index], index, true)).join('')}</div><p class="caption">Films · Television shows · Brand films · Entertainment events — illustrative concepts for this studio preview.</p></section>
