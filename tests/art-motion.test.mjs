@@ -65,5 +65,5 @@ test('Home tells the story with six ordered images and retains a static fallback
     previous = position;
   }
   assert.ok(html.includes(picture));
-  assert.doesNotMatch(html, /<video|home-production-loop|ink-mounted-rotor/);
+  assert.doesNotMatch(html, /<video|home-production-loop|ink-mounted-rotor|\sstyle=/, 'scene timing must work under the production CSP');
 });
